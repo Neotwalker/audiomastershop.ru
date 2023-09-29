@@ -832,7 +832,7 @@
 												<span>Монтажный диаметр</span>
 												<div>150 мм</div>
 											</div>
-											<a href="#">Все характеристики</a>
+											<a href="#allCharacteristics">Все характеристики</a>
 										</div>
 										<div class="categories--product__info--p">
 											Pride Ruby AIR 6,5 - новые среднечастотные динамики от Pride. Модель отличается высоким качеством звука и имеет цельный алюминиевый радиатор МС. 
@@ -895,7 +895,7 @@
 													<span><strong>Забрать из Почты России</strong> начиная с 20.03, от 275 руб.</span>
 													<span><strong>Доставка</strong> начиная с 23.03, бесплатно</span>
 												</div>
-												<a href="#" class="button">Рассчитать доставку</a>
+												<button class="button back--call">Рассчитать доставку</button>
 											</div>
 										</div>
 									</div>
@@ -1051,7 +1051,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="categories--info">
+			<section class="categories--info" id="allCharacteristics">
 				<div class="container">
 					<div class="row">
 						<div class="categories--info__title h4">О товаре</div>
@@ -1632,6 +1632,32 @@
 				<input type="checkbox" class="custom-checkbox" id="check" name="check" value="yes">
 				<label class="check" for="check"><span>Я согласен на <a href="#">обработку персональных данных</a></span></label>
 				<span>Наш менеджер свяжется с вами в ближайшее время и ответит на все вопросы</span>
+				<button class="button">Получить звонок</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="modal--buyInOneClick">
+		<div class="modal--wrapper">
+			<div class="modal--close">
+				<svg viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<g class="g" stroke="none" stroke-width="1" fill-rule="evenodd">
+						<rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+						<rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+					</g>
+				</svg>
+			</div>
+			<div class="modal--title">
+				Купить в 1 клик
+			</div>
+			<div class="modal--subtitle">Вам перезвонит наш специалист,<br> чтобы записать в установочный центр</div>
+			<form class="modal--form">
+				<label for="name">Ваше имя</label>
+				<input type="text" name="name" id="name" placeholder="Иванов Иван">
+				<label for="phone">Номер телефона</label>
+				<input type="text" name="phone" id="phone" placeholder="+7 (999) 999-99-99">
+				<!-- <input type="checkbox" class="custom-checkbox" id="check" name="check" value="yes">
+				<label class="check" for="check"><span>Я согласен на <a href="#">обработку персональных данных</a></span></label> -->
 				<button class="button">Получить звонок</button>
 			</form>
 		</div>
