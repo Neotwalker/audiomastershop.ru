@@ -615,11 +615,11 @@
 						<h1 class="h1">Эстрадная акустика</h1>
 						<div class="categories--product__wrapper">
 							<div class="categories--product__gallery">
+								<img src="img/category/percent.png" alt="#" class="absolute">
+								<img src="img/category/top.png" alt="#" class="absolute absolute--second">
 								<div class="categories--product__slider">
 									<div class="categories--product__slider--block">
 										<img src="img/category/modal-image.png" alt="#" class="categories--product__slider--main">
-										<img src="img/category/percent.png" alt="#" class="absolute">
-										<img src="img/category/top.png" alt="#" class="absolute absolute--second">
 										<div class="categories--product__slider--search">
 											<svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<g opacity="0.5" clip-path="url(#clip0_745_1102)">
@@ -635,8 +635,6 @@
 									</div>
 									<div class="categories--product__slider--block">
 										<img src="img/category/nav/2.png" alt="#" class="categories--product__slider--main">
-										<img src="img/category/percent.png" alt="#" class="absolute">
-										<img src="img/category/top.png" alt="#" class="absolute absolute--second">
 										<div class="categories--product__slider--search">
 											<svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<g opacity="0.5" clip-path="url(#clip0_745_1102)">
@@ -652,8 +650,6 @@
 									</div>
 									<div class="categories--product__slider--block">
 										<img src="img/category/nav/3.png" alt="#" class="categories--product__slider--main">
-										<img src="img/category/percent.png" alt="#" class="absolute">
-										<img src="img/category/top.png" alt="#" class="absolute absolute--second">
 										<div class="categories--product__slider--search">
 											<svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<g opacity="0.5" clip-path="url(#clip0_745_1102)">
@@ -669,8 +665,6 @@
 									</div>
 									<div class="categories--product__slider--block">
 										<img src="img/category/modal-image.png" alt="#" class="categories--product__slider--main">
-										<img src="img/category/percent.png" alt="#" class="absolute">
-										<img src="img/category/top.png" alt="#" class="absolute absolute--second">
 										<div class="categories--product__slider--search">
 											<svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<g opacity="0.5" clip-path="url(#clip0_745_1102)">
@@ -686,8 +680,6 @@
 									</div>
 									<div class="categories--product__slider--block">
 										<img src="img/category/nav/2.png" alt="#" class="categories--product__slider--main">
-										<img src="img/category/percent.png" alt="#" class="absolute">
-										<img src="img/category/top.png" alt="#" class="absolute absolute--second">
 										<div class="categories--product__slider--search">
 											<svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<g opacity="0.5" clip-path="url(#clip0_745_1102)">
@@ -703,8 +695,6 @@
 									</div>
 									<div class="categories--product__slider--block">
 										<img src="img/category/nav/3.png" alt="#" class="categories--product__slider--main">
-										<img src="img/category/percent.png" alt="#" class="absolute">
-										<img src="img/category/top.png" alt="#" class="absolute absolute--second">
 										<div class="categories--product__slider--search">
 											<svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<g opacity="0.5" clip-path="url(#clip0_745_1102)">
@@ -892,10 +882,9 @@
 												<div class="categories--product__info--title">Способы получения заказа</div>
 												<div class="categories--product__info--text">
 													<span><strong>Самовывоз</strong> сегодня и позже, бесплатно</span>
-													<span><strong>Забрать из Почты России</strong> начиная с 20.03, от 275 руб.</span>
 													<span><strong>Доставка</strong> начиная с 23.03</span>
 												</div>
-												<button class="button back--call">Рассчитать доставку</button>
+												<button class="button calculateDelivery">Рассчитать доставку</button>
 											</div>
 										</div>
 									</div>
@@ -1650,7 +1639,32 @@
 			<div class="modal--title">
 				Купить в 1 клик
 			</div>
-			<div class="modal--subtitle">Вам перезвонит наш специалист,<br> чтобы записать в установочный центр</div>
+			<div class="modal--subtitle">Вам перезвонит наш специалист,<br> чтобы оформить покупку и доставку по телефону</div>
+			<form class="modal--form">
+				<label for="name">Ваше имя</label>
+				<input type="text" name="name" id="name" placeholder="Иванов Иван">
+				<label for="phone">Номер телефона</label>
+				<input type="text" name="phone" id="phone" placeholder="+7 (999) 999-99-99">
+				<!-- <input type="checkbox" class="custom-checkbox" id="check" name="check" value="yes">
+				<label class="check" for="check"><span>Я согласен на <a href="#">обработку персональных данных</a></span></label> -->
+				<button class="button">Получить звонок</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="modal--calculateDelivery">
+		<div class="modal--wrapper">
+			<div class="modal--close">
+				<svg viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<g class="g" stroke="none" stroke-width="1" fill-rule="evenodd">
+						<rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+						<rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+					</g>
+				</svg>
+			</div>
+			<div class="modal--title">
+				Рассчитать стоимость<br> доставки в ваш город
+			</div>
 			<form class="modal--form">
 				<label for="name">Ваше имя</label>
 				<input type="text" name="name" id="name" placeholder="Иванов Иван">
