@@ -18,135 +18,177 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	// модальное окно "обратный звонок"
-	let modal = document.querySelectorAll(".modal");
+	// let modal = document.querySelectorAll(".modal");
 	
-	modal.forEach(function(item){
+	// modal.forEach(function(item){
 		
-		let CallbackButton = document.querySelectorAll(".back--call");
-		let CallbackModal = document.querySelector(".modal--backCall");
+	// 	let CallbackButton = document.querySelectorAll(".back--call");
+	// 	let CallbackModal = document.querySelector(".modal--backCall");
 		
-		// модальное окно "обратный звонок"
-		const openCallbackModal = () => {
-			CallbackModal.classList.toggle('active');
-		}
+	// 	// модальное окно "обратный звонок"
+	// 	const openCallbackModal = () => {
+	// 		CallbackModal.classList.toggle('active');
+	// 	}
 		
-		CallbackButton.forEach(function(button){
-			button.addEventListener("click", function(e) {
-				openCallbackModal();
-				document.querySelector('body').classList.add('hidden');
-			});
-		})
+	// 	CallbackButton.forEach(function(button){
+	// 		button.addEventListener("click", function(e) {
+	// 			openCallbackModal();
+	// 			document.querySelector('.page--wrapper').classList.add('hidden');
+	// 		});
+	// 	})
 
-		let modalClose = item.querySelector(".modal--close");
-		modalClose.addEventListener("click", function(e){
-			item.classList.remove("active");
-			document.querySelector('body').classList.remove('hidden');
-			e.stopPropagation();
-		});
-		document.addEventListener('click', function(event) {
-			let target = event.target;
-			if (!target.closest('.modal--wrapper') && !target.closest('.back--call')) {
-				item.classList.remove('active');
-				document.querySelector('body').classList.remove('hidden');
-			}
-		});
+	// 	let modalClose = item.querySelector(".modal--close");
+	// 	modalClose.addEventListener("click", function(e){
+	// 		item.classList.remove("active");
+	// 		document.querySelector('.page--wrapper').classList.remove('hidden');
+	// 		e.stopPropagation();
+	// 	});
+	// 	document.addEventListener('click', function(event) {
+	// 		let target = event.target;
+	// 		if (!target.closest('.modal--wrapper') && !target.closest('.back--call')) {
+	// 			item.classList.remove('active');
+	// 			document.querySelector('.page--wrapper').classList.remove('hidden');
+	// 		}
+	// 	});
 
-		// модальные окна товаров
-		let CategoryImageModal = document.querySelectorAll('.open--modal__bestdeals .main--bestdeals__block--item__image');
-		let modalBestdealsItems = item.querySelectorAll('.modal--bestdealsItem');
-		CategoryImageModal.forEach(function(link) {
-			// Получаем id модального окна, на которое ссылается ссылка
-			let modalId = link.getAttribute('href').substring(1);
+	// 	// модальные окна товаров
+	// 	let CategoryImageModal = document.querySelectorAll('.open--modal__bestdeals .main--bestdeals__block--item__image');
+	// 	let modalBestdealsItems = item.querySelectorAll('.modal--bestdealsItem');
+	// 	CategoryImageModal.forEach(function(link) {
+	// 		// Получаем id модального окна, на которое ссылается ссылка
+	// 		let modalId = link.getAttribute('href').substring(1);
 			
-			if (modalId){
-				// Назначаем обработчик события на клик по ссылке
-				link.addEventListener('click', function(e) {
-					e.preventDefault();
+	// 		if (modalId){
+	// 			// Назначаем обработчик события на клик по ссылке
+	// 			link.addEventListener('click', function(e) {
+	// 				e.preventDefault();
 					
-					// Получаем модальное окно с соответствующим id
-					let modal = document.getElementById(modalId);
+	// 				// Получаем модальное окно с соответствующим id
+	// 				let modal = document.getElementById(modalId);
 					
-					// Добавляем класс active к модальному окну
-					modal.classList.add('active');
-					document.querySelector('body').classList.add('hidden');
+	// 				// Добавляем класс active к модальному окну
+	// 				modal.classList.add('active');
+	// 				document.querySelector('.page--wrapper').classList.add('hidden');
 	
-					e.stopPropagation();
-				});
-			}
+	// 				e.stopPropagation();
+	// 			});
+	// 		}
 	
-		});
-		modalBestdealsItems.forEach(function(modal) {
-			let modalBestdealsItemClose = modal.querySelector('.modal--bestdealsItem .modal--close');
-			modalBestdealsItemClose.addEventListener("click", function(e){
+	// 	});
+	// 	modalBestdealsItems.forEach(function(modal) {
+	// 		let modalBestdealsItemClose = modal.querySelector('.modal--bestdealsItem .modal--close');
+	// 		modalBestdealsItemClose.addEventListener("click", function(e){
 	
-				modal.classList.remove("active");
-				document.querySelector('body').classList.remove('hidden');
-			});
-		});
+	// 			modal.classList.remove("active");
+	// 			document.querySelector('.page--wrapper').classList.remove('hidden');
+	// 		});
+	// 	});
 
+	// });
+
+	let modalbackCall = document.querySelector('.modal--backCall');
+	let modalbackCallButton = document.querySelector('.back--call');
+	if (modalbackCall) {
+		modalbackCallButton.addEventListener('click', () => {
+			modalbackCall.classList.add('active');
+			document.querySelector('.page--wrapper').classList.add('hidden');
+		});
+		modalbackCall.addEventListener("click", (event) => {
+			if (!event.target.closest('.modal--backCall.active .modal--wrapper') && !event.target.closest('.modal--close')) {
+				modalbackCall.classList.remove('active');
+				document.querySelector('.page--wrapper').classList.remove('hidden');
+				event.stopPropagation();
+			}
+		});
+	}
+
+	const openModalBestdeals = document.querySelectorAll('.open--modal__bestdeals');
+	openModalBestdeals.forEach((item) => {
+		const link = item.querySelector('.main--bestdeals__block--item__image');
+		link.addEventListener('click', function(event) {
+			event.preventDefault();
+			const href = this.getAttribute('href');
+			const modalId = href.substring(1);
+			const modal = document.getElementById(modalId);
+			modal.classList.add('active');
+			document.querySelector('.page--wrapper').classList.add('hidden');
+			modal.addEventListener("click", closeModal);
+		});
 	});
+
+	function closeModal(event) {
+		if (!event.target.closest('.modal--bestdealsItem.active .modal--wrapper') && !event.target.closest('.modal--close')) {
+			const modal = event.currentTarget;
+			modal.removeEventListener("click", closeModal);
+			modal.classList.remove('active');
+			document.querySelector('.page--wrapper').classList.remove('hidden');
+			event.stopPropagation();
+		}
+	}
 
 	// модальное окно "купить в 1 клик"
 	let buyInOneClick = document.querySelectorAll(".buyInOneClick");
-	buyInOneClick.forEach(function(item){
-		if (buyInOneClick){
+	if (buyInOneClick){
+		buyInOneClick.forEach( (item) => {
 			let buyInOneClickModals = document.querySelector(".modal--buyInOneClick");
 			const buyInOneClickModal = () => {
-				buyInOneClickModals.classList.toggle('active');
+				buyInOneClickModals.classList.add('active');
+				document.querySelector('.page--wrapper').classList.add('hidden');
 			}
 	
 			item.addEventListener("click", function(e) {
+				e.preventDefault();
 				buyInOneClickModal();
-				document.querySelector('body').classList.add('hidden');
 			});
-	
-			let modalClose = buyInOneClickModals.querySelector(".modal--close");
-			modalClose.addEventListener("click", function(e){
-				buyInOneClickModals.classList.remove("active");
-				document.querySelector('body').classList.remove('hidden');
-				e.stopPropagation();
-			});
-	
-			document.addEventListener('click', function(event) {
-				let target = event.target;
-				if (!target.closest('.modal--wrapper') && !target.closest('.buyInOneClick')) {
+
+			buyInOneClickModals.addEventListener("click", (event) => {
+				if (!event.target.closest('.modal--buyInOneClick.active .modal--wrapper') && !event.target.closest('.modal--close')) {
 					buyInOneClickModals.classList.remove('active');
-					document.querySelector('body').classList.remove('hidden');
+					document.querySelector('.page--wrapper').classList.remove('hidden');
+					event.stopPropagation();
 				}
 			});
-		}
-	});
+		});
+	}
 
 	// модальное окно "Рассчитать стоимость доставки в ваш город"
 	let calculateDelivery = document.querySelectorAll(".calculateDelivery");
-	calculateDelivery.forEach(function(item){
-		if (calculateDelivery){
+	if (calculateDelivery){
+		calculateDelivery.forEach(function(item){
 			let calculateDeliveryModals = document.querySelector(".modal--calculateDelivery");
 			const calculateDeliveryModal = () => {
-				calculateDeliveryModals.classList.toggle('active');
+				calculateDeliveryModals.classList.add('active');
 			}
 	
 			item.addEventListener("click", function(e) {
+				e.preventDefault();
 				calculateDeliveryModal();
-				document.querySelector('body').classList.add('hidden');
+				document.querySelector('.page--wrapper').classList.add('hidden');
 			});
-	
-			let modalClose = calculateDeliveryModals.querySelector(".modal--close");
-			modalClose.addEventListener("click", function(e){
-				calculateDeliveryModals.classList.remove("active");
-				document.querySelector('body').classList.remove('hidden');
-				e.stopPropagation();
-			});
-	
-			document.addEventListener('click', function(event) {
-				let target = event.target;
-				if (!target.closest('.modal--wrapper') && !target.closest('.calculateDelivery')) {
+
+			calculateDeliveryModals.addEventListener("click", (event) => {
+				if (!event.target.closest('.modal--calculateDelivery.active .modal--wrapper') && !event.target.closest('.modal--close')) {
 					calculateDeliveryModals.classList.remove('active');
-					document.querySelector('body').classList.remove('hidden');
+					document.querySelector('.page--wrapper').classList.remove('hidden');
+					event.stopPropagation();
 				}
 			});
-		}
-	})
+		});
+	}
+
+	// закрытие модального окна
+	let modalClose = document.querySelectorAll(".modal--close");
+	modalClose.forEach(close => {
+		close.addEventListener('click', () => {
+			const modal = close.closest('.modal');
+			// Проверяем, есть ли у модального окна класс active
+			if (modal.classList.contains('active')) {
+				// Скрываем модальное окно
+				modal.classList.remove('active');
+				document.querySelector('.page--wrapper').classList.remove('hidden');
+			}
+		});
+	});
 
 	// каталог
 	let menuCatalogOpen = document.querySelector('.header--middle__catalog');
@@ -186,6 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		// Для каждого элемента li
 		items.forEach(function (item) {
 
+			
 			if(innerWidth > 992){
 				let showRightWrapperTimeout; // Переменная для хранения таймаута
 	
