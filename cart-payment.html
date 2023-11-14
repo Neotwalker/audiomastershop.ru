@@ -607,9 +607,10 @@
 							</div>
 						</div>
 						<div class="h1">Оформление заказа</div>
-						<div class="cart--payment__block--quote">* — обязательные поля</div>
+						<div class="cart--payment__block--quote desktop">* — обязательные поля</div>
 						<div class="cart--payment__block--wrapper">
 							<div class="cart--payment__block--left">
+								<div class="cart--payment__block--quote tablet">* — обязательные поля</div>
 								<div class="h4">Данные покупателя</div>
 								<form action="#" class="cart--payment__block--form">
 									<div class="cart--payment__block--form__input">
@@ -690,22 +691,22 @@
 													<button id="option1" class="cart--selected__right--order__methodOfObtaining--block__option active">
 														<img src="img/cart/deliveryOptions/1.png" alt="#">
 														<span>3-5 дней</span>
-														<strong>0 ₽</strong>
+														<strong>560 ₽</strong>
 													</button>
 													<button id="option2" class="cart--selected__right--order__methodOfObtaining--block__option">
 														<img src="img/cart/deliveryOptions/2.png" alt="#">
 														<span>3-5 дней</span>
-														<strong>0 ₽</strong>
+														<strong>700 ₽</strong>
 													</button>
 													<button id="option3" class="cart--selected__right--order__methodOfObtaining--block__option">
 														<img src="img/cart/deliveryOptions/3.png" alt="#">
 														<span>3-5 дней</span>
-														<strong>0 ₽</strong>
+														<strong>650 ₽</strong>
 													</button>
 													<button id="option4" class="cart--selected__right--order__methodOfObtaining--block__option">
 														<img src="img/cart/deliveryOptions/4.png" alt="#">
 														<span>3-7 дней</span>
-														<strong>0 ₽</strong>
+														<strong>690 ₽</strong>
 													</button>
 												</div>
 											</div>
@@ -798,22 +799,22 @@
 													<button id="option1" class="cart--selected__right--order__methodOfObtaining--block__option active">
 														<img src="img/cart/deliveryOptions/1.png" alt="#">
 														<span>3-5 дней</span>
-														<strong>0 ₽</strong>
+														<strong>560 ₽</strong>
 													</button>
 													<button id="option2" class="cart--selected__right--order__methodOfObtaining--block__option">
 														<img src="img/cart/deliveryOptions/2.png" alt="#">
 														<span>3-5 дней</span>
-														<strong>0 ₽</strong>
+														<strong>700 ₽</strong>
 													</button>
 													<button id="option3" class="cart--selected__right--order__methodOfObtaining--block__option">
 														<img src="img/cart/deliveryOptions/3.png" alt="#">
 														<span>3-5 дней</span>
-														<strong>0 ₽</strong>
+														<strong>650 ₽</strong>
 													</button>
 													<button id="option4" class="cart--selected__right--order__methodOfObtaining--block__option">
 														<img src="img/cart/deliveryOptions/4.png" alt="#">
 														<span>3-7 дней</span>
-														<strong>0 ₽</strong>
+														<strong>690 ₽</strong>
 													</button>
 												</div>
 											</div>
@@ -893,42 +894,110 @@
 										</div>
 									</div>
 								</div>
+								<div class="cart--payment__block--paymentOrder">
+									<div class="h4">Оплата заказа</div>
+									<div class="cart--payment__block--methodReceiving__wrapper">
+										<div class="cart--payment__block--paymentOrder__wrapper">
+											<div class="cart--payment__block--paymentOrder__methods">
+												<button class="cart--payment__block--paymentOrder__method paymentOrder--cart active">
+													<img src="img/cart/paymentMethods/1.png" alt="#">
+													<span>Картой</span>
+												</button>
+												<button class="cart--payment__block--paymentOrder__method paymentOrder--installmentPlan">
+													<img src="img/cart/paymentMethods/2.png" alt="#">
+													<span>Рассрочка</span>
+												</button>
+												<button class="cart--payment__block--paymentOrder__method paymentOrder--credit">
+													<img src="img/cart/paymentMethods/3.png" alt="#">
+													<span>Кредит</span>
+												</button>
+											</div>
+										</div>
+										<div class="cart--payment__block--paymentOrder__info active" id="paymentOrder--cart">
+											<div class="cart--payment__block--paymentOrder__info--cards">
+												<img src="img/payment/cards/1.png" alt="#">
+												<img src="img/payment/cards/2.png" alt="#">
+												<img src="img/payment/cards/3.png" alt="#">
+												<img src="img/payment/cards/4.png" alt="#">
+											</div>
+											<p>
+												Для оплаты (ввода реквизитов Вашей карты) Вы будете перенаправлены на платежный шлюз ПАО СБЕРБАНК.
+											</p>
+										</div>
+										<div class="cart--payment__block--paymentOrder__info" id="paymentOrder--installmentPlan">
+											<div class="cart--payment__block--paymentOrder__info--wrapper">
+												<div class="cart--payment__block--paymentOrder__info--wrapper__image">
+													<img src="img/payment/3.png" alt="#">
+												</div>
+												<div class="cart--payment__block--paymentOrder__info--wrapper__text">
+													<div class="h5">Покупай со Сбером в рассрочку</div>
+													<ul>
+														<li>Онлайн или в магазине</li>
+														<li>Без подписания бумажных договоров</li>
+														<li>Оформление за 2 минуты</li>
+													</ul>
+													<a href="https://www.sberbank.com/ru/person/credits/money/pos" class="button button--green">Подробнее на сайте банка</a>
+												</div>
+											</div>
+										</div>
+										<div class="cart--payment__block--paymentOrder__info" id="paymentOrder--credit">
+											<div class="cart--payment__block--paymentOrder__info--wrapper">
+												<div class="cart--payment__block--paymentOrder__info--wrapper__image">
+													<img src="img/payment/4.png" alt="#">
+												</div>
+												<div class="cart--payment__block--paymentOrder__info--wrapper__text">
+													<div class="h5">Тинькофф Кредитование</div>
+													<ul>
+														<li>Онлайн-заявка или в нашем магазине</li>
+														<li>Решение за 2 минуты</li>
+														<li>Подписание по СМС или на встрече с представителем банка</li>
+													</ul>
+													<a href="https://www.sberbank.com/ru/person/credits/money/pos" class="button button--yellow">Подробнее на сайте банка</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<a href="#" class="button">Оплатить и оформить заказ</a>
+								</div>
 							</div>
 
 							<div class="cart--payment__block--right">
-								<div class="h4">Ваш заказ</div>
-								<div class="cart--payment__block--right__item">
-									<div class="cart--payment__block--right__item--image">
-										<img src="img/cart/1.png" alt="#">
+								<div class="cart--payment__block--right__block">
+									<div class="h4">Ваш заказ</div>
+									<div class="cart--payment__block--right__item">
+										<div class="cart--payment__block--right__item--image">
+											<img src="img/cart/1.png" alt="#">
+										</div>
+										<div class="cart--payment__block--right__item--info">
+											<span>Акустика Blam LW 165 P</span>
+											<div class="cart--payment__block--right__item--count">1 шт.</div>
+											<div class="h4">29 040 ₽</div>
+										</div>
 									</div>
-									<div class="cart--payment__block--right__item--info">
-										<span>Акустика Blam LW 165 P</span>
-										<div class="cart--payment__block--right__item--count">1 шт.</div>
-										<div class="h4">29 040 ₽</div>
+									<div class="cart--payment__block--right__item">
+										<div class="cart--payment__block--right__item--image">
+											<img src="img/cart/2.png" alt="#">
+										</div>
+										<div class="cart--payment__block--right__item--info">
+											<span>Моноблок AUDIO NOVA AA800.1</span>
+											<div class="cart--payment__block--right__item--count">1 шт.</div>
+											<div class="h4">8 850 ₽</div>
+										</div>
+									</div>
+									<div class="cart--payment__block--right__total">
+										<div class="cart--payment__block--right__total--item">
+											<span>Доставка в Москву:</span>
+											<span>655 ₽</span>
+										</div>
+										<div class="cart--payment__block--right__total--item">
+											<div class="h4">Итого:</div>
+											<div class="h4">38 545 ₽</div>
+										</div>
+										<a href="#" class="cart--selected__right--order__methodOfObtaining--block__paymentMethod--button button">Оплатить и оформить заказ</a>
+										<a href="#" class="buyInOneClick button--openModal">Купить в 1 клик</a>
 									</div>
 								</div>
-								<div class="cart--payment__block--right__item">
-									<div class="cart--payment__block--right__item--image">
-										<img src="img/cart/2.png" alt="#">
-									</div>
-									<div class="cart--payment__block--right__item--info">
-										<span>Моноблок AUDIO NOVA AA800.1</span>
-										<div class="cart--payment__block--right__item--count">1 шт.</div>
-										<div class="h4">8 850 ₽</div>
-									</div>
-								</div>
-								<div class="cart--payment__block--right__total">
-									<div class="cart--payment__block--right__total--item">
-										<span>Доставка в Москву:</span>
-										<span>655 ₽</span>
-									</div>
-									<div class="cart--payment__block--right__total--item">
-										<div class="h4">Итого:</div>
-										<div class="h4">38 545 ₽</div>
-									</div>
-									<a href="#" class="cart--selected__right--order__methodOfObtaining--block__paymentMethod--button button">Перейти к оформлению</a>
-									<a href="#" class="buyInOneClick button--openModal">Купить в 1 клик</a>
-								</div>
+								<a href="cart.html" class="cart--selected__block--back">← Вернуться в корзину</a>
 							</div>
 						</div>
 					</div>
