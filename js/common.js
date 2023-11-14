@@ -9,6 +9,32 @@ document.addEventListener("DOMContentLoaded", () => {
 		ChooseCityButton.addEventListener('click', function(){
 			city.classList.toggle('active');
 		});
+	
+		let input = city.querySelector('.choose--city__block .search');
+		let list = city.querySelector('.choose--city__list');
+		let cities = list.querySelectorAll('li');
+	
+		input.addEventListener('input', function() {
+			const searchValue = input.value.toLowerCase();
+			
+			if (searchValue.length < 1) {
+				cities.forEach(function(city) {
+					city.style.display = 'block';
+				});
+				return;
+			}
+		
+			cities.forEach(function(city) {
+				const cityName = city.querySelector('a').textContent.toLowerCase();
+		
+				if (!cityName.startsWith(searchValue)) {
+					city.style.display = 'none';
+				} else {
+					city.style.display = 'block';
+				}
+			});
+		});
+	
 		window.addEventListener('click', e => {
 			const target = e.target;
 			if (!target.closest('.choose--city__block') && !target.closest('.choose--city button')) {
@@ -176,6 +202,33 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
+	let chooseOnMap = document.querySelectorAll('.chooseOnMap');
+
+	if (chooseOnMap){
+		chooseOnMap.forEach( (map) => {
+	
+			let modalMaps = document.querySelector(".modal--map");
+			const modalMap = () => {
+				modalMaps.classList.add('active');
+			}
+			map.addEventListener("click", function(e) {
+				e.preventDefault();
+				modalMap();
+				document.querySelector('.page--wrapper').classList.add('hidden');
+			});
+
+			modalMaps.addEventListener("click", (event) => {
+				if (!event.target.closest('.modal--map.active .modal--wrapper') && !event.target.closest('.modal--close')) {
+					modalMaps.classList.remove('active');
+					document.querySelector('.page--wrapper').classList.remove('hidden');
+					event.stopPropagation();
+				}
+			});
+	
+		});
+	}
+
+
 	// закрытие модального окна
 	let modalClose = document.querySelectorAll(".modal--close");
 	modalClose.forEach(close => {
@@ -332,7 +385,23 @@ document.addEventListener("DOMContentLoaded", () => {
 	buttonLineCart.forEach(function(item) {
 		item.addEventListener('click', function() {
 			let svgLikeCart = item.querySelector('.main--bestdeals__block--item__like svg');
-			svgLikeCart.classList.toggle('liked');
+			item.classList.toggle('liked');
+		});
+	});
+
+	let deleteLikedCart = document.querySelectorAll('.cart--selected__item--info__favorites');
+	deleteLikedCart.forEach( (destroy) => {
+		destroy.addEventListener('click', () =>{
+			let canDeleteItem = destroy.parentNode.parentNode.parentNode;
+			canDeleteItem.remove();
+		});
+	});
+
+	let deleteItem = document.querySelectorAll('.delete--item');
+	deleteItem.forEach( (destroy) => {
+		destroy.addEventListener('click', () =>{
+			let canDeleteItem = destroy.parentNode.parentNode.parentNode;
+			canDeleteItem.remove();
 		});
 	});
 
@@ -342,34 +411,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		add.addEventListener('click', function(){
 			add.textContent = 'В корзине';
 			add.classList.add('added')
-		});
-	});
-	
-	// поиск города
-	const input = document.querySelector('.search');
-	const list = document.querySelector('.choose--city__list');
-	const cities = list.querySelectorAll('li');
-
-	input.addEventListener('input', function() {
-		const searchValue = input.value.toLowerCase();
-		
-		// Показываем все города, если поисковая строка пустая
-		if (searchValue.length < 1) {
-			cities.forEach(function(city) {
-				city.style.display = 'block';
-			});
-			return;
-		}
-
-		cities.forEach(function(city) {
-			const cityName = city.querySelector('a').textContent.toLowerCase();
-
-			// Скрываем города, которые не начинаются с введенной поисковой строки
-			if (!cityName.startsWith(searchValue)) {
-				city.style.display = 'none';
-			} else {
-				city.style.display = 'block';
-			}
 		});
 	});
 
@@ -469,24 +510,74 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	let deliveryReceivingOrderDelivery = document.querySelector('.delivery--receivingOrder__delivery');
 	let deliveryReceivingOrderPickup = document.querySelector('.delivery--receivingOrder__pickup');
+	let deliveryReceivingOrderPickupPoint = document.querySelector('.delivery--receivingOrder__pickupPoint');
 	let deliveryButtonDelivery = document.querySelector('.button--delivery');
 	let deliveryButtonPickup = document.querySelector('.button--pickup');
+	let deliverButtonPickupPoint = document.querySelector('.button--pickupPoint');
 	
 	if(deliveryButtonDelivery){
 		deliveryButtonDelivery.addEventListener('click', function(){
 			this.classList.add('active');
-			deliveryButtonPickup.classList.remove('active');
 			deliveryReceivingOrderDelivery.classList.add('active');
-			deliveryReceivingOrderPickup.classList.remove('active');
+
+			if(deliveryButtonPickup){
+				deliveryButtonPickup.classList.remove('active');
+			}
+			
+			if(deliveryReceivingOrderPickup) {
+				deliveryReceivingOrderPickup.classList.remove('active');
+			}
+
+			if(deliveryReceivingOrderPickupPoint){
+				deliveryReceivingOrderPickupPoint.classList.remove('active');
+			}
+
+			if(deliverButtonPickupPoint) {
+				deliverButtonPickupPoint.classList.remove('active');
+			}
 		});
 	}
 
 	if(deliveryButtonPickup){
 		deliveryButtonPickup.addEventListener('click', function(){
 			this.classList.add('active');
-			deliveryButtonDelivery.classList.remove('active');
-			deliveryReceivingOrderPickup.classList.add('active');
-			deliveryReceivingOrderDelivery.classList.remove('active');
+			if (deliveryButtonDelivery) {
+				deliveryButtonDelivery.classList.remove('active');
+			}
+			if(deliveryReceivingOrderPickup) {
+				deliveryReceivingOrderPickup.classList.add('active');
+			}
+
+			if(deliveryReceivingOrderPickupPoint) {
+				deliveryReceivingOrderPickupPoint.classList.remove('active');
+			}
+
+			if(deliveryReceivingOrderDelivery) {
+				deliveryReceivingOrderDelivery.classList.remove('active');
+			}
+			if(deliverButtonPickupPoint) {
+				deliverButtonPickupPoint.classList.remove('active');
+			}
+		});
+	}
+
+	if(deliverButtonPickupPoint){
+		deliverButtonPickupPoint.addEventListener('click', function(){
+			this.classList.add('active');
+			deliveryReceivingOrderPickupPoint.classList.add('active');
+
+			if(deliveryButtonPickup){
+				deliveryButtonPickup.classList.remove('active');
+			}
+			if (deliveryButtonDelivery) {
+				deliveryButtonDelivery.classList.remove('active');
+			}
+			if (deliveryReceivingOrderPickup) {
+				deliveryReceivingOrderPickup.classList.remove('active');
+			}
+			if (deliveryReceivingOrderDelivery){
+				deliveryReceivingOrderDelivery.classList.remove('active');
+			}
 		});
 	}
 
@@ -531,6 +622,71 @@ document.addEventListener("DOMContentLoaded", () => {
 			});
 		});
 	});
+
+	if (document.getElementById("check-chooseAll")){
+		document.getElementById("check-chooseAll").addEventListener("change", function() {
+			var isChecked = this.checked;
+			var chooseGeneralCheckboxes = document.querySelectorAll(".choose--general");
+		
+			for(var i = 0; i < chooseGeneralCheckboxes.length; i++) {
+				chooseGeneralCheckboxes[i].checked = isChecked;
+			}
+		});
+	}
+
+	let deliveryOptions = document.querySelectorAll('.cart--selected__right--order__methodOfObtaining--block__option');
+	// Перебираем кнопки и добавляем обработчик события клика
+	deliveryOptions.forEach(function(button) {
+		button.addEventListener('click', function() {
+			// Удаляем класс "active" у всех кнопок
+			deliveryOptions.forEach(function(button) {
+				button.classList.remove('active');
+			});
+			
+			// Добавляем класс "active" только кликнутой кнопке
+			this.classList.add('active');
+		});
+	});
+
+	const smoothHeightQuestion = (itemSelector, buttonSelector, contentSelector) => {
+		const items = document.querySelectorAll(itemSelector);
+	
+		if (!items.length) return;
+	
+		items.forEach(el => {
+			const button = el.querySelector(buttonSelector);
+			const content = el.querySelector(contentSelector);
+	
+			if (el.dataset.open === 'true') { // проверяем значение data-атрибута open у элемента
+				button.classList.add('active') // добавляем класс 'active' в элемент
+				content.style.maxHeight = `${content.scrollHeight}px` // устанавливаем высоту блока с контентом
+			}
+	
+			button.addEventListener('click', () => {
+				if (el.dataset.open !== 'true') {
+					el.dataset.open = 'true';
+					button.classList.add('active');
+					content.style.maxHeight = `${content.scrollHeight}px`;
+				} else {
+					el.dataset.open = 'false';
+					button.classList.remove('active');
+					content.style.maxHeight = '';
+				}
+			})
+	
+			const onResize = () => {
+				if (el.dataset.open === 'true') {
+					if (parseInt(content.style.maxHeight) !== content.scrollHeight) {
+						content.style.maxHeight = `${content.scrollHeight}px`;
+					}
+				}
+			}
+	
+			window.addEventListener('resize', onResize);
+		})
+	}
+
+	smoothHeightQuestion('.showMap__item', '.showMap__item--title', '.showMap__item--answer'); // вызываем основную функцию smoothHeight и передаем в качестве параметров  необходимые селекторы
 
 });
 
@@ -587,24 +743,26 @@ $(function() {
 		let count = parseInt($input.val()) - 1;
 		count = count < 1 ? 1 : count;
 		$input.val(count);
+		$input.attr('data-current--count', count);
 	});
-
+	
 	$('.quantity .plus').click(function() {
 		let $input = $(this).parent().find('.quantity--input');
 		let count = parseInt($input.val()) + 1;
 		count = count > parseInt($input.data('max-count')) ? parseInt($input.data('max-count')) : count;
 		$input.val(parseInt(count));
+		$input.attr('data-current--count', parseInt(count));
 	});
-
+	
 	$('.quantity .quantity--input').bind("change keyup input click", function() {
 		if (this.value.match(/[^0-9]/g)) {
-				this.value = this.value.replace(/[^0-9]/g, '');
+			this.value = this.value.replace(/[^0-9]/g, '');
 		}
 		if (this.value == "") {
-				this.value = 1;
+			this.value = 1;
 		}
 		if (this.value > parseInt($(this).data('max-count'))) {
-				this.value = parseInt($(this).data('max-count'));
+			this.value = parseInt($(this).data('max-count'));
 		}
 	});
 
