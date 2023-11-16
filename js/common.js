@@ -527,27 +527,13 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		});
 	}
-
-	// Проверка наличия класса "active" и добавление/удаление атрибута "disabled"
-	if (!deliveryReceivingOrderDelivery.classList.contains('active')) {
-		toggleDisabledState(deliveryReceivingOrderDelivery, true);
-	} else {
-		toggleDisabledState(deliveryReceivingOrderDelivery, false);
-	}
-
-	if (!deliveryReceivingOrderPickup.classList.contains('active')) {
-		toggleDisabledState(deliveryReceivingOrderPickup, true);
-	} else {
-		toggleDisabledState(deliveryReceivingOrderPickup, false);
-	}
-
-	if (!deliveryReceivingOrderPickupPoint.classList.contains('active')) {
-		toggleDisabledState(deliveryReceivingOrderPickupPoint, true);
-	} else {
-		toggleDisabledState(deliveryReceivingOrderPickupPoint, false);
-	}
 	
 	if(deliveryButtonDelivery){
+		if (!deliveryReceivingOrderDelivery.classList.contains('active')) {
+			toggleDisabledState(deliveryReceivingOrderDelivery, true);
+		} else {
+			toggleDisabledState(deliveryReceivingOrderDelivery, false);
+		}
 		deliveryButtonDelivery.addEventListener('click', function(e){
 			e.preventDefault();
 			this.classList.add('active');
@@ -574,6 +560,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	if(deliveryButtonPickup){
+		if (!deliveryReceivingOrderPickup.classList.contains('active')) {
+			toggleDisabledState(deliveryReceivingOrderPickup, true);
+		} else {
+			toggleDisabledState(deliveryReceivingOrderPickup, false);
+		}
 		deliveryButtonPickup.addEventListener('click', function(e){
 			e.preventDefault();
 			this.classList.add('active');
@@ -600,6 +591,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	if(deliverButtonPickupPoint){
+		if (!deliveryReceivingOrderPickupPoint.classList.contains('active')) {
+			toggleDisabledState(deliveryReceivingOrderPickupPoint, true);
+		} else {
+			toggleDisabledState(deliveryReceivingOrderPickupPoint, false);
+		}
 		deliverButtonPickupPoint.addEventListener('click', function(e){
 			e.preventDefault();
 			this.classList.add('active');
