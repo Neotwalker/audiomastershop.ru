@@ -514,24 +514,59 @@ document.addEventListener("DOMContentLoaded", () => {
 	let deliveryButtonDelivery = document.querySelector('.button--delivery');
 	let deliveryButtonPickup = document.querySelector('.button--pickup');
 	let deliverButtonPickupPoint = document.querySelector('.button--pickupPoint');
+	let cartPaymentBlock = document.querySelector('.cart--payment__block--methodReceiving__item');
+
+	// Функция для добавления или удаления атрибута "disabled" у элементов
+	function toggleDisabledState(element, toggle) {
+		const formElements = element.querySelectorAll('input, select, radio, checkbox, textarea, button');
+		formElements.forEach((el) => {
+			if (toggle) {
+				el.setAttribute('disabled', 'disabled');
+			} else {
+				el.removeAttribute('disabled');
+			}
+		});
+	}
+
+	// Проверка наличия класса "active" и добавление/удаление атрибута "disabled"
+	if (!deliveryReceivingOrderDelivery.classList.contains('active')) {
+		toggleDisabledState(deliveryReceivingOrderDelivery, true);
+	} else {
+		toggleDisabledState(deliveryReceivingOrderDelivery, false);
+	}
+
+	if (!deliveryReceivingOrderPickup.classList.contains('active')) {
+		toggleDisabledState(deliveryReceivingOrderPickup, true);
+	} else {
+		toggleDisabledState(deliveryReceivingOrderPickup, false);
+	}
+
+	if (!deliveryReceivingOrderPickupPoint.classList.contains('active')) {
+		toggleDisabledState(deliveryReceivingOrderPickupPoint, true);
+	} else {
+		toggleDisabledState(deliveryReceivingOrderPickupPoint, false);
+	}
 	
 	if(deliveryButtonDelivery){
-		deliveryButtonDelivery.addEventListener('click', function(){
+		deliveryButtonDelivery.addEventListener('click', function(e){
+			e.preventDefault();
 			this.classList.add('active');
-			deliveryReceivingOrderDelivery.classList.add('active');
-
+			if(deliveryReceivingOrderDelivery){
+				deliveryReceivingOrderDelivery.classList.add('active');
+				toggleDisabledState(deliveryReceivingOrderDelivery, false);
+			}
+			
 			if(deliveryButtonPickup){
 				deliveryButtonPickup.classList.remove('active');
 			}
-			
 			if(deliveryReceivingOrderPickup) {
 				deliveryReceivingOrderPickup.classList.remove('active');
+				toggleDisabledState(deliveryReceivingOrderPickup, true);
 			}
-
 			if(deliveryReceivingOrderPickupPoint){
 				deliveryReceivingOrderPickupPoint.classList.remove('active');
+				toggleDisabledState(deliveryReceivingOrderPickupPoint, true);
 			}
-
 			if(deliverButtonPickupPoint) {
 				deliverButtonPickupPoint.classList.remove('active');
 			}
@@ -539,21 +574,24 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	if(deliveryButtonPickup){
-		deliveryButtonPickup.addEventListener('click', function(){
+		deliveryButtonPickup.addEventListener('click', function(e){
+			e.preventDefault();
 			this.classList.add('active');
+			if(deliveryReceivingOrderPickup) {
+				deliveryReceivingOrderPickup.classList.add('active');
+				toggleDisabledState(deliveryReceivingOrderPickup, false);
+			}
+
 			if (deliveryButtonDelivery) {
 				deliveryButtonDelivery.classList.remove('active');
 			}
-			if(deliveryReceivingOrderPickup) {
-				deliveryReceivingOrderPickup.classList.add('active');
-			}
-
 			if(deliveryReceivingOrderPickupPoint) {
 				deliveryReceivingOrderPickupPoint.classList.remove('active');
+				toggleDisabledState(deliveryReceivingOrderPickupPoint, true);
 			}
-
 			if(deliveryReceivingOrderDelivery) {
 				deliveryReceivingOrderDelivery.classList.remove('active');
+				toggleDisabledState(deliveryReceivingOrderDelivery, true);
 			}
 			if(deliverButtonPickupPoint) {
 				deliverButtonPickupPoint.classList.remove('active');
@@ -562,9 +600,13 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	if(deliverButtonPickupPoint){
-		deliverButtonPickupPoint.addEventListener('click', function(){
+		deliverButtonPickupPoint.addEventListener('click', function(e){
+			e.preventDefault();
 			this.classList.add('active');
-			deliveryReceivingOrderPickupPoint.classList.add('active');
+			if(deliveryReceivingOrderPickupPoint){
+				deliveryReceivingOrderPickupPoint.classList.add('active');
+				toggleDisabledState(deliveryReceivingOrderPickupPoint, false);
+			}
 
 			if(deliveryButtonPickup){
 				deliveryButtonPickup.classList.remove('active');
@@ -574,12 +616,94 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 			if (deliveryReceivingOrderPickup) {
 				deliveryReceivingOrderPickup.classList.remove('active');
+				toggleDisabledState(deliveryReceivingOrderPickup, true);
 			}
 			if (deliveryReceivingOrderDelivery){
 				deliveryReceivingOrderDelivery.classList.remove('active');
+				toggleDisabledState(deliveryReceivingOrderDelivery, true);
 			}
 		});
 	}
+
+	const methodReceivingItems = document.querySelectorAll('.cart--payment__block--methodReceiving__item--choosen');
+	const spanElements = document.querySelectorAll('.cart--payment__block--methodReceiving__item--choosen span');
+	const chooseButtons = document.querySelectorAll('.cart--payment__block--methodReceiving__item--choose');
+
+	// chooseButtons.forEach((choose) => {
+	// 	choose.addEventListener('click', function() {
+	// 	 if (this.classList.contains('choosen')) {
+	// 		this.classList.remove('choosen');
+	// 		this.textContent = 'Выбрать';
+	// 		this.parentNode.querySelector('span').style.display = 'none';
+	// 	 } else {
+	// 		methodReceivingItems.forEach(item => {
+	// 		 item.classList.remove('active');
+	// 		});
+	// 		spanElements.forEach(span => {
+	// 		 span.style.display = 'none';
+	// 		});
+	// 		chooseButtons.forEach(btn => {
+	// 		 btn.classList.remove('choosen');
+	// 		});
+	// 		this.classList.add('choosen');
+	// 		this.parentNode.classList.add('active');
+	// 		this.parentNode.querySelector('span').style.display = 'block';
+	// 		this.textContent = 'Изменить';
+	// 	 }
+	// 	});
+	// });
+
+	chooseButtons.forEach((choose) => {
+		choose.addEventListener('click', function() {
+			const formInputs = this.parentNode.parentNode.querySelectorAll('.cart--payment__block--form__input select, .cart--payment__block--form__input input');
+			let isFormValid = true;
+			formInputs.forEach(input => {
+				if (input.hasAttribute('required') && !input.value) {
+					isFormValid = false;
+				}
+			});
+		
+			if (!isFormValid) {
+				this.parentNode.querySelector('span').textContent = 'Заполните все поля';
+				this.parentNode.querySelector('span').style.display = 'block';
+			} else {
+				if (this.textContent === 'Изменить') {
+					this.parentNode.querySelector('span').textContent = '';
+					this.textContent = 'Выбрать';
+					// Удаляем атрибут readonly и очищаем значения select и input
+					const activeFormInputs = document.querySelectorAll('.cart--payment__block--methodReceiving__item.active .cart--payment__block--form__input select, .cart--payment__block--methodReceiving__item.active .cart--payment__block--form__input input');
+					activeFormInputs.forEach(input => {
+						input.removeAttribute('readonly');
+						if (input.tagName === 'SELECT' || input.type === 'text') {
+							input.value = '';
+						}
+					});
+				} else {
+					this.parentNode.querySelector('span').textContent = 'Выбрано';
+					this.textContent = 'Изменить';
+					// Добавляем атрибут readonly ко всем элементам формы внутри блока ".cart--payment__block--methodReceiving__item.active"
+					const activeFormInputs = document.querySelectorAll('.cart--payment__block--methodReceiving__item.active .cart--payment__block--form__input select, .cart--payment__block--methodReceiving__item.active .cart--payment__block--form__input input');
+					activeFormInputs.forEach(input => {
+						input.setAttribute('readonly', true);
+					});
+				}
+		
+				methodReceivingItems.forEach(item => {
+					item.classList.remove('active');
+				});
+				spanElements.forEach(span => {
+					span.style.display = 'none';
+				});
+				chooseButtons.forEach(btn => {
+					btn.classList.remove('choosen');
+				});
+		
+				this.classList.add('choosen');
+				this.parentNode.classList.add('active');
+				this.parentNode.querySelector('span').style.display = 'block';
+			}
+		});
+	});
 
 	const paymentButtons = document.querySelectorAll('.payment--header__buttons .button');
 	const paymentBlocks = document.querySelectorAll('.payment--blocks__item');
@@ -687,6 +811,33 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	smoothHeightQuestion('.showMap__item', '.showMap__item--title', '.showMap__item--answer'); // вызываем основную функцию smoothHeight и передаем в качестве параметров  необходимые селекторы
+	
+	let paymentOrderCart = document.querySelector('#paymentOrder--cart');
+	let paymentOrderInstallmentPlan = document.querySelector('#paymentOrder--installmentPlan');
+	let paymentOrderCredit = document.querySelector('#paymentOrder--credit');
+	let paymentOrderMethods = document.querySelectorAll('.cart--payment__block--paymentOrder__method');
+
+	paymentOrderMethods.forEach(function(method) {
+		method.addEventListener('click', function() {
+			paymentOrderMethods.forEach(function(elem) {
+				elem.classList.remove('active');
+			});
+			this.classList.add('active');
+			if (this.classList.contains('paymentOrder--cart')) {
+				paymentOrderCart.classList.add('active');
+				paymentOrderInstallmentPlan.classList.remove('active');
+				paymentOrderCredit.classList.remove('active');
+			} else if (this.classList.contains('paymentOrder--installmentPlan')) {
+				paymentOrderCart.classList.remove('active');
+				paymentOrderInstallmentPlan.classList.add('active');
+				paymentOrderCredit.classList.remove('active');
+			} else if (this.classList.contains('paymentOrder--credit')) {
+				paymentOrderCart.classList.remove('active');
+				paymentOrderInstallmentPlan.classList.remove('active');
+				paymentOrderCredit.classList.add('active');
+			}
+		});
+	});
 
 });
 
