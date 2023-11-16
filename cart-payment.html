@@ -612,112 +612,43 @@
 							<div class="cart--payment__block--left">
 								<div class="cart--payment__block--quote tablet">* — обязательные поля</div>
 								<div class="h4">Данные покупателя</div>
-								<form action="#" class="cart--payment__block--form">
-									<div class="cart--payment__block--form__input">
-										<label for="fio1">Ваше имя*</label>
-										<input type="text" name="fio1" id="fio1" required>
-									</div>
-									<div class="cart--payment__block--form__input">
-										<label for="phone1">Номер телефона*</label>
-										<input type="tel" name="phone1" id="phone1" required placeholder="+7 (999) 999-99-99">
-									</div>
-									<div class="cart--payment__block--form__input">
-										<label for="email1">Электронная почта*</label>
-										<input type="email" name="email1" id="email1" required>
-									</div>
-									<div class="cart--payment__block--form__input">
-										<span>На этот адрес электронной почты пришлем чек и детали заказа</span>
-									</div>
-									<div class="cart--payment__block--form__textarea">
-										<label for="email1">Комментарий к заказу</label>
-										<textarea name="textarea1" id="textarea1" cols="30" rows="10"></textarea>
-									</div>
-								</form>
-								<div class="cart--payment__block--methodReceiving">
-									<div class="h4">Способ получения заказа</div>
-									<div class="cart--payment__block--methodReceiving__wrapper">
-										<div class="cart--selected__right--order__methodOfObtaining--buttons">
-											<button class="button button--pickupPoint active">Доставка в пункт выдачи</button>
-											<button class="button button--delivery">Курьером</button>
-											<button class="button button--pickup">Самовывоз</button>
+								<form action="#" class="cart--payment__block--form__main" id="cart--form">
+									<div class="cart--payment__block--form">
+										<div class="cart--payment__block--form__input">
+											<label for="fio1">Ваше имя*</label>
+											<input type="text" name="fio1" id="fio1" required>
 										</div>
-	
-										<div class="delivery--receivingOrder__pickupPoint cart--payment__block--methodReceiving__item active">
-											<div class="cart--payment__block--form">
-												<div class="cart--payment__block--form__input">
-													<label for="select-country">Страна*</label>
-													<div class="select">
-														<select name="select-country" id="select-country">
-															<option selected="true" disabled="disabled">Не выбрано</option>
-															<option value="Россия">Россия</option>
-															<option value="Беларусь">Беларусь</option>
-															<option value="Казахстан">Казахстан</option>
-															<option value="Узбекистан">Узбекистан</option>
-														</select>
-													</div>
-												</div>
-												<div class="cart--payment__block--form__input">
-													<label for="select-region">Регион*</label>
-													<div class="select">
-														<select name="select-region" id="select-region">
-															<option selected="true" disabled="disabled">Не выбрано</option>
-															<option value="Россия">Россия</option>
-															<option value="Беларусь">Беларусь</option>
-															<option value="Казахстан">Казахстан</option>
-															<option value="Узбекистан">Узбекистан</option>
-														</select>
-													</div>
-												</div>
-												<div class="cart--payment__block--form__input">
-													<label for="select-city">Город*</label>
-													<div class="select">
-														<select name="select-city" id="select-city">
-															<option selected="true" disabled="disabled">Не выбрано</option>
-															<option value="Россия">Россия</option>
-															<option value="Беларусь">Беларусь</option>
-															<option value="Казахстан">Казахстан</option>
-															<option value="Узбекистан">Узбекистан</option>
-														</select>
-													</div>
-												</div>
-												<div class="cart--payment__block--form__input">
-													<label for="select-index">Индекс</label>
-													<input type="text" name="select-index" id="select-index">
-												</div>
+										<div class="cart--payment__block--form__input">
+											<label for="phone1">Номер телефона*</label>
+											<input type="tel" name="phone1" id="phone1" required placeholder="+7 (999) 999-99-99">
+										</div>
+										<div class="cart--payment__block--form__input">
+											<label for="email1">Электронная почта*</label>
+											<input type="email" name="email1" id="email1" required>
+										</div>
+										<div class="cart--payment__block--form__input">
+											<span>На этот адрес электронной почты пришлем чек и детали заказа</span>
+										</div>
+										<div class="cart--payment__block--form__textarea">
+											<label for="email1">Комментарий к заказу</label>
+											<textarea name="textarea1" id="textarea1" cols="30" rows="10"></textarea>
+										</div>
+									</div>
+									<div class="cart--payment__block--methodReceiving">
+										<div class="h4">Способ получения заказа</div>
+										<div class="cart--payment__block--methodReceiving__wrapper">
+											<div class="cart--selected__right--order__methodOfObtaining--buttons">
+												<button type="button" class="button button--pickupPoint active">Доставка в пункт выдачи</button>
+												<button type="button" class="button button--delivery">Курьером</button>
+												<button type="button" class="button button--pickup">Самовывоз</button>
 											</div>
-											<div class="cart--payment__block--methodReceiving__item--transport">
-												<div class="h5">Выберете транспортную компанию</div>
-												<div class="cart--selected__right--order__methodOfObtaining--block__deliveryOptions">
-													<button id="option1" class="cart--selected__right--order__methodOfObtaining--block__option active">
-														<img src="img/cart/deliveryOptions/1.png" alt="#">
-														<span>3-5 дней</span>
-														<strong>560 ₽</strong>
-													</button>
-													<button id="option2" class="cart--selected__right--order__methodOfObtaining--block__option">
-														<img src="img/cart/deliveryOptions/2.png" alt="#">
-														<span>3-5 дней</span>
-														<strong>700 ₽</strong>
-													</button>
-													<button id="option3" class="cart--selected__right--order__methodOfObtaining--block__option">
-														<img src="img/cart/deliveryOptions/3.png" alt="#">
-														<span>3-5 дней</span>
-														<strong>650 ₽</strong>
-													</button>
-													<button id="option4" class="cart--selected__right--order__methodOfObtaining--block__option">
-														<img src="img/cart/deliveryOptions/4.png" alt="#">
-														<span>3-7 дней</span>
-														<strong>690 ₽</strong>
-													</button>
-												</div>
-											</div>
-											<div class="cart--payment__block--methodReceiving__item--pickupPoint">
-												<div class="h5">Выберете пункт выдачи</div>
+											<div class="delivery--receivingOrder__pickupPoint cart--payment__block--methodReceiving__item active">
 												<div class="cart--payment__block--form">
 													<div class="cart--payment__block--form__input">
-														<label for="select-country1">Выбрать из списка*</label>
+														<label for="select-country">Страна*</label>
 														<div class="select">
-															<select name="select-pickupPoint" id="select-pickupPoint">
-																<option selected="true" disabled="disabled">Не выбрано</option>
+															<select name="select-country" id="select-country" required>
+																<option label="Не выбрано"></option>
 																<option value="Россия">Россия</option>
 																<option value="Беларусь">Беларусь</option>
 																<option value="Казахстан">Казахстан</option>
@@ -726,239 +657,335 @@
 														</div>
 													</div>
 													<div class="cart--payment__block--form__input">
-														<a href="#" class="cart--payment__block--form__chooseOnMap chooseOnMap" style="background-image: url(img/cart/page-payment/map.png);">
-															<img src="img/cart/page-payment/point.png" alt="">
-															<strong>Выбрать на карте</strong>
-														</a>
+														<label for="select-region">Регион*</label>
+														<div class="select">
+															<select name="select-region" id="select-region" required>
+																<option label="Не выбрано"></option>
+																<option value="Россия">Россия</option>
+																<option value="Беларусь">Беларусь</option>
+																<option value="Казахстан">Казахстан</option>
+																<option value="Узбекистан">Узбекистан</option>
+															</select>
+														</div>
+													</div>
+													<div class="cart--payment__block--form__input">
+														<label for="select-city">Город*</label>
+														<div class="select">
+															<select name="select-city" id="select-city" required>
+																<option label="Не выбрано"></option>
+																<option value="Россия">Россия</option>
+																<option value="Беларусь">Беларусь</option>
+																<option value="Казахстан">Казахстан</option>
+																<option value="Узбекистан">Узбекистан</option>
+															</select>
+														</div>
+													</div>
+													<div class="cart--payment__block--form__input">
+														<label for="select-index">Индекс</label>
+														<input type="text" name="select-index" id="select-index">
 													</div>
 												</div>
-											</div>
-											<div class="cart--payment__block--methodReceiving__item--info">
-												<div class="cart--payment__block--methodReceiving__item--info__unit">
-													<span>Доставка:</span>
-													<span>СДЭК, 3-5 дней</span>
-												</div>
-												<div class="cart--payment__block--methodReceiving__item--info__unit">
-													<span>Адрес пункта выдачи:</span>
-													<span>Москва, ул. Покровка, 25</span>
-												</div>
-												<div class="cart--payment__block--methodReceiving__item--info__unit">
-													<span>Стоимость: </span>
-													<strong>700 ₽</strong>
-												</div>
-											</div>
-											<a href="#" class="button cart--payment__block--methodReceiving__item--choose">Выбрать</a>
-										</div>
+												<div class="cart--payment__block--methodReceiving__item--transport">
+													<div class="h5">Выберете транспортную компанию</div>
+													<div class="cart--selected__right--order__methodOfObtaining--block__deliveryOptions">
+														<input type="radio" id="option1" name="option" value="boxberry" checked>
+														<label for="option1" class="cart--selected__right--order__methodOfObtaining--block__option active">
+															<img src="img/cart/deliveryOptions/1.png" alt="#">
+															<span>3-5 дней</span>
+															<strong>560 ₽</strong>
+														</label>
 	
-										<div class="delivery--receivingOrder__delivery cart--payment__block--methodReceiving__item">
-											<div class="cart--payment__block--form">
-												<div class="cart--payment__block--form__input">
-													<label for="select-country">Страна*</label>
-													<div class="select">
-														<select name="select-country" id="select-country">
-															<option selected="true" disabled="disabled">Не выбрано</option>
-															<option value="Россия">Россия</option>
-															<option value="Беларусь">Беларусь</option>
-															<option value="Казахстан">Казахстан</option>
-															<option value="Узбекистан">Узбекистан</option>
-														</select>
+														<input type="radio" id="option2" name="option" value="cdek">
+														<label for="option2" class="cart--selected__right--order__methodOfObtaining--block__option">
+															<img src="img/cart/deliveryOptions/2.png" alt="#">
+															<span>3-5 дней</span>
+															<strong>700 ₽</strong>
+														</label>
+	
+														<input type="radio" id="option3" name="option" value="пэк">
+														<label for="option3" class="cart--selected__right--order__methodOfObtaining--block__option">
+															<img src="img/cart/deliveryOptions/3.png" alt="#">
+															<span>3-5 дней</span>
+															<strong>650 ₽</strong>
+														</label>
+	
+														<input type="radio" id="option4" name="option" value="почта россии">
+														<label for="option4" class="cart--selected__right--order__methodOfObtaining--block__option">
+															<img src="img/cart/deliveryOptions/4.png" alt="#">
+															<span>3-7 дней</span>
+															<strong>690 ₽</strong>
+														</label>
 													</div>
 												</div>
-												<div class="cart--payment__block--form__input">
-													<label for="select-region">Регион*</label>
-													<div class="select">
-														<select name="select-region" id="select-region">
-															<option selected="true" disabled="disabled">Не выбрано</option>
-															<option value="Россия">Россия</option>
-															<option value="Беларусь">Беларусь</option>
-															<option value="Казахстан">Казахстан</option>
-															<option value="Узбекистан">Узбекистан</option>
-														</select>
-													</div>
-												</div>
-												<div class="cart--payment__block--form__input">
-													<label for="select-city">Город*</label>
-													<div class="select">
-														<select name="select-city" id="select-city">
-															<option selected="true" disabled="disabled">Не выбрано</option>
-															<option value="Россия">Россия</option>
-															<option value="Беларусь">Беларусь</option>
-															<option value="Казахстан">Казахстан</option>
-															<option value="Узбекистан">Узбекистан</option>
-														</select>
-													</div>
-												</div>
-												<div class="cart--payment__block--form__input">
-													<label for="select-index">Индекс</label>
-													<input type="text" name="select-index" id="select-index">
-												</div>
-											</div>
-											<div class="cart--payment__block--methodReceiving__item--transport">
-												<div class="h5">Выберете транспортную компанию</div>
-												<div class="cart--selected__right--order__methodOfObtaining--block__deliveryOptions">
-													<button id="option1" class="cart--selected__right--order__methodOfObtaining--block__option active">
-														<img src="img/cart/deliveryOptions/1.png" alt="#">
-														<span>3-5 дней</span>
-														<strong>560 ₽</strong>
-													</button>
-													<button id="option2" class="cart--selected__right--order__methodOfObtaining--block__option">
-														<img src="img/cart/deliveryOptions/2.png" alt="#">
-														<span>3-5 дней</span>
-														<strong>700 ₽</strong>
-													</button>
-													<button id="option3" class="cart--selected__right--order__methodOfObtaining--block__option">
-														<img src="img/cart/deliveryOptions/3.png" alt="#">
-														<span>3-5 дней</span>
-														<strong>650 ₽</strong>
-													</button>
-													<button id="option4" class="cart--selected__right--order__methodOfObtaining--block__option">
-														<img src="img/cart/deliveryOptions/4.png" alt="#">
-														<span>3-7 дней</span>
-														<strong>690 ₽</strong>
-													</button>
-												</div>
-											</div>
-											<div class="cart--payment__block--methodReceiving__item--info">
-												<div class="cart--payment__block--methodReceiving__item--info__unit">
-													<span>Доставка:</span>
-													<span>СДЭК, 3-5 дней</span>
-												</div>
-												<div class="cart--payment__block--methodReceiving__item--info__unit">
-													<span>Адрес пункта выдачи:</span>
-													<span>Москва, ул. Покровка, 25</span>
-												</div>
-												<div class="cart--payment__block--methodReceiving__item--info__unit">
-													<span>Стоимость: </span>
-													<strong>700 ₽</strong>
-												</div>
-											</div>
-											<a href="#" class="button cart--payment__block--methodReceiving__item--choose">Выбрать</a>
-										</div>
-										<div class="delivery--receivingOrder__pickup cart--payment__block--methodReceiving__item">
-											<div class="cart--payment__block--methodReceiving__item--wrapper">
-												<div class="cart--payment__block--methodReceiving__item--left">
-													<div class="h5">Заказывайте на сайте и забирайте товары, когда удобно в нашем офлайн-магазине</div>
-													<div class="delivery--receivingOrder__pickup--block__info--item">
-														<strong>Адрес:</strong>
-														<span>Проспект Ямашева, д. 33б</span>
-													</div>
-													<div class="delivery--receivingOrder__pickup--block__info--item">
-														<strong>Телефон: </strong>
-														<a href="tel:+7 843 225-63-55">+7 843 225-63-55</a>
-													</div>
-													<div class="delivery--receivingOrder__pickup--block__info--item">
-														<strong>График работы:</strong>
-														<div class="delivery--receivingOrder__pickup--block__info--days">
-															<div class="delivery--receivingOrder__pickup--block__info--day">
-																<span>Пн - Пт</span>
-																<span>с 10:00 до 19:00</span>
-															</div>
-															<div class="delivery--receivingOrder__pickup--block__info--day">
-																<span>Сб</span>
-																<span>с 10:00 до 17:00</span>
+												<div class="cart--payment__block--methodReceiving__item--pickupPoint">
+													<div class="h5">Выберете пункт выдачи</div>
+													<div class="cart--payment__block--form">
+														<div class="cart--payment__block--form__input">
+															<label for="select-country1">Выбрать из списка*</label>
+															<div class="select">
+																<select name="select-pickupPoint" id="select-pickupPoint" required>
+																	<option label="Не выбрано"></option>
+																	<option value="Россия">Россия</option>
+																	<option value="Беларусь">Беларусь</option>
+																	<option value="Казахстан">Казахстан</option>
+																	<option value="Узбекистан">Узбекистан</option>
+																</select>
 															</div>
 														</div>
-													</div>
-												</div>
-												<div class="cart--payment__block--methodReceiving__item--right">
-													<img src="img/cart/page-payment/map1.png" alt="#">
-												</div>
-												<div class="showMap__wrapper">
-													<div class="showMap__item" data-open="false">
-														<button class="showMap__item--title">
-															<span class="delivery--receivingOrder__pickup--block__info--map showMap">Смотреть на карте</span>
-														</button>
-														<div class="showMap__item--answer">
-															<div style="position:relative;overflow:hidden;">
-																<iframe src="https://yandex.ru/map-widget/v1/?ll=49.107528%2C55.826296&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjI1NzYyNxJo0KDQvtGB0YHQuNGPLCDQoNC10YHQv9GD0LHQu9C40LrQsCDQotCw0YLQsNGA0YHRgtCw0L0sINCa0LDQt9Cw0L3RjCwg0L_RgNC-0YHQv9C10LrRgiDQr9C80LDRiNC10LLQsCwgMzMiCg0cbkRCFSBOX0I%2C&z=17.6" width="560" height="400" frameborder="" allowfullscreen="true" style="position:relative;">
-																</iframe>
-															</div>
+														<div class="cart--payment__block--form__input">
+															<a href="#" class="cart--payment__block--form__chooseOnMap chooseOnMap" style="background-image: url(img/cart/page-payment/map.png);">
+																<img src="img/cart/page-payment/point.png" alt="">
+																<strong>Выбрать на карте</strong>
+															</a>
 														</div>
 													</div>
-												</div>
-												<div class="cart--payment__block--methodReceiving__item--button">
-													<a href="#" class="button">Когда заказ будет готов к выдаче, мы позвоним или отправим SMS</a>
 												</div>
 												<div class="cart--payment__block--methodReceiving__item--info">
 													<div class="cart--payment__block--methodReceiving__item--info__unit">
-														<span>Самовывоз из магазина:</span>
-														<span>Завтра и позже</span>
+														<span>Доставка:</span>
+														<span>СДЭК, 3-5 дней</span>
+													</div>
+													<div class="cart--payment__block--methodReceiving__item--info__unit">
+														<span>Адрес пункта выдачи:</span>
+														<span>Москва, ул. Покровка, 25</span>
 													</div>
 													<div class="cart--payment__block--methodReceiving__item--info__unit">
 														<span>Стоимость: </span>
-														<strong>Бесплатно</strong>
+														<strong>700 ₽</strong>
 													</div>
 												</div>
-												<a href="#" class="button cart--payment__block--methodReceiving__item--choose">Выбрать</a>
+												<div class="cart--payment__block--methodReceiving__item--choosen">
+													<span class="accent--color">Выбрано</span>
+													<button type="button" class="button cart--payment__block--methodReceiving__item--choose">Выбрать</button>
+												</div>
+											</div>
+	
+											<div class="delivery--receivingOrder__delivery cart--payment__block--methodReceiving__item">
+												<div class="cart--payment__block--form">
+													<div class="cart--payment__block--form__input">
+														<label for="select-country1">Страна*</label>
+														<div class="select">
+															<select name="select-country1" id="select-country1" required disabled>
+																<option label="Не выбрано"></option>
+																<option value="Россия">Россия</option>
+																<option value="Беларусь">Беларусь</option>
+																<option value="Казахстан">Казахстан</option>
+																<option value="Узбекистан">Узбекистан</option>
+															</select>
+														</div>
+													</div>
+													<div class="cart--payment__block--form__input">
+														<label for="select-region1">Регион*</label>
+														<div class="select">
+															<select name="select-region1" id="select-region1" required disabled>
+																<option label="Не выбрано"></option>
+																<option value="Россия">Россия</option>
+																<option value="Беларусь">Беларусь</option>
+																<option value="Казахстан">Казахстан</option>
+																<option value="Узбекистан">Узбекистан</option>
+															</select>
+														</div>
+													</div>
+													<div class="cart--payment__block--form__input">
+														<label for="select-city1">Город*</label>
+														<div class="select">
+															<select name="select-city1" id="select-city1" required disabled>
+																<option label="Не выбрано"></option>
+																<option value="Россия">Россия</option>
+																<option value="Беларусь">Беларусь</option>
+																<option value="Казахстан">Казахстан</option>
+																<option value="Узбекистан">Узбекистан</option>
+															</select>
+														</div>
+													</div>
+													<div class="cart--payment__block--form__input">
+														<label for="select-address">Адрес доставки</label>
+														<input type="text" name="select-address" id="select-address" disabled>
+													</div>
+												</div>
+												<div class="cart--payment__block--methodReceiving__item--transport">
+													<div class="h5">Выберете транспортную компанию</div>
+													<div class="cart--selected__right--order__methodOfObtaining--block__deliveryOptions">
+														<input type="radio" id="option5" name="option1" value="boxberry" checked disabled>
+														<label for="option5" class="cart--selected__right--order__methodOfObtaining--block__option active">
+															<img src="img/cart/deliveryOptions/1.png" alt="#">
+															<span>3-5 дней</span>
+															<strong>560 ₽</strong>
+														</label>
+	
+														<input type="radio" id="option6" name="option1" value="cdek" disabled>
+														<label for="option6" class="cart--selected__right--order__methodOfObtaining--block__option">
+															<img src="img/cart/deliveryOptions/2.png" alt="#">
+															<span>3-5 дней</span>
+															<strong>700 ₽</strong>
+														</label>
+	
+														<input type="radio" id="option7" name="option1" value="пэк" disabled>
+														<label for="option7" class="cart--selected__right--order__methodOfObtaining--block__option">
+															<img src="img/cart/deliveryOptions/3.png" alt="#">
+															<span>3-5 дней</span>
+															<strong>650 ₽</strong>
+														</label>
+	
+														<input type="radio" id="option8" name="option1" value="почта россии" disabled>
+														<label for="option8" class="cart--selected__right--order__methodOfObtaining--block__option">
+															<img src="img/cart/deliveryOptions/4.png" alt="#">
+															<span>3-7 дней</span>
+															<strong>690 ₽</strong>
+														</label>
+													</div>
+												</div>
+												<div class="cart--payment__block--methodReceiving__item--info">
+													<div class="cart--payment__block--methodReceiving__item--info__unit">
+														<span>Доставка:</span>
+														<span>СДЭК, 3-5 дней</span>
+													</div>
+													<div class="cart--payment__block--methodReceiving__item--info__unit">
+														<span>Адрес пункта выдачи:</span>
+														<span>Москва, ул. Покровка, 25</span>
+													</div>
+													<div class="cart--payment__block--methodReceiving__item--info__unit">
+														<span>Стоимость: </span>
+														<strong>700 ₽</strong>
+													</div>
+												</div>
+												<div class="cart--payment__block--methodReceiving__item--choosen">
+													<span class="accent--color">Выбрано</span>
+													<button type="button" class="button cart--payment__block--methodReceiving__item--choose" disabled>Выбрать</button>
+												</div>
+											</div>
+											<div class="delivery--receivingOrder__pickup cart--payment__block--methodReceiving__item">
+												<div class="cart--payment__block--methodReceiving__item--wrapper">
+													<div class="cart--payment__block--methodReceiving__item--left">
+														<div class="h5">Заказывайте на сайте и забирайте товары, когда удобно в нашем офлайн-магазине</div>
+														<div class="delivery--receivingOrder__pickup--block__info--item">
+															<strong>Адрес:</strong>
+															<span>Проспект Ямашева, д. 33б</span>
+														</div>
+														<div class="delivery--receivingOrder__pickup--block__info--item">
+															<strong>Телефон: </strong>
+															<a href="tel:+7 843 225-63-55">+7 843 225-63-55</a>
+														</div>
+														<div class="delivery--receivingOrder__pickup--block__info--item">
+															<strong>График работы:</strong>
+															<div class="delivery--receivingOrder__pickup--block__info--days">
+																<div class="delivery--receivingOrder__pickup--block__info--day">
+																	<span>Пн - Пт</span>
+																	<span>с 10:00 до 19:00</span>
+																</div>
+																<div class="delivery--receivingOrder__pickup--block__info--day">
+																	<span>Сб</span>
+																	<span>с 10:00 до 17:00</span>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="cart--payment__block--methodReceiving__item--right">
+														<img src="img/cart/page-payment/map1.png" alt="#">
+													</div>
+													<div class="showMap__wrapper">
+														<div class="showMap__item" data-open="false">
+															<button class="showMap__item--title">
+																<span class="delivery--receivingOrder__pickup--block__info--map showMap">Смотреть на карте</span>
+															</button>
+															<div class="showMap__item--answer">
+																<div style="position:relative;overflow:hidden;">
+																	<iframe src="https://yandex.ru/map-widget/v1/?ll=49.107528%2C55.826296&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjI1NzYyNxJo0KDQvtGB0YHQuNGPLCDQoNC10YHQv9GD0LHQu9C40LrQsCDQotCw0YLQsNGA0YHRgtCw0L0sINCa0LDQt9Cw0L3RjCwg0L_RgNC-0YHQv9C10LrRgiDQr9C80LDRiNC10LLQsCwgMzMiCg0cbkRCFSBOX0I%2C&z=17.6" width="560" height="400" frameborder="" allowfullscreen="true" style="position:relative;">
+																	</iframe>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="cart--payment__block--methodReceiving__item--button">
+														<a href="#" class="button">Когда заказ будет готов к выдаче, мы позвоним или отправим SMS</a>
+													</div>
+													<div class="cart--payment__block--methodReceiving__item--info">
+														<div class="cart--payment__block--methodReceiving__item--info__unit">
+															<span>Самовывоз из магазина:</span>
+															<span>Завтра и позже</span>
+														</div>
+														<div class="cart--payment__block--methodReceiving__item--info__unit">
+															<span>Стоимость: </span>
+															<strong>Бесплатно</strong>
+														</div>
+													</div>
+													<div class="cart--payment__block--methodReceiving__item--choosen">
+														<span class="accent--color">Выбрано</span>
+														<button class="button cart--payment__block--methodReceiving__item--choose">Выбрать</button>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="cart--payment__block--paymentOrder">
-									<div class="h4">Оплата заказа</div>
-									<div class="cart--payment__block--methodReceiving__wrapper">
-										<div class="cart--payment__block--paymentOrder__wrapper">
-											<div class="cart--payment__block--paymentOrder__methods">
-												<button class="cart--payment__block--paymentOrder__method paymentOrder--cart active">
-													<img src="img/cart/paymentMethods/1.png" alt="#">
-													<span>Картой</span>
-												</button>
-												<button class="cart--payment__block--paymentOrder__method paymentOrder--installmentPlan">
-													<img src="img/cart/paymentMethods/2.png" alt="#">
-													<span>Рассрочка</span>
-												</button>
-												<button class="cart--payment__block--paymentOrder__method paymentOrder--credit">
-													<img src="img/cart/paymentMethods/3.png" alt="#">
-													<span>Кредит</span>
-												</button>
-											</div>
-										</div>
-										<div class="cart--payment__block--paymentOrder__info active" id="paymentOrder--cart">
-											<div class="cart--payment__block--paymentOrder__info--cards">
-												<img src="img/payment/cards/1.png" alt="#">
-												<img src="img/payment/cards/2.png" alt="#">
-												<img src="img/payment/cards/3.png" alt="#">
-												<img src="img/payment/cards/4.png" alt="#">
-											</div>
-											<p>
-												Для оплаты (ввода реквизитов Вашей карты) Вы будете перенаправлены на платежный шлюз ПАО СБЕРБАНК.
-											</p>
-										</div>
-										<div class="cart--payment__block--paymentOrder__info" id="paymentOrder--installmentPlan">
-											<div class="cart--payment__block--paymentOrder__info--wrapper">
-												<div class="cart--payment__block--paymentOrder__info--wrapper__image">
-													<img src="img/payment/3.png" alt="#">
-												</div>
-												<div class="cart--payment__block--paymentOrder__info--wrapper__text">
-													<div class="h5">Покупай со Сбером в рассрочку</div>
-													<ul>
-														<li>Онлайн или в магазине</li>
-														<li>Без подписания бумажных договоров</li>
-														<li>Оформление за 2 минуты</li>
-													</ul>
-													<a href="https://www.sberbank.com/ru/person/credits/money/pos" class="button button--green">Подробнее на сайте банка</a>
+									<div class="cart--payment__block--paymentOrder">
+										<div class="h4">Оплата заказа</div>
+										<div class="cart--payment__block--methodReceiving__wrapper">
+											<div class="cart--payment__block--paymentOrder__wrapper">
+												<div class="cart--payment__block--paymentOrder__methods">
+													<input type="radio" name="radio1" id="radio1" checked value="Картой">
+													<label for="radio1" class="cart--payment__block--paymentOrder__method paymentOrder--cart active">
+														<img src="img/cart/paymentMethods/1.png" alt="#">
+														<span>Картой</span>
+													</label>
+													<input type="radio" name="radio1" id="radio2" value="Рассрочка">
+													<label for="radio2" class="cart--payment__block--paymentOrder__method paymentOrder--installmentPlan">
+														<img src="img/cart/paymentMethods/2.png" alt="#">
+														<span>Рассрочка</span>
+													</label>
+													<input type="radio" name="radio1" id="radio3" value="Кредит">
+													<label for="radio3" class="cart--payment__block--paymentOrder__method paymentOrder--credit">
+														<img src="img/cart/paymentMethods/3.png" alt="#">
+														<span>Кредит</span>
+													</label>
 												</div>
 											</div>
-										</div>
-										<div class="cart--payment__block--paymentOrder__info" id="paymentOrder--credit">
-											<div class="cart--payment__block--paymentOrder__info--wrapper">
-												<div class="cart--payment__block--paymentOrder__info--wrapper__image">
-													<img src="img/payment/4.png" alt="#">
+											<div class="cart--payment__block--paymentOrder__info active" id="paymentOrder--cart">
+												<div class="cart--payment__block--paymentOrder__info--cards">
+													<img src="img/payment/cards/1.png" alt="#">
+													<img src="img/payment/cards/2.png" alt="#">
+													<img src="img/payment/cards/3.png" alt="#">
+													<img src="img/payment/cards/4.png" alt="#">
 												</div>
-												<div class="cart--payment__block--paymentOrder__info--wrapper__text">
-													<div class="h5">Тинькофф Кредитование</div>
-													<ul>
-														<li>Онлайн-заявка или в нашем магазине</li>
-														<li>Решение за 2 минуты</li>
-														<li>Подписание по СМС или на встрече с представителем банка</li>
-													</ul>
-													<a href="https://www.sberbank.com/ru/person/credits/money/pos" class="button button--yellow">Подробнее на сайте банка</a>
+												<p>
+													Для оплаты (ввода реквизитов Вашей карты) Вы будете перенаправлены на платежный шлюз ПАО СБЕРБАНК.
+												</p>
+											</div>
+											<div class="cart--payment__block--paymentOrder__info" id="paymentOrder--installmentPlan">
+												<div class="cart--payment__block--paymentOrder__info--wrapper">
+													<div class="cart--payment__block--paymentOrder__info--wrapper__image">
+														<img src="img/payment/3.png" alt="#">
+													</div>
+													<div class="cart--payment__block--paymentOrder__info--wrapper__text">
+														<div class="h5">Покупай со Сбером в рассрочку</div>
+														<ul>
+															<li>Онлайн или в магазине</li>
+															<li>Без подписания бумажных договоров</li>
+															<li>Оформление за 2 минуты</li>
+														</ul>
+														<a href="https://www.sberbank.com/ru/person/credits/money/pos" class="button button--green">Подробнее на сайте банка</a>
+													</div>
+												</div>
+											</div>
+											<div class="cart--payment__block--paymentOrder__info" id="paymentOrder--credit">
+												<div class="cart--payment__block--paymentOrder__info--wrapper">
+													<div class="cart--payment__block--paymentOrder__info--wrapper__image">
+														<img src="img/payment/4.png" alt="#">
+													</div>
+													<div class="cart--payment__block--paymentOrder__info--wrapper__text">
+														<div class="h5">Тинькофф Кредитование</div>
+														<ul>
+															<li>Онлайн-заявка или в нашем магазине</li>
+															<li>Решение за 2 минуты</li>
+															<li>Подписание по СМС или на встрече с представителем банка</li>
+														</ul>
+														<a href="https://www.sberbank.com/ru/person/credits/money/pos" class="button button--yellow">Подробнее на сайте банка</a>
+													</div>
 												</div>
 											</div>
 										</div>
+										<button type="submit" class="button">Оплатить и оформить заказ</button>
 									</div>
-									<a href="#" class="button">Оплатить и оформить заказ</a>
-								</div>
+								</form>
 							</div>
 
 							<div class="cart--payment__block--right">
@@ -993,7 +1020,7 @@
 											<div class="h4">Итого:</div>
 											<div class="h4">38 545 ₽</div>
 										</div>
-										<a href="#" class="cart--selected__right--order__methodOfObtaining--block__paymentMethod--button button">Оплатить и оформить заказ</a>
+										<button type="submit" form="cart--form" href="#" class="cart--selected__right--order__methodOfObtaining--block__paymentMethod--button button">Оплатить и оформить заказ</button type="submit" for="">
 										<a href="#" class="buyInOneClick button--openModal">Купить в 1 клик</a>
 									</div>
 								</div>
