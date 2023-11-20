@@ -590,7 +590,7 @@
 			</div>
 		</header>
 	
-		<main class="main">
+		<main class="main page--search">
 			<section class="main--slider">
 				<div class="container">
 					<div class="row">
@@ -663,418 +663,591 @@
 							<h1 class="h1"><span>Audiomaster</span><br> студия автозвука</h1>
 							<span class="subtitle">Профессионально подберем и установим аудиосистему в ваш автомобиль исходя из ваших пожеланий и возможностей</span>
 						</div>
-						<div class="main--bestdeals__block--wrapper">
-							<div class="main--bestdeals__block--item open--modal__bestdeals">
-								<a href="#bestdealsItem-1" class="main--bestdeals__block--item__image button--openModal">
-									<img src="img/catalog/main/1.png" alt="#">
-									<img src="img/catalog/discount.png" alt="#" class="absolute">
-								</a>
-								<a href="categories-single.html" class="main--bestdeals__block--item__info">
-									<div class="name">Магнитола Aura AMH-77DSP</div>
-									<div class="desc">Купили более 10 раз</div>
-									<div class="cost">520 ₽</div>
-								</a>
-								<div class="main--bestdeals__block--item__footer">
-									<div class="main--bestdeals__block--item__cart button button--addCart">
-										<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M0.93623 0.0251465H4.95437C5.37544 0.0251465 5.70245 0.307357 5.84131 0.679158L9.57724 12.4962H17.5642L19.804 5.91125H11.3959C10.8808 5.91125 10.4597 5.49017 10.4597 4.97503C10.4597 4.45988 10.8808 4.0388 11.3959 4.0388H21.0672C21.896 4.07912 22.1065 4.84512 21.9542 5.20796L19.1052 13.7056C18.9663 14.0774 18.5901 14.3148 18.2183 14.3148H8.92323C8.50216 14.3148 8.13035 14.0819 8.03628 13.7056L4.30036 1.88863H0.93623C0.421083 1.88863 7.62939e-06 1.46755 7.62939e-06 0.952409C7.62939e-06 0.437263 0.425562 0.0251465 0.93623 0.0251465Z" fill="white"></path>
-											<path d="M17.3761 15.9993C19.0111 15.9993 20.364 17.3521 20.364 18.9871C20.364 20.6221 19.0111 21.975 17.3761 21.975C15.7411 21.975 14.3883 20.6221 14.3883 18.9871C14.3883 17.3521 15.7411 15.9993 17.3761 15.9993ZM16.2562 19.0319C16.2562 19.6859 16.7714 20.2011 17.3761 20.2011C17.9853 20.2011 18.496 19.6859 18.496 19.0319C18.496 18.3779 17.9808 17.8627 17.3761 17.8627C16.7221 17.8672 16.207 18.3779 16.2562 19.0319Z" fill="white"></path>
-											<path d="M10.0924 15.9993C11.7274 15.9993 13.0803 17.3521 13.0803 18.9871C13.0803 20.6221 11.7274 21.975 10.0924 21.975C8.41259 21.975 7.10457 20.6221 7.10457 18.9871C7.10009 17.3521 8.45739 15.9993 10.0924 15.9993ZM8.96805 19.0319C8.96805 19.6859 9.4832 20.2011 10.0879 20.2011C10.6927 20.2011 11.2078 19.6859 11.2078 19.0319C11.2078 18.3779 10.6927 17.8627 10.0879 17.8627C9.4384 17.8672 8.92326 18.3779 8.96805 19.0319Z" fill="white"></path>
-										</svg>
-										<div class="quantity">
-											<button class="minus">-</button>
-											<input type="text" class="quantity--input" value="1" data-max-count="999">
-											<button class="plus">+</button>
-										</div>
+						<div class="main--bestdeals__h2">
+							<div class="h2">Вот что мы нашли по вашему запросу</div>
+						</div>
+						<!-- если что-то найдено -->
+						<div class="main--bestdeals__block--found">
+							<div class="main--catalog__sorts--wrapper">
+								<div class="h3">Вы искали</div>
+								<div class="main--catalog__sorts">
+									<div class="main--catalog__sorts--list">
+										<input type="text" class="you-lookingFor" name="you-lookingFor" placeholder="Усилитель">
 									</div>
-									<!-- <button class="main--bestdeals__block--item__compare">
-										<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M0 6.19434H2V18.1943H0V6.19434ZM6 0.194336H8V18.1943H6V0.194336ZM12 9.19434H14V18.1943H12V9.19434ZM18 3.19434H20V18.1943H18V3.19434Z" fill="#999999"/>
-										</svg>
-									</button> -->
-									<button class="main--bestdeals__block--item__like">
-										<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M14.5 0C17.538 0 20 2.5 20 6C20 13 12.5 17 10 18.5C7.5 17 0 13 0 6C0 2.5 2.5 0 5.5 0C7.36 0 9 1 10 2C11 1 12.64 0 14.5 0ZM10.934 15.604C11.815 15.048 12.61 14.495 13.354 13.903C16.335 11.533 18 8.943 18 6C18 3.64 16.463 2 14.5 2C13.424 2 12.26 2.57 11.414 3.414L10 4.828L8.586 3.414C7.74 2.57 6.576 2 5.5 2C3.56 2 2 3.656 2 6C2 8.944 3.666 11.533 6.645 13.903C7.39 14.495 8.185 15.048 9.066 15.603C9.365 15.792 9.661 15.973 10 16.175C10.339 15.973 10.635 15.792 10.934 15.604Z" fill="#999999"></path>
-										</svg>
-									</button>
+									<div class="main--catalog__sorts--list">
+										<!-- <label for="input-sort">Показывать по </label> -->
+										<select id="input-category" class="sort--list" onchange="location = this.value;">
+											<option value="#" selected="selected">Выберите категорию </option>
+											<option value="#">Акустика</option>
+											<option value="#">Усилители</option>
+											<option value="#">Сабвуферы</option>
+											<option value="#">Магнитолы</option>
+											<option value="#">Шумоизоляция</option>
+											<option value="#">Шумоизоляция</option>
+											<option value="#">Подиумы</option>
+											<option value="#">Аксессуары</option>
+											<option value="#">Короба</option>
+											<option value="#">Аудиопроцессоры</option>
+											<option value="#">Питание</option>
+											<option value="#">Переходные рамки</option>
+											<option value="#">Автосигнализация</option>
+											<option value="#">ISO-разъемы</option>
+											<option value="#">Парковочные радары</option>
+											<option value="#">Рем.комплекты</option>
+											<option value="#">Кабельная продукция</option>
+											<option value="#">Уход за автомобилем</option>
+										</select>
+									</div>
+									<div class="main--catalog__sorts--list">
+										<select id="input-sort" class="sort--list" onchange="location = this.value;">
+											<option value="https://audiomastershop.ru/avtozvuk/akustika/?sort=p.sort_order&amp;order=ASC" selected="selected">По популярности (убывание)</option>
+											<option value="https://audiomastershop.ru/avtozvuk/akustika/?sort=pd.name&amp;order=ASC">Название (А - Я)</option>
+											<option value="https://audiomastershop.ru/avtozvuk/akustika/?sort=pd.name&amp;order=DESC">Название (Я - А)</option>
+											<option value="https://audiomastershop.ru/avtozvuk/akustika/?sort=p.price&amp;order=ASC">Цена (низкая &gt; высокая)</option>
+											<option value="https://audiomastershop.ru/avtozvuk/akustika/?sort=p.price&amp;order=DESC">Цена (высокая &gt; низкая)</option>
+											<option value="https://audiomastershop.ru/avtozvuk/akustika/?sort=rating&amp;order=DESC">Рейтинг (начиная с высокого)</option>
+											<option value="https://audiomastershop.ru/avtozvuk/akustika/?sort=rating&amp;order=ASC">Рейтинг (начиная с низкого)</option>
+											<option value="https://audiomastershop.ru/avtozvuk/akustika/?sort=p.model&amp;order=ASC">Код Товара (А - Я)</option>
+											<option value="https://audiomastershop.ru/avtozvuk/akustika/?sort=p.model&amp;order=DESC">Код Товара (Я - А)</option>
+										</select>
+									</div>
+									<div class="main--catalog__sorts--list">
+										<!-- <label for="input-sort">Показывать по </label> -->
+										<select id="input-limit" class="sort--list" onchange="location = this.value;">
+											<option value="https://audiomastershop.ru/avtozvuk/akustika/?limit=15" selected="selected">Показывать по 16 </option>
+											<option value="https://audiomastershop.ru/avtozvuk/akustika/?limit=25">Показывать по 25</option>
+											<option value="https://audiomastershop.ru/avtozvuk/akustika/?limit=50">Показывать по 50</option>
+											<option value="https://audiomastershop.ru/avtozvuk/akustika/?limit=75">Показывать по 75</option>
+											<option value="https://audiomastershop.ru/avtozvuk/akustika/?limit=100">Показывать по 100</option>
+										</select>
+									</div>
 								</div>
 							</div>
-							<div class="main--bestdeals__block--item open--modal__bestdeals">
-								<a href="#bestdealsItem-2" class="main--bestdeals__block--item__image button--openModal">
-									<img src="img/catalog/main/2.png" alt="#">
-								</a>
-								<a href="categories-single.html" class="main--bestdeals__block--item__info">
-									<div class="name">Акустика Pride Solo Mini 6,5</div>
-									<div class="desc">Купили более 150 раз</div>
-									<div class="cost">3 750 ₽</div>
-								</a>
-								<div class="main--bestdeals__block--item__footer">
-									<div class="main--bestdeals__block--item__cart button button--addCart">
-										<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M0.93623 0.0251465H4.95437C5.37544 0.0251465 5.70245 0.307357 5.84131 0.679158L9.57724 12.4962H17.5642L19.804 5.91125H11.3959C10.8808 5.91125 10.4597 5.49017 10.4597 4.97503C10.4597 4.45988 10.8808 4.0388 11.3959 4.0388H21.0672C21.896 4.07912 22.1065 4.84512 21.9542 5.20796L19.1052 13.7056C18.9663 14.0774 18.5901 14.3148 18.2183 14.3148H8.92323C8.50216 14.3148 8.13035 14.0819 8.03628 13.7056L4.30036 1.88863H0.93623C0.421083 1.88863 7.62939e-06 1.46755 7.62939e-06 0.952409C7.62939e-06 0.437263 0.425562 0.0251465 0.93623 0.0251465Z" fill="white"></path>
-											<path d="M17.3761 15.9993C19.0111 15.9993 20.364 17.3521 20.364 18.9871C20.364 20.6221 19.0111 21.975 17.3761 21.975C15.7411 21.975 14.3883 20.6221 14.3883 18.9871C14.3883 17.3521 15.7411 15.9993 17.3761 15.9993ZM16.2562 19.0319C16.2562 19.6859 16.7714 20.2011 17.3761 20.2011C17.9853 20.2011 18.496 19.6859 18.496 19.0319C18.496 18.3779 17.9808 17.8627 17.3761 17.8627C16.7221 17.8672 16.207 18.3779 16.2562 19.0319Z" fill="white"></path>
-											<path d="M10.0924 15.9993C11.7274 15.9993 13.0803 17.3521 13.0803 18.9871C13.0803 20.6221 11.7274 21.975 10.0924 21.975C8.41259 21.975 7.10457 20.6221 7.10457 18.9871C7.10009 17.3521 8.45739 15.9993 10.0924 15.9993ZM8.96805 19.0319C8.96805 19.6859 9.4832 20.2011 10.0879 20.2011C10.6927 20.2011 11.2078 19.6859 11.2078 19.0319C11.2078 18.3779 10.6927 17.8627 10.0879 17.8627C9.4384 17.8672 8.92326 18.3779 8.96805 19.0319Z" fill="white"></path>
-										</svg>
-										<div class="quantity">
-											<button class="minus">-</button>
-											<input type="text" class="quantity--input" value="1" data-max-count="999">
-											<button class="plus">+</button>
+							<div class="main--bestdeals__block--wrapper">
+								<div class="main--bestdeals__block--item open--modal__bestdeals">
+									<a href="#bestdealsItem-1" class="main--bestdeals__block--item__image button--openModal">
+										<img src="img/catalog/main/1.png" alt="#">
+										<img src="img/catalog/discount.png" alt="#" class="absolute">
+									</a>
+									<a href="categories-single.html" class="main--bestdeals__block--item__info">
+										<div class="name">Магнитола Aura AMH-77DSP</div>
+										<div class="desc">Купили более 10 раз</div>
+										<div class="cost">520 ₽</div>
+									</a>
+									<div class="main--bestdeals__block--item__footer">
+										<div class="main--bestdeals__block--item__cart button button--addCart">
+											<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0.93623 0.0251465H4.95437C5.37544 0.0251465 5.70245 0.307357 5.84131 0.679158L9.57724 12.4962H17.5642L19.804 5.91125H11.3959C10.8808 5.91125 10.4597 5.49017 10.4597 4.97503C10.4597 4.45988 10.8808 4.0388 11.3959 4.0388H21.0672C21.896 4.07912 22.1065 4.84512 21.9542 5.20796L19.1052 13.7056C18.9663 14.0774 18.5901 14.3148 18.2183 14.3148H8.92323C8.50216 14.3148 8.13035 14.0819 8.03628 13.7056L4.30036 1.88863H0.93623C0.421083 1.88863 7.62939e-06 1.46755 7.62939e-06 0.952409C7.62939e-06 0.437263 0.425562 0.0251465 0.93623 0.0251465Z" fill="white"></path>
+												<path d="M17.3761 15.9993C19.0111 15.9993 20.364 17.3521 20.364 18.9871C20.364 20.6221 19.0111 21.975 17.3761 21.975C15.7411 21.975 14.3883 20.6221 14.3883 18.9871C14.3883 17.3521 15.7411 15.9993 17.3761 15.9993ZM16.2562 19.0319C16.2562 19.6859 16.7714 20.2011 17.3761 20.2011C17.9853 20.2011 18.496 19.6859 18.496 19.0319C18.496 18.3779 17.9808 17.8627 17.3761 17.8627C16.7221 17.8672 16.207 18.3779 16.2562 19.0319Z" fill="white"></path>
+												<path d="M10.0924 15.9993C11.7274 15.9993 13.0803 17.3521 13.0803 18.9871C13.0803 20.6221 11.7274 21.975 10.0924 21.975C8.41259 21.975 7.10457 20.6221 7.10457 18.9871C7.10009 17.3521 8.45739 15.9993 10.0924 15.9993ZM8.96805 19.0319C8.96805 19.6859 9.4832 20.2011 10.0879 20.2011C10.6927 20.2011 11.2078 19.6859 11.2078 19.0319C11.2078 18.3779 10.6927 17.8627 10.0879 17.8627C9.4384 17.8672 8.92326 18.3779 8.96805 19.0319Z" fill="white"></path>
+											</svg>
+											<div class="quantity">
+												<button class="minus">-</button>
+												<input type="text" class="quantity--input" value="1" data-max-count="999">
+												<button class="plus">+</button>
+											</div>
 										</div>
+										<!-- <button class="main--bestdeals__block--item__compare">
+											<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0 6.19434H2V18.1943H0V6.19434ZM6 0.194336H8V18.1943H6V0.194336ZM12 9.19434H14V18.1943H12V9.19434ZM18 3.19434H20V18.1943H18V3.19434Z" fill="#999999"/>
+											</svg>
+										</button> -->
+										<button class="main--bestdeals__block--item__like">
+											<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M14.5 0C17.538 0 20 2.5 20 6C20 13 12.5 17 10 18.5C7.5 17 0 13 0 6C0 2.5 2.5 0 5.5 0C7.36 0 9 1 10 2C11 1 12.64 0 14.5 0ZM10.934 15.604C11.815 15.048 12.61 14.495 13.354 13.903C16.335 11.533 18 8.943 18 6C18 3.64 16.463 2 14.5 2C13.424 2 12.26 2.57 11.414 3.414L10 4.828L8.586 3.414C7.74 2.57 6.576 2 5.5 2C3.56 2 2 3.656 2 6C2 8.944 3.666 11.533 6.645 13.903C7.39 14.495 8.185 15.048 9.066 15.603C9.365 15.792 9.661 15.973 10 16.175C10.339 15.973 10.635 15.792 10.934 15.604Z" fill="#999999"></path>
+											</svg>
+										</button>
 									</div>
-									<!-- <button class="main--bestdeals__block--item__compare">
-										<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M0 6.19434H2V18.1943H0V6.19434ZM6 0.194336H8V18.1943H6V0.194336ZM12 9.19434H14V18.1943H12V9.19434ZM18 3.19434H20V18.1943H18V3.19434Z" fill="#999999"/>
-										</svg>
-									</button> -->
-									<button class="main--bestdeals__block--item__like">
-										<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M14.5 0C17.538 0 20 2.5 20 6C20 13 12.5 17 10 18.5C7.5 17 0 13 0 6C0 2.5 2.5 0 5.5 0C7.36 0 9 1 10 2C11 1 12.64 0 14.5 0ZM10.934 15.604C11.815 15.048 12.61 14.495 13.354 13.903C16.335 11.533 18 8.943 18 6C18 3.64 16.463 2 14.5 2C13.424 2 12.26 2.57 11.414 3.414L10 4.828L8.586 3.414C7.74 2.57 6.576 2 5.5 2C3.56 2 2 3.656 2 6C2 8.944 3.666 11.533 6.645 13.903C7.39 14.495 8.185 15.048 9.066 15.603C9.365 15.792 9.661 15.973 10 16.175C10.339 15.973 10.635 15.792 10.934 15.604Z" fill="#999999"></path>
-										</svg>
-									</button>
+								</div>
+								<div class="main--bestdeals__block--item open--modal__bestdeals">
+									<a href="#bestdealsItem-2" class="main--bestdeals__block--item__image button--openModal">
+										<img src="img/catalog/main/2.png" alt="#">
+									</a>
+									<a href="categories-single.html" class="main--bestdeals__block--item__info">
+										<div class="name">Акустика Pride Solo Mini 6,5</div>
+										<div class="desc">Купили более 150 раз</div>
+										<div class="cost">3 750 ₽</div>
+									</a>
+									<div class="main--bestdeals__block--item__footer">
+										<div class="main--bestdeals__block--item__cart button button--addCart">
+											<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0.93623 0.0251465H4.95437C5.37544 0.0251465 5.70245 0.307357 5.84131 0.679158L9.57724 12.4962H17.5642L19.804 5.91125H11.3959C10.8808 5.91125 10.4597 5.49017 10.4597 4.97503C10.4597 4.45988 10.8808 4.0388 11.3959 4.0388H21.0672C21.896 4.07912 22.1065 4.84512 21.9542 5.20796L19.1052 13.7056C18.9663 14.0774 18.5901 14.3148 18.2183 14.3148H8.92323C8.50216 14.3148 8.13035 14.0819 8.03628 13.7056L4.30036 1.88863H0.93623C0.421083 1.88863 7.62939e-06 1.46755 7.62939e-06 0.952409C7.62939e-06 0.437263 0.425562 0.0251465 0.93623 0.0251465Z" fill="white"></path>
+												<path d="M17.3761 15.9993C19.0111 15.9993 20.364 17.3521 20.364 18.9871C20.364 20.6221 19.0111 21.975 17.3761 21.975C15.7411 21.975 14.3883 20.6221 14.3883 18.9871C14.3883 17.3521 15.7411 15.9993 17.3761 15.9993ZM16.2562 19.0319C16.2562 19.6859 16.7714 20.2011 17.3761 20.2011C17.9853 20.2011 18.496 19.6859 18.496 19.0319C18.496 18.3779 17.9808 17.8627 17.3761 17.8627C16.7221 17.8672 16.207 18.3779 16.2562 19.0319Z" fill="white"></path>
+												<path d="M10.0924 15.9993C11.7274 15.9993 13.0803 17.3521 13.0803 18.9871C13.0803 20.6221 11.7274 21.975 10.0924 21.975C8.41259 21.975 7.10457 20.6221 7.10457 18.9871C7.10009 17.3521 8.45739 15.9993 10.0924 15.9993ZM8.96805 19.0319C8.96805 19.6859 9.4832 20.2011 10.0879 20.2011C10.6927 20.2011 11.2078 19.6859 11.2078 19.0319C11.2078 18.3779 10.6927 17.8627 10.0879 17.8627C9.4384 17.8672 8.92326 18.3779 8.96805 19.0319Z" fill="white"></path>
+											</svg>
+											<div class="quantity">
+												<button class="minus">-</button>
+												<input type="text" class="quantity--input" value="1" data-max-count="999">
+												<button class="plus">+</button>
+											</div>
+										</div>
+										<!-- <button class="main--bestdeals__block--item__compare">
+											<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0 6.19434H2V18.1943H0V6.19434ZM6 0.194336H8V18.1943H6V0.194336ZM12 9.19434H14V18.1943H12V9.19434ZM18 3.19434H20V18.1943H18V3.19434Z" fill="#999999"/>
+											</svg>
+										</button> -->
+										<button class="main--bestdeals__block--item__like">
+											<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M14.5 0C17.538 0 20 2.5 20 6C20 13 12.5 17 10 18.5C7.5 17 0 13 0 6C0 2.5 2.5 0 5.5 0C7.36 0 9 1 10 2C11 1 12.64 0 14.5 0ZM10.934 15.604C11.815 15.048 12.61 14.495 13.354 13.903C16.335 11.533 18 8.943 18 6C18 3.64 16.463 2 14.5 2C13.424 2 12.26 2.57 11.414 3.414L10 4.828L8.586 3.414C7.74 2.57 6.576 2 5.5 2C3.56 2 2 3.656 2 6C2 8.944 3.666 11.533 6.645 13.903C7.39 14.495 8.185 15.048 9.066 15.603C9.365 15.792 9.661 15.973 10 16.175C10.339 15.973 10.635 15.792 10.934 15.604Z" fill="#999999"></path>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="main--bestdeals__block--item open--modal__bestdeals">
+									<a href="#" class="main--bestdeals__block--item__image button--openModal">
+										<img src="img/catalog/main/3.png" alt="#">
+									</a>
+									<a href="categories-single.html" class="main--bestdeals__block--item__info">
+										<div class="name">Акустика Pride Solo v.3 (в комплекте OVERBOOST)</div>
+										<div class="desc">Купили более 100 раз</div>
+										<div class="cost">8 000 ₽</div>
+									</a>
+									<div class="main--bestdeals__block--item__footer">
+										<div class="main--bestdeals__block--item__cart button button--addCart">
+											<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0.93623 0.0251465H4.95437C5.37544 0.0251465 5.70245 0.307357 5.84131 0.679158L9.57724 12.4962H17.5642L19.804 5.91125H11.3959C10.8808 5.91125 10.4597 5.49017 10.4597 4.97503C10.4597 4.45988 10.8808 4.0388 11.3959 4.0388H21.0672C21.896 4.07912 22.1065 4.84512 21.9542 5.20796L19.1052 13.7056C18.9663 14.0774 18.5901 14.3148 18.2183 14.3148H8.92323C8.50216 14.3148 8.13035 14.0819 8.03628 13.7056L4.30036 1.88863H0.93623C0.421083 1.88863 7.62939e-06 1.46755 7.62939e-06 0.952409C7.62939e-06 0.437263 0.425562 0.0251465 0.93623 0.0251465Z" fill="white"></path>
+												<path d="M17.3761 15.9993C19.0111 15.9993 20.364 17.3521 20.364 18.9871C20.364 20.6221 19.0111 21.975 17.3761 21.975C15.7411 21.975 14.3883 20.6221 14.3883 18.9871C14.3883 17.3521 15.7411 15.9993 17.3761 15.9993ZM16.2562 19.0319C16.2562 19.6859 16.7714 20.2011 17.3761 20.2011C17.9853 20.2011 18.496 19.6859 18.496 19.0319C18.496 18.3779 17.9808 17.8627 17.3761 17.8627C16.7221 17.8672 16.207 18.3779 16.2562 19.0319Z" fill="white"></path>
+												<path d="M10.0924 15.9993C11.7274 15.9993 13.0803 17.3521 13.0803 18.9871C13.0803 20.6221 11.7274 21.975 10.0924 21.975C8.41259 21.975 7.10457 20.6221 7.10457 18.9871C7.10009 17.3521 8.45739 15.9993 10.0924 15.9993ZM8.96805 19.0319C8.96805 19.6859 9.4832 20.2011 10.0879 20.2011C10.6927 20.2011 11.2078 19.6859 11.2078 19.0319C11.2078 18.3779 10.6927 17.8627 10.0879 17.8627C9.4384 17.8672 8.92326 18.3779 8.96805 19.0319Z" fill="white"></path>
+											</svg>
+											<div class="quantity">
+												<button class="minus">-</button>
+												<input type="text" class="quantity--input" value="1" data-max-count="999">
+												<button class="plus">+</button>
+											</div>
+										</div>
+										<!-- <button class="main--bestdeals__block--item__compare">
+											<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0 6.19434H2V18.1943H0V6.19434ZM6 0.194336H8V18.1943H6V0.194336ZM12 9.19434H14V18.1943H12V9.19434ZM18 3.19434H20V18.1943H18V3.19434Z" fill="#999999"/>
+											</svg>
+										</button> -->
+										<button class="main--bestdeals__block--item__like">
+											<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M14.5 0C17.538 0 20 2.5 20 6C20 13 12.5 17 10 18.5C7.5 17 0 13 0 6C0 2.5 2.5 0 5.5 0C7.36 0 9 1 10 2C11 1 12.64 0 14.5 0ZM10.934 15.604C11.815 15.048 12.61 14.495 13.354 13.903C16.335 11.533 18 8.943 18 6C18 3.64 16.463 2 14.5 2C13.424 2 12.26 2.57 11.414 3.414L10 4.828L8.586 3.414C7.74 2.57 6.576 2 5.5 2C3.56 2 2 3.656 2 6C2 8.944 3.666 11.533 6.645 13.903C7.39 14.495 8.185 15.048 9.066 15.603C9.365 15.792 9.661 15.973 10 16.175C10.339 15.973 10.635 15.792 10.934 15.604Z" fill="#999999"></path>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="main--bestdeals__block--item open--modal__bestdeals">
+									<a href="#" class="main--bestdeals__block--item__image button--openModal">
+										<img src="img/catalog/main/1.png" alt="#">
+									</a>
+									<a href="categories-single.html" class="main--bestdeals__block--item__info">
+										<div class="name">Магнитола Aura AMH-77DSP</div>
+										<div class="desc">Купили более 10 раз</div>
+										<div class="cost">520 ₽</div>
+									</a>
+									<div class="main--bestdeals__block--item__footer">
+										<div class="main--bestdeals__block--item__cart button button--addCart">
+											<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0.93623 0.0251465H4.95437C5.37544 0.0251465 5.70245 0.307357 5.84131 0.679158L9.57724 12.4962H17.5642L19.804 5.91125H11.3959C10.8808 5.91125 10.4597 5.49017 10.4597 4.97503C10.4597 4.45988 10.8808 4.0388 11.3959 4.0388H21.0672C21.896 4.07912 22.1065 4.84512 21.9542 5.20796L19.1052 13.7056C18.9663 14.0774 18.5901 14.3148 18.2183 14.3148H8.92323C8.50216 14.3148 8.13035 14.0819 8.03628 13.7056L4.30036 1.88863H0.93623C0.421083 1.88863 7.62939e-06 1.46755 7.62939e-06 0.952409C7.62939e-06 0.437263 0.425562 0.0251465 0.93623 0.0251465Z" fill="white"></path>
+												<path d="M17.3761 15.9993C19.0111 15.9993 20.364 17.3521 20.364 18.9871C20.364 20.6221 19.0111 21.975 17.3761 21.975C15.7411 21.975 14.3883 20.6221 14.3883 18.9871C14.3883 17.3521 15.7411 15.9993 17.3761 15.9993ZM16.2562 19.0319C16.2562 19.6859 16.7714 20.2011 17.3761 20.2011C17.9853 20.2011 18.496 19.6859 18.496 19.0319C18.496 18.3779 17.9808 17.8627 17.3761 17.8627C16.7221 17.8672 16.207 18.3779 16.2562 19.0319Z" fill="white"></path>
+												<path d="M10.0924 15.9993C11.7274 15.9993 13.0803 17.3521 13.0803 18.9871C13.0803 20.6221 11.7274 21.975 10.0924 21.975C8.41259 21.975 7.10457 20.6221 7.10457 18.9871C7.10009 17.3521 8.45739 15.9993 10.0924 15.9993ZM8.96805 19.0319C8.96805 19.6859 9.4832 20.2011 10.0879 20.2011C10.6927 20.2011 11.2078 19.6859 11.2078 19.0319C11.2078 18.3779 10.6927 17.8627 10.0879 17.8627C9.4384 17.8672 8.92326 18.3779 8.96805 19.0319Z" fill="white"></path>
+											</svg>
+											<div class="quantity">
+												<button class="minus">-</button>
+												<input type="text" class="quantity--input" value="1" data-max-count="999">
+												<button class="plus">+</button>
+											</div>
+										</div>
+										<!-- <button class="main--bestdeals__block--item__compare">
+											<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0 6.19434H2V18.1943H0V6.19434ZM6 0.194336H8V18.1943H6V0.194336ZM12 9.19434H14V18.1943H12V9.19434ZM18 3.19434H20V18.1943H18V3.19434Z" fill="#999999"/>
+											</svg>
+										</button> -->
+										<button class="main--bestdeals__block--item__like">
+											<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M14.5 0C17.538 0 20 2.5 20 6C20 13 12.5 17 10 18.5C7.5 17 0 13 0 6C0 2.5 2.5 0 5.5 0C7.36 0 9 1 10 2C11 1 12.64 0 14.5 0ZM10.934 15.604C11.815 15.048 12.61 14.495 13.354 13.903C16.335 11.533 18 8.943 18 6C18 3.64 16.463 2 14.5 2C13.424 2 12.26 2.57 11.414 3.414L10 4.828L8.586 3.414C7.74 2.57 6.576 2 5.5 2C3.56 2 2 3.656 2 6C2 8.944 3.666 11.533 6.645 13.903C7.39 14.495 8.185 15.048 9.066 15.603C9.365 15.792 9.661 15.973 10 16.175C10.339 15.973 10.635 15.792 10.934 15.604Z" fill="#999999"></path>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="main--bestdeals__block--item open--modal__bestdeals">
+									<a href="#" class="main--bestdeals__block--item__image button--openModal">
+										<img src="img/catalog/main/2.png" alt="#">
+									</a>
+									<a href="categories-single.html" class="main--bestdeals__block--item__info">
+										<div class="name">Акустика Pride Solo Mini 6,5</div>
+										<div class="desc">Купили более 150 раз</div>
+										<div class="cost">3 750 ₽</div>
+									</a>
+									<div class="main--bestdeals__block--item__footer">
+										<div class="main--bestdeals__block--item__cart button button--addCart">
+											<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0.93623 0.0251465H4.95437C5.37544 0.0251465 5.70245 0.307357 5.84131 0.679158L9.57724 12.4962H17.5642L19.804 5.91125H11.3959C10.8808 5.91125 10.4597 5.49017 10.4597 4.97503C10.4597 4.45988 10.8808 4.0388 11.3959 4.0388H21.0672C21.896 4.07912 22.1065 4.84512 21.9542 5.20796L19.1052 13.7056C18.9663 14.0774 18.5901 14.3148 18.2183 14.3148H8.92323C8.50216 14.3148 8.13035 14.0819 8.03628 13.7056L4.30036 1.88863H0.93623C0.421083 1.88863 7.62939e-06 1.46755 7.62939e-06 0.952409C7.62939e-06 0.437263 0.425562 0.0251465 0.93623 0.0251465Z" fill="white"></path>
+												<path d="M17.3761 15.9993C19.0111 15.9993 20.364 17.3521 20.364 18.9871C20.364 20.6221 19.0111 21.975 17.3761 21.975C15.7411 21.975 14.3883 20.6221 14.3883 18.9871C14.3883 17.3521 15.7411 15.9993 17.3761 15.9993ZM16.2562 19.0319C16.2562 19.6859 16.7714 20.2011 17.3761 20.2011C17.9853 20.2011 18.496 19.6859 18.496 19.0319C18.496 18.3779 17.9808 17.8627 17.3761 17.8627C16.7221 17.8672 16.207 18.3779 16.2562 19.0319Z" fill="white"></path>
+												<path d="M10.0924 15.9993C11.7274 15.9993 13.0803 17.3521 13.0803 18.9871C13.0803 20.6221 11.7274 21.975 10.0924 21.975C8.41259 21.975 7.10457 20.6221 7.10457 18.9871C7.10009 17.3521 8.45739 15.9993 10.0924 15.9993ZM8.96805 19.0319C8.96805 19.6859 9.4832 20.2011 10.0879 20.2011C10.6927 20.2011 11.2078 19.6859 11.2078 19.0319C11.2078 18.3779 10.6927 17.8627 10.0879 17.8627C9.4384 17.8672 8.92326 18.3779 8.96805 19.0319Z" fill="white"></path>
+											</svg>
+											<div class="quantity">
+												<button class="minus">-</button>
+												<input type="text" class="quantity--input" value="1" data-max-count="999">
+												<button class="plus">+</button>
+											</div>
+										</div>
+										<!-- <button class="main--bestdeals__block--item__compare">
+											<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0 6.19434H2V18.1943H0V6.19434ZM6 0.194336H8V18.1943H6V0.194336ZM12 9.19434H14V18.1943H12V9.19434ZM18 3.19434H20V18.1943H18V3.19434Z" fill="#999999"/>
+											</svg>
+										</button> -->
+										<button class="main--bestdeals__block--item__like">
+											<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M14.5 0C17.538 0 20 2.5 20 6C20 13 12.5 17 10 18.5C7.5 17 0 13 0 6C0 2.5 2.5 0 5.5 0C7.36 0 9 1 10 2C11 1 12.64 0 14.5 0ZM10.934 15.604C11.815 15.048 12.61 14.495 13.354 13.903C16.335 11.533 18 8.943 18 6C18 3.64 16.463 2 14.5 2C13.424 2 12.26 2.57 11.414 3.414L10 4.828L8.586 3.414C7.74 2.57 6.576 2 5.5 2C3.56 2 2 3.656 2 6C2 8.944 3.666 11.533 6.645 13.903C7.39 14.495 8.185 15.048 9.066 15.603C9.365 15.792 9.661 15.973 10 16.175C10.339 15.973 10.635 15.792 10.934 15.604Z" fill="#999999"></path>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="main--bestdeals__block--item open--modal__bestdeals">
+									<a href="#" class="main--bestdeals__block--item__image button--openModal">
+										<img src="img/catalog/main/4.png" alt="#">
+									</a>
+									<a href="categories-single.html" class="main--bestdeals__block--item__info">
+										<div class="name">Акустика Pride Solo v.3 (в комплекте OVERBOOST)</div>
+										<div class="desc">Купили более 100 раз</div>
+										<div class="cost">8 000 ₽</div>
+									</a>
+									<div class="main--bestdeals__block--item__footer">
+										<div class="main--bestdeals__block--item__cart button button--addCart">
+											<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0.93623 0.0251465H4.95437C5.37544 0.0251465 5.70245 0.307357 5.84131 0.679158L9.57724 12.4962H17.5642L19.804 5.91125H11.3959C10.8808 5.91125 10.4597 5.49017 10.4597 4.97503C10.4597 4.45988 10.8808 4.0388 11.3959 4.0388H21.0672C21.896 4.07912 22.1065 4.84512 21.9542 5.20796L19.1052 13.7056C18.9663 14.0774 18.5901 14.3148 18.2183 14.3148H8.92323C8.50216 14.3148 8.13035 14.0819 8.03628 13.7056L4.30036 1.88863H0.93623C0.421083 1.88863 7.62939e-06 1.46755 7.62939e-06 0.952409C7.62939e-06 0.437263 0.425562 0.0251465 0.93623 0.0251465Z" fill="white"></path>
+												<path d="M17.3761 15.9993C19.0111 15.9993 20.364 17.3521 20.364 18.9871C20.364 20.6221 19.0111 21.975 17.3761 21.975C15.7411 21.975 14.3883 20.6221 14.3883 18.9871C14.3883 17.3521 15.7411 15.9993 17.3761 15.9993ZM16.2562 19.0319C16.2562 19.6859 16.7714 20.2011 17.3761 20.2011C17.9853 20.2011 18.496 19.6859 18.496 19.0319C18.496 18.3779 17.9808 17.8627 17.3761 17.8627C16.7221 17.8672 16.207 18.3779 16.2562 19.0319Z" fill="white"></path>
+												<path d="M10.0924 15.9993C11.7274 15.9993 13.0803 17.3521 13.0803 18.9871C13.0803 20.6221 11.7274 21.975 10.0924 21.975C8.41259 21.975 7.10457 20.6221 7.10457 18.9871C7.10009 17.3521 8.45739 15.9993 10.0924 15.9993ZM8.96805 19.0319C8.96805 19.6859 9.4832 20.2011 10.0879 20.2011C10.6927 20.2011 11.2078 19.6859 11.2078 19.0319C11.2078 18.3779 10.6927 17.8627 10.0879 17.8627C9.4384 17.8672 8.92326 18.3779 8.96805 19.0319Z" fill="white"></path>
+											</svg>
+											<div class="quantity">
+												<button class="minus">-</button>
+												<input type="text" class="quantity--input" value="1" data-max-count="999">
+												<button class="plus">+</button>
+											</div>
+										</div>
+										<!-- <button class="main--bestdeals__block--item__compare">
+											<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0 6.19434H2V18.1943H0V6.19434ZM6 0.194336H8V18.1943H6V0.194336ZM12 9.19434H14V18.1943H12V9.19434ZM18 3.19434H20V18.1943H18V3.19434Z" fill="#999999"/>
+											</svg>
+										</button> -->
+										<button class="main--bestdeals__block--item__like">
+											<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M14.5 0C17.538 0 20 2.5 20 6C20 13 12.5 17 10 18.5C7.5 17 0 13 0 6C0 2.5 2.5 0 5.5 0C7.36 0 9 1 10 2C11 1 12.64 0 14.5 0ZM10.934 15.604C11.815 15.048 12.61 14.495 13.354 13.903C16.335 11.533 18 8.943 18 6C18 3.64 16.463 2 14.5 2C13.424 2 12.26 2.57 11.414 3.414L10 4.828L8.586 3.414C7.74 2.57 6.576 2 5.5 2C3.56 2 2 3.656 2 6C2 8.944 3.666 11.533 6.645 13.903C7.39 14.495 8.185 15.048 9.066 15.603C9.365 15.792 9.661 15.973 10 16.175C10.339 15.973 10.635 15.792 10.934 15.604Z" fill="#999999"></path>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="main--bestdeals__block--item open--modal__bestdeals">
+									<a href="#" class="main--bestdeals__block--item__image button--openModal">
+										<img src="img/catalog/main/5.png" alt="#">
+										<img src="img/catalog/top.png" alt="#" class="absolute">
+									</a>
+									<a href="categories-single.html" class="main--bestdeals__block--item__info">
+										<div class="name">Акустика Pride Solo Mini 6,5</div>
+										<div class="desc">Купили более 150 раз</div>
+										<div class="cost">3 750 ₽</div>
+									</a>
+									<div class="main--bestdeals__block--item__footer">
+										<div class="main--bestdeals__block--item__cart button button--addCart">
+											<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0.93623 0.0251465H4.95437C5.37544 0.0251465 5.70245 0.307357 5.84131 0.679158L9.57724 12.4962H17.5642L19.804 5.91125H11.3959C10.8808 5.91125 10.4597 5.49017 10.4597 4.97503C10.4597 4.45988 10.8808 4.0388 11.3959 4.0388H21.0672C21.896 4.07912 22.1065 4.84512 21.9542 5.20796L19.1052 13.7056C18.9663 14.0774 18.5901 14.3148 18.2183 14.3148H8.92323C8.50216 14.3148 8.13035 14.0819 8.03628 13.7056L4.30036 1.88863H0.93623C0.421083 1.88863 7.62939e-06 1.46755 7.62939e-06 0.952409C7.62939e-06 0.437263 0.425562 0.0251465 0.93623 0.0251465Z" fill="white"></path>
+												<path d="M17.3761 15.9993C19.0111 15.9993 20.364 17.3521 20.364 18.9871C20.364 20.6221 19.0111 21.975 17.3761 21.975C15.7411 21.975 14.3883 20.6221 14.3883 18.9871C14.3883 17.3521 15.7411 15.9993 17.3761 15.9993ZM16.2562 19.0319C16.2562 19.6859 16.7714 20.2011 17.3761 20.2011C17.9853 20.2011 18.496 19.6859 18.496 19.0319C18.496 18.3779 17.9808 17.8627 17.3761 17.8627C16.7221 17.8672 16.207 18.3779 16.2562 19.0319Z" fill="white"></path>
+												<path d="M10.0924 15.9993C11.7274 15.9993 13.0803 17.3521 13.0803 18.9871C13.0803 20.6221 11.7274 21.975 10.0924 21.975C8.41259 21.975 7.10457 20.6221 7.10457 18.9871C7.10009 17.3521 8.45739 15.9993 10.0924 15.9993ZM8.96805 19.0319C8.96805 19.6859 9.4832 20.2011 10.0879 20.2011C10.6927 20.2011 11.2078 19.6859 11.2078 19.0319C11.2078 18.3779 10.6927 17.8627 10.0879 17.8627C9.4384 17.8672 8.92326 18.3779 8.96805 19.0319Z" fill="white"></path>
+											</svg>
+											<div class="quantity">
+												<button class="minus">-</button>
+												<input type="text" class="quantity--input" value="1" data-max-count="999">
+												<button class="plus">+</button>
+											</div>
+										</div>
+										<!-- <button class="main--bestdeals__block--item__compare">
+											<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0 6.19434H2V18.1943H0V6.19434ZM6 0.194336H8V18.1943H6V0.194336ZM12 9.19434H14V18.1943H12V9.19434ZM18 3.19434H20V18.1943H18V3.19434Z" fill="#999999"/>
+											</svg>
+										</button> -->
+										<button class="main--bestdeals__block--item__like">
+											<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M14.5 0C17.538 0 20 2.5 20 6C20 13 12.5 17 10 18.5C7.5 17 0 13 0 6C0 2.5 2.5 0 5.5 0C7.36 0 9 1 10 2C11 1 12.64 0 14.5 0ZM10.934 15.604C11.815 15.048 12.61 14.495 13.354 13.903C16.335 11.533 18 8.943 18 6C18 3.64 16.463 2 14.5 2C13.424 2 12.26 2.57 11.414 3.414L10 4.828L8.586 3.414C7.74 2.57 6.576 2 5.5 2C3.56 2 2 3.656 2 6C2 8.944 3.666 11.533 6.645 13.903C7.39 14.495 8.185 15.048 9.066 15.603C9.365 15.792 9.661 15.973 10 16.175C10.339 15.973 10.635 15.792 10.934 15.604Z" fill="#999999"></path>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="main--bestdeals__block--item open--modal__bestdeals">
+									<a href="#" class="main--bestdeals__block--item__image button--openModal">
+										<img src="img/catalog/main/6.png" alt="#">
+									</a>
+									<a href="categories-single.html" class="main--bestdeals__block--item__info">
+										<div class="name">Магнитола Aura AMH-77DSP</div>
+										<div class="desc">Купили более 10 раз</div>
+										<div class="cost">520 ₽</div>
+									</a>
+									<div class="main--bestdeals__block--item__footer">
+										<div class="main--bestdeals__block--item__cart button button--addCart">
+											<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0.93623 0.0251465H4.95437C5.37544 0.0251465 5.70245 0.307357 5.84131 0.679158L9.57724 12.4962H17.5642L19.804 5.91125H11.3959C10.8808 5.91125 10.4597 5.49017 10.4597 4.97503C10.4597 4.45988 10.8808 4.0388 11.3959 4.0388H21.0672C21.896 4.07912 22.1065 4.84512 21.9542 5.20796L19.1052 13.7056C18.9663 14.0774 18.5901 14.3148 18.2183 14.3148H8.92323C8.50216 14.3148 8.13035 14.0819 8.03628 13.7056L4.30036 1.88863H0.93623C0.421083 1.88863 7.62939e-06 1.46755 7.62939e-06 0.952409C7.62939e-06 0.437263 0.425562 0.0251465 0.93623 0.0251465Z" fill="white"></path>
+												<path d="M17.3761 15.9993C19.0111 15.9993 20.364 17.3521 20.364 18.9871C20.364 20.6221 19.0111 21.975 17.3761 21.975C15.7411 21.975 14.3883 20.6221 14.3883 18.9871C14.3883 17.3521 15.7411 15.9993 17.3761 15.9993ZM16.2562 19.0319C16.2562 19.6859 16.7714 20.2011 17.3761 20.2011C17.9853 20.2011 18.496 19.6859 18.496 19.0319C18.496 18.3779 17.9808 17.8627 17.3761 17.8627C16.7221 17.8672 16.207 18.3779 16.2562 19.0319Z" fill="white"></path>
+												<path d="M10.0924 15.9993C11.7274 15.9993 13.0803 17.3521 13.0803 18.9871C13.0803 20.6221 11.7274 21.975 10.0924 21.975C8.41259 21.975 7.10457 20.6221 7.10457 18.9871C7.10009 17.3521 8.45739 15.9993 10.0924 15.9993ZM8.96805 19.0319C8.96805 19.6859 9.4832 20.2011 10.0879 20.2011C10.6927 20.2011 11.2078 19.6859 11.2078 19.0319C11.2078 18.3779 10.6927 17.8627 10.0879 17.8627C9.4384 17.8672 8.92326 18.3779 8.96805 19.0319Z" fill="white"></path>
+											</svg>
+											<div class="quantity">
+												<button class="minus">-</button>
+												<input type="text" class="quantity--input" value="1" data-max-count="999">
+												<button class="plus">+</button>
+											</div>
+										</div>
+										<!-- <button class="main--bestdeals__block--item__compare">
+											<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0 6.19434H2V18.1943H0V6.19434ZM6 0.194336H8V18.1943H6V0.194336ZM12 9.19434H14V18.1943H12V9.19434ZM18 3.19434H20V18.1943H18V3.19434Z" fill="#999999"/>
+											</svg>
+										</button> -->
+										<button class="main--bestdeals__block--item__like">
+											<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M14.5 0C17.538 0 20 2.5 20 6C20 13 12.5 17 10 18.5C7.5 17 0 13 0 6C0 2.5 2.5 0 5.5 0C7.36 0 9 1 10 2C11 1 12.64 0 14.5 0ZM10.934 15.604C11.815 15.048 12.61 14.495 13.354 13.903C16.335 11.533 18 8.943 18 6C18 3.64 16.463 2 14.5 2C13.424 2 12.26 2.57 11.414 3.414L10 4.828L8.586 3.414C7.74 2.57 6.576 2 5.5 2C3.56 2 2 3.656 2 6C2 8.944 3.666 11.533 6.645 13.903C7.39 14.495 8.185 15.048 9.066 15.603C9.365 15.792 9.661 15.973 10 16.175C10.339 15.973 10.635 15.792 10.934 15.604Z" fill="#999999"></path>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="main--bestdeals__block--item open--modal__bestdeals">
+									<a href="#" class="main--bestdeals__block--item__image button--openModal">
+										<img src="img/catalog/main/7.png" alt="#">
+										<img src="img/catalog/bestseller.png" alt="#" class="absolute">
+									</a>
+									<a href="categories-single.html" class="main--bestdeals__block--item__info">
+										<div class="name">Акустика Pride Solo Mini 6,5</div>
+										<div class="desc">Купили более 150 раз</div>
+										<div class="cost">3 750 ₽</div>
+									</a>
+									<div class="main--bestdeals__block--item__footer">
+										<div class="main--bestdeals__block--item__cart button button--addCart">
+											<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0.93623 0.0251465H4.95437C5.37544 0.0251465 5.70245 0.307357 5.84131 0.679158L9.57724 12.4962H17.5642L19.804 5.91125H11.3959C10.8808 5.91125 10.4597 5.49017 10.4597 4.97503C10.4597 4.45988 10.8808 4.0388 11.3959 4.0388H21.0672C21.896 4.07912 22.1065 4.84512 21.9542 5.20796L19.1052 13.7056C18.9663 14.0774 18.5901 14.3148 18.2183 14.3148H8.92323C8.50216 14.3148 8.13035 14.0819 8.03628 13.7056L4.30036 1.88863H0.93623C0.421083 1.88863 7.62939e-06 1.46755 7.62939e-06 0.952409C7.62939e-06 0.437263 0.425562 0.0251465 0.93623 0.0251465Z" fill="white"></path>
+												<path d="M17.3761 15.9993C19.0111 15.9993 20.364 17.3521 20.364 18.9871C20.364 20.6221 19.0111 21.975 17.3761 21.975C15.7411 21.975 14.3883 20.6221 14.3883 18.9871C14.3883 17.3521 15.7411 15.9993 17.3761 15.9993ZM16.2562 19.0319C16.2562 19.6859 16.7714 20.2011 17.3761 20.2011C17.9853 20.2011 18.496 19.6859 18.496 19.0319C18.496 18.3779 17.9808 17.8627 17.3761 17.8627C16.7221 17.8672 16.207 18.3779 16.2562 19.0319Z" fill="white"></path>
+												<path d="M10.0924 15.9993C11.7274 15.9993 13.0803 17.3521 13.0803 18.9871C13.0803 20.6221 11.7274 21.975 10.0924 21.975C8.41259 21.975 7.10457 20.6221 7.10457 18.9871C7.10009 17.3521 8.45739 15.9993 10.0924 15.9993ZM8.96805 19.0319C8.96805 19.6859 9.4832 20.2011 10.0879 20.2011C10.6927 20.2011 11.2078 19.6859 11.2078 19.0319C11.2078 18.3779 10.6927 17.8627 10.0879 17.8627C9.4384 17.8672 8.92326 18.3779 8.96805 19.0319Z" fill="white"></path>
+											</svg>
+											<div class="quantity">
+												<button class="minus">-</button>
+												<input type="text" class="quantity--input" value="1" data-max-count="999">
+												<button class="plus">+</button>
+											</div>
+										</div>
+										<!-- <button class="main--bestdeals__block--item__compare">
+											<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0 6.19434H2V18.1943H0V6.19434ZM6 0.194336H8V18.1943H6V0.194336ZM12 9.19434H14V18.1943H12V9.19434ZM18 3.19434H20V18.1943H18V3.19434Z" fill="#999999"/>
+											</svg>
+										</button> -->
+										<button class="main--bestdeals__block--item__like">
+											<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M14.5 0C17.538 0 20 2.5 20 6C20 13 12.5 17 10 18.5C7.5 17 0 13 0 6C0 2.5 2.5 0 5.5 0C7.36 0 9 1 10 2C11 1 12.64 0 14.5 0ZM10.934 15.604C11.815 15.048 12.61 14.495 13.354 13.903C16.335 11.533 18 8.943 18 6C18 3.64 16.463 2 14.5 2C13.424 2 12.26 2.57 11.414 3.414L10 4.828L8.586 3.414C7.74 2.57 6.576 2 5.5 2C3.56 2 2 3.656 2 6C2 8.944 3.666 11.533 6.645 13.903C7.39 14.495 8.185 15.048 9.066 15.603C9.365 15.792 9.661 15.973 10 16.175C10.339 15.973 10.635 15.792 10.934 15.604Z" fill="#999999"></path>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="main--bestdeals__block--item open--modal__bestdeals">
+									<a href="#" class="main--bestdeals__block--item__image button--openModal">
+										<img src="img/catalog/main/8.png" alt="#">
+									</a>
+									<a href="categories-single.html" class="main--bestdeals__block--item__info">
+										<div class="name">Акустика Pride Solo Mini 6,5</div>
+										<div class="desc">Купили более 150 раз</div>
+										<div class="cost">3 750 ₽</div>
+									</a>
+									<div class="main--bestdeals__block--item__footer">
+										<div class="main--bestdeals__block--item__cart button button--addCart">
+											<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0.93623 0.0251465H4.95437C5.37544 0.0251465 5.70245 0.307357 5.84131 0.679158L9.57724 12.4962H17.5642L19.804 5.91125H11.3959C10.8808 5.91125 10.4597 5.49017 10.4597 4.97503C10.4597 4.45988 10.8808 4.0388 11.3959 4.0388H21.0672C21.896 4.07912 22.1065 4.84512 21.9542 5.20796L19.1052 13.7056C18.9663 14.0774 18.5901 14.3148 18.2183 14.3148H8.92323C8.50216 14.3148 8.13035 14.0819 8.03628 13.7056L4.30036 1.88863H0.93623C0.421083 1.88863 7.62939e-06 1.46755 7.62939e-06 0.952409C7.62939e-06 0.437263 0.425562 0.0251465 0.93623 0.0251465Z" fill="white"></path>
+												<path d="M17.3761 15.9993C19.0111 15.9993 20.364 17.3521 20.364 18.9871C20.364 20.6221 19.0111 21.975 17.3761 21.975C15.7411 21.975 14.3883 20.6221 14.3883 18.9871C14.3883 17.3521 15.7411 15.9993 17.3761 15.9993ZM16.2562 19.0319C16.2562 19.6859 16.7714 20.2011 17.3761 20.2011C17.9853 20.2011 18.496 19.6859 18.496 19.0319C18.496 18.3779 17.9808 17.8627 17.3761 17.8627C16.7221 17.8672 16.207 18.3779 16.2562 19.0319Z" fill="white"></path>
+												<path d="M10.0924 15.9993C11.7274 15.9993 13.0803 17.3521 13.0803 18.9871C13.0803 20.6221 11.7274 21.975 10.0924 21.975C8.41259 21.975 7.10457 20.6221 7.10457 18.9871C7.10009 17.3521 8.45739 15.9993 10.0924 15.9993ZM8.96805 19.0319C8.96805 19.6859 9.4832 20.2011 10.0879 20.2011C10.6927 20.2011 11.2078 19.6859 11.2078 19.0319C11.2078 18.3779 10.6927 17.8627 10.0879 17.8627C9.4384 17.8672 8.92326 18.3779 8.96805 19.0319Z" fill="white"></path>
+											</svg>
+											<div class="quantity">
+												<button class="minus">-</button>
+												<input type="text" class="quantity--input" value="1" data-max-count="999">
+												<button class="plus">+</button>
+											</div>
+										</div>
+										<!-- <button class="main--bestdeals__block--item__compare">
+											<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0 6.19434H2V18.1943H0V6.19434ZM6 0.194336H8V18.1943H6V0.194336ZM12 9.19434H14V18.1943H12V9.19434ZM18 3.19434H20V18.1943H18V3.19434Z" fill="#999999"/>
+											</svg>
+										</button> -->
+										<button class="main--bestdeals__block--item__like">
+											<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M14.5 0C17.538 0 20 2.5 20 6C20 13 12.5 17 10 18.5C7.5 17 0 13 0 6C0 2.5 2.5 0 5.5 0C7.36 0 9 1 10 2C11 1 12.64 0 14.5 0ZM10.934 15.604C11.815 15.048 12.61 14.495 13.354 13.903C16.335 11.533 18 8.943 18 6C18 3.64 16.463 2 14.5 2C13.424 2 12.26 2.57 11.414 3.414L10 4.828L8.586 3.414C7.74 2.57 6.576 2 5.5 2C3.56 2 2 3.656 2 6C2 8.944 3.666 11.533 6.645 13.903C7.39 14.495 8.185 15.048 9.066 15.603C9.365 15.792 9.661 15.973 10 16.175C10.339 15.973 10.635 15.792 10.934 15.604Z" fill="#999999"></path>
+											</svg>
+										</button>
+									</div>
 								</div>
 							</div>
-							<div class="main--bestdeals__block--item open--modal__bestdeals">
-								<a href="#" class="main--bestdeals__block--item__image button--openModal">
-									<img src="img/catalog/main/3.png" alt="#">
-								</a>
-								<a href="categories-single.html" class="main--bestdeals__block--item__info">
-									<div class="name">Акустика Pride Solo v.3 (в комплекте OVERBOOST)</div>
-									<div class="desc">Купили более 100 раз</div>
-									<div class="cost">8 000 ₽</div>
-								</a>
-								<div class="main--bestdeals__block--item__footer">
-									<div class="main--bestdeals__block--item__cart button button--addCart">
-										<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M0.93623 0.0251465H4.95437C5.37544 0.0251465 5.70245 0.307357 5.84131 0.679158L9.57724 12.4962H17.5642L19.804 5.91125H11.3959C10.8808 5.91125 10.4597 5.49017 10.4597 4.97503C10.4597 4.45988 10.8808 4.0388 11.3959 4.0388H21.0672C21.896 4.07912 22.1065 4.84512 21.9542 5.20796L19.1052 13.7056C18.9663 14.0774 18.5901 14.3148 18.2183 14.3148H8.92323C8.50216 14.3148 8.13035 14.0819 8.03628 13.7056L4.30036 1.88863H0.93623C0.421083 1.88863 7.62939e-06 1.46755 7.62939e-06 0.952409C7.62939e-06 0.437263 0.425562 0.0251465 0.93623 0.0251465Z" fill="white"></path>
-											<path d="M17.3761 15.9993C19.0111 15.9993 20.364 17.3521 20.364 18.9871C20.364 20.6221 19.0111 21.975 17.3761 21.975C15.7411 21.975 14.3883 20.6221 14.3883 18.9871C14.3883 17.3521 15.7411 15.9993 17.3761 15.9993ZM16.2562 19.0319C16.2562 19.6859 16.7714 20.2011 17.3761 20.2011C17.9853 20.2011 18.496 19.6859 18.496 19.0319C18.496 18.3779 17.9808 17.8627 17.3761 17.8627C16.7221 17.8672 16.207 18.3779 16.2562 19.0319Z" fill="white"></path>
-											<path d="M10.0924 15.9993C11.7274 15.9993 13.0803 17.3521 13.0803 18.9871C13.0803 20.6221 11.7274 21.975 10.0924 21.975C8.41259 21.975 7.10457 20.6221 7.10457 18.9871C7.10009 17.3521 8.45739 15.9993 10.0924 15.9993ZM8.96805 19.0319C8.96805 19.6859 9.4832 20.2011 10.0879 20.2011C10.6927 20.2011 11.2078 19.6859 11.2078 19.0319C11.2078 18.3779 10.6927 17.8627 10.0879 17.8627C9.4384 17.8672 8.92326 18.3779 8.96805 19.0319Z" fill="white"></path>
-										</svg>
-										<div class="quantity">
-											<button class="minus">-</button>
-											<input type="text" class="quantity--input" value="1" data-max-count="999">
-											<button class="plus">+</button>
-										</div>
+							<ul class="main--catalog__navigation">
+								<li class="current"><span>1</span></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><span>...</span></li>
+								<li><a href="#">51</a></li>
+							</ul>
+						</div>
+						<!-- если ничего не найдено -->
+						<div class="main--bestdeals__block--notFound">
+							<div class="main--catalog__sorts--wrapper">
+								<div class="h3">Вы искали</div>
+								<div class="main--catalog__sorts">
+									<div class="main--catalog__sorts--list">
+										<input type="text" class="you-lookingFor" name="you-lookingFor" placeholder="Усилитель">
 									</div>
-									<!-- <button class="main--bestdeals__block--item__compare">
-										<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M0 6.19434H2V18.1943H0V6.19434ZM6 0.194336H8V18.1943H6V0.194336ZM12 9.19434H14V18.1943H12V9.19434ZM18 3.19434H20V18.1943H18V3.19434Z" fill="#999999"/>
-										</svg>
-									</button> -->
-									<button class="main--bestdeals__block--item__like">
-										<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M14.5 0C17.538 0 20 2.5 20 6C20 13 12.5 17 10 18.5C7.5 17 0 13 0 6C0 2.5 2.5 0 5.5 0C7.36 0 9 1 10 2C11 1 12.64 0 14.5 0ZM10.934 15.604C11.815 15.048 12.61 14.495 13.354 13.903C16.335 11.533 18 8.943 18 6C18 3.64 16.463 2 14.5 2C13.424 2 12.26 2.57 11.414 3.414L10 4.828L8.586 3.414C7.74 2.57 6.576 2 5.5 2C3.56 2 2 3.656 2 6C2 8.944 3.666 11.533 6.645 13.903C7.39 14.495 8.185 15.048 9.066 15.603C9.365 15.792 9.661 15.973 10 16.175C10.339 15.973 10.635 15.792 10.934 15.604Z" fill="#999999"></path>
-										</svg>
-									</button>
+									<div class="main--catalog__sorts--list">
+										<!-- <label for="input-sort">Показывать по </label> -->
+										<select id="input-category" class="sort--list" onchange="location = this.value;">
+											<option value="#" selected="selected">Выберите категорию </option>
+											<option value="#">Акустика</option>
+											<option value="#">Усилители</option>
+											<option value="#">Сабвуферы</option>
+											<option value="#">Магнитолы</option>
+											<option value="#">Шумоизоляция</option>
+											<option value="#">Шумоизоляция</option>
+											<option value="#">Подиумы</option>
+											<option value="#">Аксессуары</option>
+											<option value="#">Короба</option>
+											<option value="#">Аудиопроцессоры</option>
+											<option value="#">Питание</option>
+											<option value="#">Переходные рамки</option>
+											<option value="#">Автосигнализация</option>
+											<option value="#">ISO-разъемы</option>
+											<option value="#">Парковочные радары</option>
+											<option value="#">Рем.комплекты</option>
+											<option value="#">Кабельная продукция</option>
+											<option value="#">Уход за автомобилем</option>
+										</select>
+									</div>
 								</div>
 							</div>
-							<div class="main--bestdeals__block--item open--modal__bestdeals">
-								<a href="#" class="main--bestdeals__block--item__image button--openModal">
-									<img src="img/catalog/main/1.png" alt="#">
-								</a>
-								<a href="categories-single.html" class="main--bestdeals__block--item__info">
-									<div class="name">Магнитола Aura AMH-77DSP</div>
-									<div class="desc">Купили более 10 раз</div>
-									<div class="cost">520 ₽</div>
-								</a>
-								<div class="main--bestdeals__block--item__footer">
-									<div class="main--bestdeals__block--item__cart button button--addCart">
-										<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M0.93623 0.0251465H4.95437C5.37544 0.0251465 5.70245 0.307357 5.84131 0.679158L9.57724 12.4962H17.5642L19.804 5.91125H11.3959C10.8808 5.91125 10.4597 5.49017 10.4597 4.97503C10.4597 4.45988 10.8808 4.0388 11.3959 4.0388H21.0672C21.896 4.07912 22.1065 4.84512 21.9542 5.20796L19.1052 13.7056C18.9663 14.0774 18.5901 14.3148 18.2183 14.3148H8.92323C8.50216 14.3148 8.13035 14.0819 8.03628 13.7056L4.30036 1.88863H0.93623C0.421083 1.88863 7.62939e-06 1.46755 7.62939e-06 0.952409C7.62939e-06 0.437263 0.425562 0.0251465 0.93623 0.0251465Z" fill="white"></path>
-											<path d="M17.3761 15.9993C19.0111 15.9993 20.364 17.3521 20.364 18.9871C20.364 20.6221 19.0111 21.975 17.3761 21.975C15.7411 21.975 14.3883 20.6221 14.3883 18.9871C14.3883 17.3521 15.7411 15.9993 17.3761 15.9993ZM16.2562 19.0319C16.2562 19.6859 16.7714 20.2011 17.3761 20.2011C17.9853 20.2011 18.496 19.6859 18.496 19.0319C18.496 18.3779 17.9808 17.8627 17.3761 17.8627C16.7221 17.8672 16.207 18.3779 16.2562 19.0319Z" fill="white"></path>
-											<path d="M10.0924 15.9993C11.7274 15.9993 13.0803 17.3521 13.0803 18.9871C13.0803 20.6221 11.7274 21.975 10.0924 21.975C8.41259 21.975 7.10457 20.6221 7.10457 18.9871C7.10009 17.3521 8.45739 15.9993 10.0924 15.9993ZM8.96805 19.0319C8.96805 19.6859 9.4832 20.2011 10.0879 20.2011C10.6927 20.2011 11.2078 19.6859 11.2078 19.0319C11.2078 18.3779 10.6927 17.8627 10.0879 17.8627C9.4384 17.8672 8.92326 18.3779 8.96805 19.0319Z" fill="white"></path>
-										</svg>
-										<div class="quantity">
-											<button class="minus">-</button>
-											<input type="text" class="quantity--input" value="1" data-max-count="999">
-											<button class="plus">+</button>
-										</div>
-									</div>
-									<!-- <button class="main--bestdeals__block--item__compare">
-										<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M0 6.19434H2V18.1943H0V6.19434ZM6 0.194336H8V18.1943H6V0.194336ZM12 9.19434H14V18.1943H12V9.19434ZM18 3.19434H20V18.1943H18V3.19434Z" fill="#999999"/>
-										</svg>
-									</button> -->
-									<button class="main--bestdeals__block--item__like">
-										<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M14.5 0C17.538 0 20 2.5 20 6C20 13 12.5 17 10 18.5C7.5 17 0 13 0 6C0 2.5 2.5 0 5.5 0C7.36 0 9 1 10 2C11 1 12.64 0 14.5 0ZM10.934 15.604C11.815 15.048 12.61 14.495 13.354 13.903C16.335 11.533 18 8.943 18 6C18 3.64 16.463 2 14.5 2C13.424 2 12.26 2.57 11.414 3.414L10 4.828L8.586 3.414C7.74 2.57 6.576 2 5.5 2C3.56 2 2 3.656 2 6C2 8.944 3.666 11.533 6.645 13.903C7.39 14.495 8.185 15.048 9.066 15.603C9.365 15.792 9.661 15.973 10 16.175C10.339 15.973 10.635 15.792 10.934 15.604Z" fill="#999999"></path>
-										</svg>
-									</button>
+							<div class="main--bestdeals__block--notFound__info">
+								<div class="main--bestdeals__block--notFound__info--text">
+									<div class="h3">Мы ничего не нашли<br> по вашему запросу</div>
+									<ul>
+										<span>Вот что можно сделать:</span>
+										<li>Изменить или уточнить запрос в <a href="#">поисковой строке</a></li>
+										<li><a href="#">Связаться</a> с нашим специалистом, он поможет найти нужный товар или подобрать аналог</li>
+										<li>Перейти в <a href="#">каталог</a> всех товаров</li>
+										<li>Купить <a href="#">ароматизатор</a></li>
+									</ul>
 								</div>
-							</div>
-							<div class="main--bestdeals__block--item open--modal__bestdeals">
-								<a href="#" class="main--bestdeals__block--item__image button--openModal">
-									<img src="img/catalog/main/2.png" alt="#">
-								</a>
-								<a href="categories-single.html" class="main--bestdeals__block--item__info">
-									<div class="name">Акустика Pride Solo Mini 6,5</div>
-									<div class="desc">Купили более 150 раз</div>
-									<div class="cost">3 750 ₽</div>
-								</a>
-								<div class="main--bestdeals__block--item__footer">
-									<div class="main--bestdeals__block--item__cart button button--addCart">
-										<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M0.93623 0.0251465H4.95437C5.37544 0.0251465 5.70245 0.307357 5.84131 0.679158L9.57724 12.4962H17.5642L19.804 5.91125H11.3959C10.8808 5.91125 10.4597 5.49017 10.4597 4.97503C10.4597 4.45988 10.8808 4.0388 11.3959 4.0388H21.0672C21.896 4.07912 22.1065 4.84512 21.9542 5.20796L19.1052 13.7056C18.9663 14.0774 18.5901 14.3148 18.2183 14.3148H8.92323C8.50216 14.3148 8.13035 14.0819 8.03628 13.7056L4.30036 1.88863H0.93623C0.421083 1.88863 7.62939e-06 1.46755 7.62939e-06 0.952409C7.62939e-06 0.437263 0.425562 0.0251465 0.93623 0.0251465Z" fill="white"></path>
-											<path d="M17.3761 15.9993C19.0111 15.9993 20.364 17.3521 20.364 18.9871C20.364 20.6221 19.0111 21.975 17.3761 21.975C15.7411 21.975 14.3883 20.6221 14.3883 18.9871C14.3883 17.3521 15.7411 15.9993 17.3761 15.9993ZM16.2562 19.0319C16.2562 19.6859 16.7714 20.2011 17.3761 20.2011C17.9853 20.2011 18.496 19.6859 18.496 19.0319C18.496 18.3779 17.9808 17.8627 17.3761 17.8627C16.7221 17.8672 16.207 18.3779 16.2562 19.0319Z" fill="white"></path>
-											<path d="M10.0924 15.9993C11.7274 15.9993 13.0803 17.3521 13.0803 18.9871C13.0803 20.6221 11.7274 21.975 10.0924 21.975C8.41259 21.975 7.10457 20.6221 7.10457 18.9871C7.10009 17.3521 8.45739 15.9993 10.0924 15.9993ZM8.96805 19.0319C8.96805 19.6859 9.4832 20.2011 10.0879 20.2011C10.6927 20.2011 11.2078 19.6859 11.2078 19.0319C11.2078 18.3779 10.6927 17.8627 10.0879 17.8627C9.4384 17.8672 8.92326 18.3779 8.96805 19.0319Z" fill="white"></path>
-										</svg>
-										<div class="quantity">
-											<button class="minus">-</button>
-											<input type="text" class="quantity--input" value="1" data-max-count="999">
-											<button class="plus">+</button>
-										</div>
-									</div>
-									<!-- <button class="main--bestdeals__block--item__compare">
-										<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M0 6.19434H2V18.1943H0V6.19434ZM6 0.194336H8V18.1943H6V0.194336ZM12 9.19434H14V18.1943H12V9.19434ZM18 3.19434H20V18.1943H18V3.19434Z" fill="#999999"/>
-										</svg>
-									</button> -->
-									<button class="main--bestdeals__block--item__like">
-										<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M14.5 0C17.538 0 20 2.5 20 6C20 13 12.5 17 10 18.5C7.5 17 0 13 0 6C0 2.5 2.5 0 5.5 0C7.36 0 9 1 10 2C11 1 12.64 0 14.5 0ZM10.934 15.604C11.815 15.048 12.61 14.495 13.354 13.903C16.335 11.533 18 8.943 18 6C18 3.64 16.463 2 14.5 2C13.424 2 12.26 2.57 11.414 3.414L10 4.828L8.586 3.414C7.74 2.57 6.576 2 5.5 2C3.56 2 2 3.656 2 6C2 8.944 3.666 11.533 6.645 13.903C7.39 14.495 8.185 15.048 9.066 15.603C9.365 15.792 9.661 15.973 10 16.175C10.339 15.973 10.635 15.792 10.934 15.604Z" fill="#999999"></path>
-										</svg>
-									</button>
-								</div>
-							</div>
-							<div class="main--bestdeals__block--item open--modal__bestdeals">
-								<a href="#" class="main--bestdeals__block--item__image button--openModal">
-									<img src="img/catalog/main/4.png" alt="#">
-								</a>
-								<a href="categories-single.html" class="main--bestdeals__block--item__info">
-									<div class="name">Акустика Pride Solo v.3 (в комплекте OVERBOOST)</div>
-									<div class="desc">Купили более 100 раз</div>
-									<div class="cost">8 000 ₽</div>
-								</a>
-								<div class="main--bestdeals__block--item__footer">
-									<div class="main--bestdeals__block--item__cart button button--addCart">
-										<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M0.93623 0.0251465H4.95437C5.37544 0.0251465 5.70245 0.307357 5.84131 0.679158L9.57724 12.4962H17.5642L19.804 5.91125H11.3959C10.8808 5.91125 10.4597 5.49017 10.4597 4.97503C10.4597 4.45988 10.8808 4.0388 11.3959 4.0388H21.0672C21.896 4.07912 22.1065 4.84512 21.9542 5.20796L19.1052 13.7056C18.9663 14.0774 18.5901 14.3148 18.2183 14.3148H8.92323C8.50216 14.3148 8.13035 14.0819 8.03628 13.7056L4.30036 1.88863H0.93623C0.421083 1.88863 7.62939e-06 1.46755 7.62939e-06 0.952409C7.62939e-06 0.437263 0.425562 0.0251465 0.93623 0.0251465Z" fill="white"></path>
-											<path d="M17.3761 15.9993C19.0111 15.9993 20.364 17.3521 20.364 18.9871C20.364 20.6221 19.0111 21.975 17.3761 21.975C15.7411 21.975 14.3883 20.6221 14.3883 18.9871C14.3883 17.3521 15.7411 15.9993 17.3761 15.9993ZM16.2562 19.0319C16.2562 19.6859 16.7714 20.2011 17.3761 20.2011C17.9853 20.2011 18.496 19.6859 18.496 19.0319C18.496 18.3779 17.9808 17.8627 17.3761 17.8627C16.7221 17.8672 16.207 18.3779 16.2562 19.0319Z" fill="white"></path>
-											<path d="M10.0924 15.9993C11.7274 15.9993 13.0803 17.3521 13.0803 18.9871C13.0803 20.6221 11.7274 21.975 10.0924 21.975C8.41259 21.975 7.10457 20.6221 7.10457 18.9871C7.10009 17.3521 8.45739 15.9993 10.0924 15.9993ZM8.96805 19.0319C8.96805 19.6859 9.4832 20.2011 10.0879 20.2011C10.6927 20.2011 11.2078 19.6859 11.2078 19.0319C11.2078 18.3779 10.6927 17.8627 10.0879 17.8627C9.4384 17.8672 8.92326 18.3779 8.96805 19.0319Z" fill="white"></path>
-										</svg>
-										<div class="quantity">
-											<button class="minus">-</button>
-											<input type="text" class="quantity--input" value="1" data-max-count="999">
-											<button class="plus">+</button>
-										</div>
-									</div>
-									<!-- <button class="main--bestdeals__block--item__compare">
-										<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M0 6.19434H2V18.1943H0V6.19434ZM6 0.194336H8V18.1943H6V0.194336ZM12 9.19434H14V18.1943H12V9.19434ZM18 3.19434H20V18.1943H18V3.19434Z" fill="#999999"/>
-										</svg>
-									</button> -->
-									<button class="main--bestdeals__block--item__like">
-										<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M14.5 0C17.538 0 20 2.5 20 6C20 13 12.5 17 10 18.5C7.5 17 0 13 0 6C0 2.5 2.5 0 5.5 0C7.36 0 9 1 10 2C11 1 12.64 0 14.5 0ZM10.934 15.604C11.815 15.048 12.61 14.495 13.354 13.903C16.335 11.533 18 8.943 18 6C18 3.64 16.463 2 14.5 2C13.424 2 12.26 2.57 11.414 3.414L10 4.828L8.586 3.414C7.74 2.57 6.576 2 5.5 2C3.56 2 2 3.656 2 6C2 8.944 3.666 11.533 6.645 13.903C7.39 14.495 8.185 15.048 9.066 15.603C9.365 15.792 9.661 15.973 10 16.175C10.339 15.973 10.635 15.792 10.934 15.604Z" fill="#999999"></path>
-										</svg>
-									</button>
-								</div>
-							</div>
-							<div class="main--bestdeals__block--item open--modal__bestdeals">
-								<a href="#" class="main--bestdeals__block--item__image button--openModal">
-									<img src="img/catalog/main/5.png" alt="#">
-									<img src="img/catalog/top.png" alt="#" class="absolute">
-								</a>
-								<a href="categories-single.html" class="main--bestdeals__block--item__info">
-									<div class="name">Акустика Pride Solo Mini 6,5</div>
-									<div class="desc">Купили более 150 раз</div>
-									<div class="cost">3 750 ₽</div>
-								</a>
-								<div class="main--bestdeals__block--item__footer">
-									<div class="main--bestdeals__block--item__cart button button--addCart">
-										<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M0.93623 0.0251465H4.95437C5.37544 0.0251465 5.70245 0.307357 5.84131 0.679158L9.57724 12.4962H17.5642L19.804 5.91125H11.3959C10.8808 5.91125 10.4597 5.49017 10.4597 4.97503C10.4597 4.45988 10.8808 4.0388 11.3959 4.0388H21.0672C21.896 4.07912 22.1065 4.84512 21.9542 5.20796L19.1052 13.7056C18.9663 14.0774 18.5901 14.3148 18.2183 14.3148H8.92323C8.50216 14.3148 8.13035 14.0819 8.03628 13.7056L4.30036 1.88863H0.93623C0.421083 1.88863 7.62939e-06 1.46755 7.62939e-06 0.952409C7.62939e-06 0.437263 0.425562 0.0251465 0.93623 0.0251465Z" fill="white"></path>
-											<path d="M17.3761 15.9993C19.0111 15.9993 20.364 17.3521 20.364 18.9871C20.364 20.6221 19.0111 21.975 17.3761 21.975C15.7411 21.975 14.3883 20.6221 14.3883 18.9871C14.3883 17.3521 15.7411 15.9993 17.3761 15.9993ZM16.2562 19.0319C16.2562 19.6859 16.7714 20.2011 17.3761 20.2011C17.9853 20.2011 18.496 19.6859 18.496 19.0319C18.496 18.3779 17.9808 17.8627 17.3761 17.8627C16.7221 17.8672 16.207 18.3779 16.2562 19.0319Z" fill="white"></path>
-											<path d="M10.0924 15.9993C11.7274 15.9993 13.0803 17.3521 13.0803 18.9871C13.0803 20.6221 11.7274 21.975 10.0924 21.975C8.41259 21.975 7.10457 20.6221 7.10457 18.9871C7.10009 17.3521 8.45739 15.9993 10.0924 15.9993ZM8.96805 19.0319C8.96805 19.6859 9.4832 20.2011 10.0879 20.2011C10.6927 20.2011 11.2078 19.6859 11.2078 19.0319C11.2078 18.3779 10.6927 17.8627 10.0879 17.8627C9.4384 17.8672 8.92326 18.3779 8.96805 19.0319Z" fill="white"></path>
-										</svg>
-										<div class="quantity">
-											<button class="minus">-</button>
-											<input type="text" class="quantity--input" value="1" data-max-count="999">
-											<button class="plus">+</button>
-										</div>
-									</div>
-									<!-- <button class="main--bestdeals__block--item__compare">
-										<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M0 6.19434H2V18.1943H0V6.19434ZM6 0.194336H8V18.1943H6V0.194336ZM12 9.19434H14V18.1943H12V9.19434ZM18 3.19434H20V18.1943H18V3.19434Z" fill="#999999"/>
-										</svg>
-									</button> -->
-									<button class="main--bestdeals__block--item__like">
-										<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M14.5 0C17.538 0 20 2.5 20 6C20 13 12.5 17 10 18.5C7.5 17 0 13 0 6C0 2.5 2.5 0 5.5 0C7.36 0 9 1 10 2C11 1 12.64 0 14.5 0ZM10.934 15.604C11.815 15.048 12.61 14.495 13.354 13.903C16.335 11.533 18 8.943 18 6C18 3.64 16.463 2 14.5 2C13.424 2 12.26 2.57 11.414 3.414L10 4.828L8.586 3.414C7.74 2.57 6.576 2 5.5 2C3.56 2 2 3.656 2 6C2 8.944 3.666 11.533 6.645 13.903C7.39 14.495 8.185 15.048 9.066 15.603C9.365 15.792 9.661 15.973 10 16.175C10.339 15.973 10.635 15.792 10.934 15.604Z" fill="#999999"></path>
-										</svg>
-									</button>
-								</div>
-							</div>
-							<div class="main--bestdeals__block--item open--modal__bestdeals">
-								<a href="#" class="main--bestdeals__block--item__image button--openModal">
-									<img src="img/catalog/main/6.png" alt="#">
-								</a>
-								<a href="categories-single.html" class="main--bestdeals__block--item__info">
-									<div class="name">Магнитола Aura AMH-77DSP</div>
-									<div class="desc">Купили более 10 раз</div>
-									<div class="cost">520 ₽</div>
-								</a>
-								<div class="main--bestdeals__block--item__footer">
-									<div class="main--bestdeals__block--item__cart button button--addCart">
-										<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M0.93623 0.0251465H4.95437C5.37544 0.0251465 5.70245 0.307357 5.84131 0.679158L9.57724 12.4962H17.5642L19.804 5.91125H11.3959C10.8808 5.91125 10.4597 5.49017 10.4597 4.97503C10.4597 4.45988 10.8808 4.0388 11.3959 4.0388H21.0672C21.896 4.07912 22.1065 4.84512 21.9542 5.20796L19.1052 13.7056C18.9663 14.0774 18.5901 14.3148 18.2183 14.3148H8.92323C8.50216 14.3148 8.13035 14.0819 8.03628 13.7056L4.30036 1.88863H0.93623C0.421083 1.88863 7.62939e-06 1.46755 7.62939e-06 0.952409C7.62939e-06 0.437263 0.425562 0.0251465 0.93623 0.0251465Z" fill="white"></path>
-											<path d="M17.3761 15.9993C19.0111 15.9993 20.364 17.3521 20.364 18.9871C20.364 20.6221 19.0111 21.975 17.3761 21.975C15.7411 21.975 14.3883 20.6221 14.3883 18.9871C14.3883 17.3521 15.7411 15.9993 17.3761 15.9993ZM16.2562 19.0319C16.2562 19.6859 16.7714 20.2011 17.3761 20.2011C17.9853 20.2011 18.496 19.6859 18.496 19.0319C18.496 18.3779 17.9808 17.8627 17.3761 17.8627C16.7221 17.8672 16.207 18.3779 16.2562 19.0319Z" fill="white"></path>
-											<path d="M10.0924 15.9993C11.7274 15.9993 13.0803 17.3521 13.0803 18.9871C13.0803 20.6221 11.7274 21.975 10.0924 21.975C8.41259 21.975 7.10457 20.6221 7.10457 18.9871C7.10009 17.3521 8.45739 15.9993 10.0924 15.9993ZM8.96805 19.0319C8.96805 19.6859 9.4832 20.2011 10.0879 20.2011C10.6927 20.2011 11.2078 19.6859 11.2078 19.0319C11.2078 18.3779 10.6927 17.8627 10.0879 17.8627C9.4384 17.8672 8.92326 18.3779 8.96805 19.0319Z" fill="white"></path>
-										</svg>
-										<div class="quantity">
-											<button class="minus">-</button>
-											<input type="text" class="quantity--input" value="1" data-max-count="999">
-											<button class="plus">+</button>
-										</div>
-									</div>
-									<!-- <button class="main--bestdeals__block--item__compare">
-										<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M0 6.19434H2V18.1943H0V6.19434ZM6 0.194336H8V18.1943H6V0.194336ZM12 9.19434H14V18.1943H12V9.19434ZM18 3.19434H20V18.1943H18V3.19434Z" fill="#999999"/>
-										</svg>
-									</button> -->
-									<button class="main--bestdeals__block--item__like">
-										<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M14.5 0C17.538 0 20 2.5 20 6C20 13 12.5 17 10 18.5C7.5 17 0 13 0 6C0 2.5 2.5 0 5.5 0C7.36 0 9 1 10 2C11 1 12.64 0 14.5 0ZM10.934 15.604C11.815 15.048 12.61 14.495 13.354 13.903C16.335 11.533 18 8.943 18 6C18 3.64 16.463 2 14.5 2C13.424 2 12.26 2.57 11.414 3.414L10 4.828L8.586 3.414C7.74 2.57 6.576 2 5.5 2C3.56 2 2 3.656 2 6C2 8.944 3.666 11.533 6.645 13.903C7.39 14.495 8.185 15.048 9.066 15.603C9.365 15.792 9.661 15.973 10 16.175C10.339 15.973 10.635 15.792 10.934 15.604Z" fill="#999999"></path>
-										</svg>
-									</button>
-								</div>
-							</div>
-							<div class="main--bestdeals__block--item open--modal__bestdeals">
-								<a href="#" class="main--bestdeals__block--item__image button--openModal">
-									<img src="img/catalog/main/7.png" alt="#">
-									<img src="img/catalog/bestseller.png" alt="#" class="absolute">
-								</a>
-								<a href="categories-single.html" class="main--bestdeals__block--item__info">
-									<div class="name">Акустика Pride Solo Mini 6,5</div>
-									<div class="desc">Купили более 150 раз</div>
-									<div class="cost">3 750 ₽</div>
-								</a>
-								<div class="main--bestdeals__block--item__footer">
-									<div class="main--bestdeals__block--item__cart button button--addCart">
-										<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M0.93623 0.0251465H4.95437C5.37544 0.0251465 5.70245 0.307357 5.84131 0.679158L9.57724 12.4962H17.5642L19.804 5.91125H11.3959C10.8808 5.91125 10.4597 5.49017 10.4597 4.97503C10.4597 4.45988 10.8808 4.0388 11.3959 4.0388H21.0672C21.896 4.07912 22.1065 4.84512 21.9542 5.20796L19.1052 13.7056C18.9663 14.0774 18.5901 14.3148 18.2183 14.3148H8.92323C8.50216 14.3148 8.13035 14.0819 8.03628 13.7056L4.30036 1.88863H0.93623C0.421083 1.88863 7.62939e-06 1.46755 7.62939e-06 0.952409C7.62939e-06 0.437263 0.425562 0.0251465 0.93623 0.0251465Z" fill="white"></path>
-											<path d="M17.3761 15.9993C19.0111 15.9993 20.364 17.3521 20.364 18.9871C20.364 20.6221 19.0111 21.975 17.3761 21.975C15.7411 21.975 14.3883 20.6221 14.3883 18.9871C14.3883 17.3521 15.7411 15.9993 17.3761 15.9993ZM16.2562 19.0319C16.2562 19.6859 16.7714 20.2011 17.3761 20.2011C17.9853 20.2011 18.496 19.6859 18.496 19.0319C18.496 18.3779 17.9808 17.8627 17.3761 17.8627C16.7221 17.8672 16.207 18.3779 16.2562 19.0319Z" fill="white"></path>
-											<path d="M10.0924 15.9993C11.7274 15.9993 13.0803 17.3521 13.0803 18.9871C13.0803 20.6221 11.7274 21.975 10.0924 21.975C8.41259 21.975 7.10457 20.6221 7.10457 18.9871C7.10009 17.3521 8.45739 15.9993 10.0924 15.9993ZM8.96805 19.0319C8.96805 19.6859 9.4832 20.2011 10.0879 20.2011C10.6927 20.2011 11.2078 19.6859 11.2078 19.0319C11.2078 18.3779 10.6927 17.8627 10.0879 17.8627C9.4384 17.8672 8.92326 18.3779 8.96805 19.0319Z" fill="white"></path>
-										</svg>
-										<div class="quantity">
-											<button class="minus">-</button>
-											<input type="text" class="quantity--input" value="1" data-max-count="999">
-											<button class="plus">+</button>
-										</div>
-									</div>
-									<!-- <button class="main--bestdeals__block--item__compare">
-										<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M0 6.19434H2V18.1943H0V6.19434ZM6 0.194336H8V18.1943H6V0.194336ZM12 9.19434H14V18.1943H12V9.19434ZM18 3.19434H20V18.1943H18V3.19434Z" fill="#999999"/>
-										</svg>
-									</button> -->
-									<button class="main--bestdeals__block--item__like">
-										<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M14.5 0C17.538 0 20 2.5 20 6C20 13 12.5 17 10 18.5C7.5 17 0 13 0 6C0 2.5 2.5 0 5.5 0C7.36 0 9 1 10 2C11 1 12.64 0 14.5 0ZM10.934 15.604C11.815 15.048 12.61 14.495 13.354 13.903C16.335 11.533 18 8.943 18 6C18 3.64 16.463 2 14.5 2C13.424 2 12.26 2.57 11.414 3.414L10 4.828L8.586 3.414C7.74 2.57 6.576 2 5.5 2C3.56 2 2 3.656 2 6C2 8.944 3.666 11.533 6.645 13.903C7.39 14.495 8.185 15.048 9.066 15.603C9.365 15.792 9.661 15.973 10 16.175C10.339 15.973 10.635 15.792 10.934 15.604Z" fill="#999999"></path>
-										</svg>
-									</button>
-								</div>
-							</div>
-							<div class="main--bestdeals__block--item open--modal__bestdeals">
-								<a href="#" class="main--bestdeals__block--item__image button--openModal">
-									<img src="img/catalog/main/8.png" alt="#">
-								</a>
-								<a href="categories-single.html" class="main--bestdeals__block--item__info">
-									<div class="name">Акустика Pride Solo Mini 6,5</div>
-									<div class="desc">Купили более 150 раз</div>
-									<div class="cost">3 750 ₽</div>
-								</a>
-								<div class="main--bestdeals__block--item__footer">
-									<div class="main--bestdeals__block--item__cart button button--addCart">
-										<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M0.93623 0.0251465H4.95437C5.37544 0.0251465 5.70245 0.307357 5.84131 0.679158L9.57724 12.4962H17.5642L19.804 5.91125H11.3959C10.8808 5.91125 10.4597 5.49017 10.4597 4.97503C10.4597 4.45988 10.8808 4.0388 11.3959 4.0388H21.0672C21.896 4.07912 22.1065 4.84512 21.9542 5.20796L19.1052 13.7056C18.9663 14.0774 18.5901 14.3148 18.2183 14.3148H8.92323C8.50216 14.3148 8.13035 14.0819 8.03628 13.7056L4.30036 1.88863H0.93623C0.421083 1.88863 7.62939e-06 1.46755 7.62939e-06 0.952409C7.62939e-06 0.437263 0.425562 0.0251465 0.93623 0.0251465Z" fill="white"></path>
-											<path d="M17.3761 15.9993C19.0111 15.9993 20.364 17.3521 20.364 18.9871C20.364 20.6221 19.0111 21.975 17.3761 21.975C15.7411 21.975 14.3883 20.6221 14.3883 18.9871C14.3883 17.3521 15.7411 15.9993 17.3761 15.9993ZM16.2562 19.0319C16.2562 19.6859 16.7714 20.2011 17.3761 20.2011C17.9853 20.2011 18.496 19.6859 18.496 19.0319C18.496 18.3779 17.9808 17.8627 17.3761 17.8627C16.7221 17.8672 16.207 18.3779 16.2562 19.0319Z" fill="white"></path>
-											<path d="M10.0924 15.9993C11.7274 15.9993 13.0803 17.3521 13.0803 18.9871C13.0803 20.6221 11.7274 21.975 10.0924 21.975C8.41259 21.975 7.10457 20.6221 7.10457 18.9871C7.10009 17.3521 8.45739 15.9993 10.0924 15.9993ZM8.96805 19.0319C8.96805 19.6859 9.4832 20.2011 10.0879 20.2011C10.6927 20.2011 11.2078 19.6859 11.2078 19.0319C11.2078 18.3779 10.6927 17.8627 10.0879 17.8627C9.4384 17.8672 8.92326 18.3779 8.96805 19.0319Z" fill="white"></path>
-										</svg>
-										<div class="quantity">
-											<button class="minus">-</button>
-											<input type="text" class="quantity--input" value="1" data-max-count="999">
-											<button class="plus">+</button>
-										</div>
-									</div>
-									<!-- <button class="main--bestdeals__block--item__compare">
-										<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M0 6.19434H2V18.1943H0V6.19434ZM6 0.194336H8V18.1943H6V0.194336ZM12 9.19434H14V18.1943H12V9.19434ZM18 3.19434H20V18.1943H18V3.19434Z" fill="#999999"/>
-										</svg>
-									</button> -->
-									<button class="main--bestdeals__block--item__like">
-										<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M14.5 0C17.538 0 20 2.5 20 6C20 13 12.5 17 10 18.5C7.5 17 0 13 0 6C0 2.5 2.5 0 5.5 0C7.36 0 9 1 10 2C11 1 12.64 0 14.5 0ZM10.934 15.604C11.815 15.048 12.61 14.495 13.354 13.903C16.335 11.533 18 8.943 18 6C18 3.64 16.463 2 14.5 2C13.424 2 12.26 2.57 11.414 3.414L10 4.828L8.586 3.414C7.74 2.57 6.576 2 5.5 2C3.56 2 2 3.656 2 6C2 8.944 3.666 11.533 6.645 13.903C7.39 14.495 8.185 15.048 9.066 15.603C9.365 15.792 9.661 15.973 10 16.175C10.339 15.973 10.635 15.792 10.934 15.604Z" fill="#999999"></path>
-										</svg>
-									</button>
+								<div class="main--bestdeals__block--notFound__info--image">
+									<img src="img/john.png">
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="main--advantages">
+			<!-- статьи скрывать, если ничего не найдено -->
+			<section class="journal--single__articles">
 				<div class="container">
 					<div class="row">
-						<div class="main--advantages__wrapper">
-							<div class="main--advantages__item">
-								<div class="main--advantages__item--icon">
-									<img src="img/advantages/1.png" alt="#">
-									<span>#1</span>
-								</div>
-								<div class="main--advantages__item--text">Гарантия на доставку и качество товара</div>
+						<div class="h3">Статьи по вашему запросу</div>
+						<div class="journal--single__services--block">
+							<div class="journal--single__services--prev journal--single__services--prev-2">
+								<svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1.34375 0L0.015625 1.32812L6.38281 7.73438L0.015625 14.1406L1.34375 15.4688L9 7.73438L1.34375 0Z" fill="#F6A700"/>
+								</svg>
+									
 							</div>
-							<div class="main--advantages__item">
-								<div class="main--advantages__item--icon">
-									<img src="img/advantages/2.png" alt="#">
-									<span>#2</span>
-								</div>
-								<div class="main--advantages__item--text">Установка всех компонентов в нашей мастерской в Казани</div>
+							<div class="journal--single__services--next journal--single__services--next-2">
+								<svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1.34375 0L0.015625 1.32812L6.38281 7.73438L0.015625 14.1406L1.34375 15.4688L9 7.73438L1.34375 0Z" fill="#F6A700"/>
+								</svg>
 							</div>
-							<div class="main--advantages__item">
-								<div class="main--advantages__item--icon">
-									<img src="img/advantages/3.png" alt="#">
-									<span>#3</span>
-								</div>
-								<div class="main--advantages__item--text">Большой выбор вариантов оплаты и покупки в рассрочку</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="main--gallery">
-				<div class="container">
-					<div class="row">
-						<div class="main--gallery__title">
-							<a href="#" class="main--gallery__title--left">
-								<div class="main--gallery__title--image">
-									<img src="img/main/cup.png" alt="#">
-								</div>
-								<div class="main--gallery__title--text">
-									<div class="h2">Audiomaster </div>
-									<div class="h3">шестикратный чемпион по автозвуку</div>
-								</div>
-							</a>
-							<div class="main--gallery__title--right">
-								Наша команда регулярно посещает соревнования и является шестикратными чемпионами России по автозвуку. Наши проекты отличаются высокой стабильностью работы в  самых стрессовых ситуациях и не оставят вас равнодушными.
-							</div>
-						</div>
-						<div class="main--gallery__wrapper">
-							<div class="main--gallery__wrapper--image div1">
-								<img src="img/main/gallery/1.png" alt="#">
-							</div>
-							<div class="main--gallery__wrapper--image div2">
-								<img src="img/main/gallery/2.png" alt="#">
-							</div>
-							<div class="main--gallery__wrapper--image div3">
-								<img src="img/main/gallery/3.png" alt="#">
-							</div>
-							<div class="main--gallery__wrapper--image div4">
-								<img src="img/main/gallery/4.png" alt="#">
-							</div>
-							<div class="main--gallery__wrapper--image div5">
-								<img src="img/main/gallery/5.png" alt="#">
-							</div>
-							<div class="main--gallery__wrapper--image div6">
-								<img src="img/main/gallery/6.png" alt="#">
+							<div class="journal--single__services--slider journal--single__services--slider-2">
+								<a href="journal-single.html" class="journal--block__item">
+									<div class="journal--block__item--image">
+										<img src="img/journal/2.png" alt="#">
+									</div>
+									<div class="journal--block__item--info">
+										<div class="journal--block__item--tag">#Новинки</div>
+										<div class="journal--block__item--title">Новинка от Pride Car Audio - акустика Harmony 5C</div>
+										<div class="journal--block__item--link" onclick="location.href='#'" >Читать</div>
+									</div>
+								</a>
+								<a href="journal-single.html" class="journal--block__item">
+									<div class="journal--block__item--image">
+										<img src="img/journal/3.png" alt="#">
+									</div>
+									<div class="journal--block__item--info">
+										<div class="journal--block__item--tag">#Наши работы</div>
+										<div class="journal--block__item--title">Аудиосистема в Nissan X-Trail</div>
+										<div class="journal--block__item--link" onclick="location.href='#'" >Читать</div>
+									</div>
+								</a>
+								<a href="journal-single.html" class="journal--block__item">
+									<div class="journal--block__item--image">
+										<img src="img/journal/4.png" alt="#">
+									</div>
+									<div class="journal--block__item--info">
+										<div class="journal--block__item--tag">#Наши работы</div>
+										<div class="journal--block__item--title">Аудиосистема в Volkswagen Tiguan</div>
+										<div class="journal--block__item--link" onclick="location.href='#'" >Читать</div>
+									</div>
+								</a>
+								<a href="journal-single.html" class="journal--block__item">
+									<div class="journal--block__item--image">
+										<img src="img/journal/5.png" alt="#">
+									</div>
+									<div class="journal--block__item--info">
+										<div class="journal--block__item--tag">#Новинки</div>
+										<div class="journal--block__item--title">Новинка от Pride Car Audio - акустика Harmony 5C</div>
+										<div class="journal--block__item--link" onclick="location.href='#'" >Читать</div>
+									</div>
+								</a>
+								<a href="journal-single.html" class="journal--block__item">
+									<div class="journal--block__item--image">
+										<img src="img/journal/6.png" alt="#">
+									</div>
+									<div class="journal--block__item--info">
+										<div class="journal--block__item--tag">#Наши работы</div>
+										<div class="journal--block__item--title">Аудиосистема в Nissan X-Trail</div>
+										<div class="journal--block__item--link" onclick="location.href='#'" >Читать</div>
+									</div>
+								</a>
+								<a href="journal-single.html" class="journal--block__item">
+									<div class="journal--block__item--image">
+										<img src="img/journal/7.png" alt="#">
+									</div>
+									<div class="journal--block__item--info">
+										<div class="journal--block__item--tag">#Наши работы</div>
+										<div class="journal--block__item--title">Аудиосистема в Volkswagen Tiguan</div>
+										<div class="journal--block__item--link" onclick="location.href='#'" >Читать</div>
+									</div>
+								</a>
+								<a href="journal-single.html" class="journal--block__item">
+									<div class="journal--block__item--image">
+										<img src="img/journal/8.png" alt="#">
+									</div>
+									<div class="journal--block__item--info">
+										<div class="journal--block__item--tag">#Новинки</div>
+										<div class="journal--block__item--title">Новинка от Pride Car Audio - акустика Harmony 5C</div>
+										<div class="journal--block__item--link" onclick="location.href='#'" >Читать</div>
+									</div>
+								</a>
+								<a href="journal-single.html" class="journal--block__item">
+									<div class="journal--block__item--image">
+										<img src="img/journal/9.png" alt="#">
+									</div>
+									<div class="journal--block__item--info">
+										<div class="journal--block__item--tag">#Наши работы</div>
+										<div class="journal--block__item--title">Аудиосистема в Nissan X-Trail</div>
+										<div class="journal--block__item--link" onclick="location.href='#'" >Читать</div>
+									</div>
+								</a>
+								<a href="journal-single.html" class="journal--block__item">
+									<div class="journal--block__item--image">
+										<img src="img/journal/10.png" alt="#">
+									</div>
+									<div class="journal--block__item--info">
+										<div class="journal--block__item--tag">#Наши работы</div>
+										<div class="journal--block__item--title">Аудиосистема в Volkswagen Tiguan</div>
+										<div class="journal--block__item--link" onclick="location.href='#'" >Читать</div>
+									</div>
+								</a>
+								<a href="journal-single.html" class="journal--block__item">
+									<div class="journal--block__item--image">
+										<img src="img/journal/11.png" alt="#">
+									</div>
+									<div class="journal--block__item--info">
+										<div class="journal--block__item--tag">#Новинки</div>
+										<div class="journal--block__item--title">Новинка от Pride Car Audio - акустика Harmony 5C</div>
+										<div class="journal--block__item--link" onclick="location.href='#'" >Читать</div>
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -1261,188 +1434,6 @@
 								</div>
 								<div class="catalog--right__bottom--link__title">Кабельная продукция</div>
 							</a>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="main--manufacturers">
-				<div class="container">
-					<div class="row">
-						<div class="h2">Производители</div>
-						<div class="main--manufacturers__wrapper">
-							<a href="#" class="main--manufacturers__item"><img src="img/main/manufacturers/1.png" alt="#"></a>
-							<a href="#" class="main--manufacturers__item"><img src="img/main/manufacturers/2.png" alt="#"></a>
-							<a href="#" class="main--manufacturers__item"><img src="img/main/manufacturers/3.png" alt="#"></a>
-							<a href="#" class="main--manufacturers__item"><img src="img/main/manufacturers/4.png" alt="#"></a>
-							<a href="#" class="main--manufacturers__item"><img src="img/main/manufacturers/5.png" alt="#"></a>
-							<a href="#" class="main--manufacturers__item"><img src="img/main/manufacturers/6.png" alt="#"></a>
-							<a href="#" class="main--manufacturers__item"><img src="img/main/manufacturers/7.png" alt="#"></a>
-							<a href="#" class="main--manufacturers__item"><img src="img/main/manufacturers/8.png" alt="#"></a>
-							<a href="#" class="main--manufacturers__item"><img src="img/main/manufacturers/9.png" alt="#"></a>
-							<a href="#" class="main--manufacturers__item"><img src="img/main/manufacturers/10.png" alt="#"></a>
-							<a href="#" class="main--manufacturers__item"><img src="img/main/manufacturers/11.png" alt="#"></a>
-							<a href="#" class="main--manufacturers__item"><img src="img/main/manufacturers/12.png" alt="#"></a>
-							<a href="#" class="main--manufacturers__item"><img src="img/main/manufacturers/13.png" alt="#"></a>
-							<a href="#" class="main--manufacturers__item"><img src="img/main/manufacturers/14.png" alt="#"></a>
-							<a href="#" class="main--manufacturers__item"><img src="img/main/manufacturers/15.png" alt="#"></a>
-						</div>
-						<a href="#" class="all color--blue">Все производители</a>
-					</div>
-				</div>
-			</section>
-			<section class="main--reviews">
-				<div class="container">
-					<div class="row">
-						<div class="main--reviews__title">
-							<div class="h2">Отзывы</div>
-							<div class="main--reviews__title--rate">
-								<div class="h2">4.9</div>
-								<div class="main--reviews__title--rate__right">
-									<img src="img/stars.svg" alt="#">
-									<span>68 отзывов • 159 оценок</span>
-								</div>
-							</div>
-						</div>
-						<div class="main--reviews__wrapper">
-							<div class="main--reviews__item">
-								<div class="name">Рамиль Сафиуллин</div>
-								<img src="img/stars.svg" alt="#">
-								<div class="review">
-									Спасибо большое Вам за качественно подобранные акустические компоненты и за качественную установку.
-									Работы выполнили ещё в далеком 2015 году на Фольксваген Амарок. Система до сих пор отлично работает и радует громким
-									звучанием. Рекомендую!
-								</div>
-							</div>
-							<div class="main--reviews__item">
-								<div class="name">Игорь Kex</div>
-								<img src="img/stars.svg" alt="#">
-								<div class="review">
-									Лично я покупал в этом магазине динамики через Интернет)) сам с другого города с Белгородской обл. ребята очень
-									грамотные всё подсказали всё рассказали о доставке и об других важных нюансах поэтому решил подумал и купил у них)),
-									все пришло вовремя и хорошо упаковано ) советую! Кто переживает покупать или нет через интернет у них, сммело могу
-									сказать берите не бойтесь, все подскажут и расскажут ))) ребята вам респект за данные дины!!! Буду еще обращатся )))
-									вам успехов )
-								</div>
-							</div>
-							<div class="main--reviews__item">
-								<div class="name">Ринат С.</div>
-								<img src="img/stars.svg" alt="#">
-								<div class="review">
-									Спасибо большое вашему магазину приобретал у вас магнитолу тeyes cc3 были небольшие проблемы с программным обеспечением
-									ваш менеджер Денис очень квалифицированный специалист 👍оперативно и отлично решил проблему 🙏спасибо ему за это буду
-									всем знакомым советовать ваш магазин✌️вы лучшие! Ребята 😎
-								</div>
-							</div>
-							<div class="main--reviews__buttons">
-								<a href="#" class="button">Больше отзывов на Яндекс.Картах</a>
-								<a href="#" class="button button--blue">Оставить отзыв</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<div class="main--banner banner--sber section">
-				<div class="container">
-					<div class="row">
-						<div class="main--banner__block">
-							<div class="main--banner__block--text">
-								<div class="h4">На автозвук больше не нужно копить</div>
-								<div class="h2">Купи <span>сейчас</span> - плати потом!*</div>
-								<div class="main--banner__block--text__icons">
-									<img src="img/main/sber.png" alt="#">
-									<img src="img/main/tink.png" alt="#">
-								</div>
-								<a href="#" class="button button--BGblack">Подробнее</a>
-							</div>
-							<div class="main--banner__block--image">
-								<img src="img/main/banner-sber.png" alt="#" class="desktop">
-								<img src="img/main/banner-sber-mob.png" alt="#" class="tablet">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<section class="main--installationCenter">
-				<div class="container">
-					<div class="row">
-						<div class="main--installationCenter__wrapper">
-							<a href="#" class="main--installationCenter__left">
-								<div class="h2">Установочный центр</div>
-								<div class="h3">Установка автозвука<br> в Казани</div>
-							</a>
-							<div class="main--installationCenter__right">
-								<div class="main--installationCenter__right--text">
-									<p>
-										В сертифицированном установочном центре выполняются работы по установке аудиосистем, охранных комплексов, парковочных
-										радаров; так же в комплекс услуг входят работы по шумоизоляции, изготовлению подиумов и коробов.
-									</p>
-									<p>
-										Мы поможем вам <strong>подобрать</strong> не только необходимые компоненты, но и качественно <strong>установить и настроить</strong> интегрированную
-										систему.
-									</p>
-								</div>
-								<div class="main--installationCenter__right--list">
-									<div class="main--installationCenter__right--item">
-										<div class="main--installationCenter__right--item__image">
-											<img src="img/main/rating 1.png" alt="#">
-										</div>
-										<div class="main--installationCenter__right--item__text">
-											<span>Опытные мастера</span>
-										</div>
-									</div>
-									<div class="main--installationCenter__right--item">
-										<div class="main--installationCenter__right--item__image">
-											<img src="img/main/shield 1.png" alt="#">
-										</div>
-										<div class="main--installationCenter__right--item__text">
-											<span>Если попадется заводской брак, заменим компонент сразу*</span>
-											<div class="mini">*При условии покупки оборудования и установки в нашем установочном центре</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="main--audioStudio">
-				<div class="container">
-					<div class="row">
-						<div class="main--audioStudio__wrapper">
-							<div class="main--audioStudio__left">
-								<div class="h2">Студия автозвука Audiomaster</div>
-								<div class="main--audioStudio__left--text">
-									<p>Audiomaster — это студия автозвука в Казани с широким ассортиментом аудиокомпонентов в наличии.</p>
-									<p>У нас можно оплатить товары наличными и безналичным расчетом, приобрести аудиосистемы в кредит без переплаты.</p>
-									<p>В нашей студии вас ждут опытные консультанты, все компоненты аудиосистемы в одном месте, стенды для испытания систем для «громкого» и «комфортного» прослушивания.</p>
-									<p>Проконсультируем и поможем подобрать компоненты для модернизации вашего звука или соберем аудиосистему полностью.</p>
-								</div>
-							</div>
-							<div class="main--audioStudio__right">
-								<div class="prev slick-arrow main--audioStudio__prev">
-									<svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M28 14.7998C28 22.5318 21.732 28.7998 14 28.7998C6.26801 28.7998 0 22.5318 0 14.7998C0 7.06782 6.26801 0.799805 14 0.799805C21.732 0.799805 28 7.06782 28 14.7998Z" fill="white"/>
-										<path d="M14 0.799805C6.26801 0.799805 0 7.06782 0 14.7998C0 22.5318 6.26801 28.7998 14 28.7998C21.732 28.7998 28 22.5318 28 14.7998C28 7.06782 21.732 0.799805 14 0.799805ZM17.6114 19.9712L15.1714 22.4112L7.56 14.7998L15.1714 7.18838L17.6114 9.62838L12.4457 14.7998L17.6114 19.9712Z" fill="#F6A700"/>
-									</svg>
-								</div>
-								<div class="next slick-arrow main--audioStudio__next">
-									<svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M0 14.7998C0 22.5318 6.26801 28.7998 14 28.7998C21.732 28.7998 28 22.5318 28 14.7998C28 7.06782 21.732 0.799805 14 0.799805C6.26801 0.799805 0 7.06782 0 14.7998Z" fill="white"/>
-										<path d="M14 0.799805C21.732 0.799805 28 7.06782 28 14.7998C28 22.5318 21.732 28.7998 14 28.7998C6.26801 28.7998 0 22.5318 0 14.7998C0 7.06782 6.26801 0.799805 14 0.799805ZM10.3886 19.9712L12.8286 22.4112L20.44 14.7998L12.8286 7.18838L10.3886 9.62838L15.5543 14.7998L10.3886 19.9712Z" fill="#F6A700"/>
-									</svg>
-								</div>
-								<div class="main--audioStudio__slider">
-									<div class="main--audioStudio__right--item">
-										<img src="img/main/audioStudio/1.png" alt="#">
-									</div>
-									<div class="main--audioStudio__right--item">
-										<img src="img/main/audioStudio/1.jpg" alt="#">
-									</div>
-									<div class="main--audioStudio__right--item">
-										<img src="img/main/audioStudio/2.jpg" alt="#">
-									</div>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
