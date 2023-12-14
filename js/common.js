@@ -768,8 +768,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	let scrollSearch = document.querySelector('a[href="#scrollSearch"]');
 	if(scrollSearch){
-		scrollSearch.addEventListener('click', function() {
-			document.querySelector('input[type="search"]').classList.add('active');
+		let searchInput = document.querySelector('input[type="search"]');
+		scrollSearch.addEventListener('click', function(e) {
+			e.preventDefault();
+			searchInput.classList.add('active');
+			setTimeout(function() {
+				searchInput.classList.remove('active');
+			}, 3000);
 		});
 	}
 
