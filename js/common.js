@@ -766,7 +766,12 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 
-	
+	let scrollSearch = document.querySelector('a[href="#scrollSearch"]');
+	if(scrollSearch){
+		scrollSearch.addEventListener('click', function() {
+			document.querySelector('input[type="search"]').classList.add('active');
+		});
+	}
 
 });
 
