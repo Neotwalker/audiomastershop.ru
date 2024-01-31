@@ -917,27 +917,30 @@ $(function() {
 		$('.modal--item__nav').on('init', function(event, slick) {
 			$('.modal--item__nav .slick-slide.slick-current').addClass('is-active');
 		})
-		.slick({
-			slidesToShow: 3,
-			slidesToScroll: 1,
-			dots: false,
-			focusOnSelect: false,
-			infinite: true,
-			arrows: true,
-			prevArrow: $('.modal--item__slides--prev'),
-			nextArrow: $('.modal--item__slides--next'),
-			responsive: [{
-				breakpoint: 1024,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 1,
-				},
-				breakpoint: 900,
-				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 1,
-				}
-			}]
+		$(".modal--item__slides").each(function(index) {
+			$('.modal--item__nav', $(this))
+			.slick({
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				dots: false,
+				focusOnSelect: false,
+				infinite: true,
+				arrows: true,
+				prevArrow: $(this).find('.modal--item__slides--prev'),
+				nextArrow: $(this).find('.modal--item__slides--next'),
+				responsive: [{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1,
+					},
+					breakpoint: 900,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 1,
+					}
+				}]
+			});
 		});
 	 
 		$('.modal--item__slider').on('afterChange', function(event, slick, currentSlide) {
