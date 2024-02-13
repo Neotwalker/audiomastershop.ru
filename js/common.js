@@ -778,6 +778,12 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
+	const filterButton = document.querySelector('.main--catalog__filter .button');
+	filterButton.addEventListener('click', (e) => {
+		const filter = document.querySelector('.main--catalog__filter .bx_filter');
+		filter.classList.toggle('active');
+	});
+
 });
 
 $(function() {

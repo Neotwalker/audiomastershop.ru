@@ -663,344 +663,351 @@
 						</div>
 						<div class="main--catalog__footer">
 							<aside class="main--catalog__filter">
-								<ul>
-									<li class="main--catalog__filter--item active">
-										<div class="main--catalog__filter--heading">
-											<span>Цена, руб.</span>
-											<i class="main--catalog__filter--heading__icon">
-											</i>
-										</div>
-										<div class="main--catalog__filter--options options--prices">
-											<div class="main--catalog__filter--wrapper">
-												<div class="main--catalog__filter--options__price">
-													<div>
-														<input id="price--min" type="text" class="option--price">
-														<label for="price--min">от</label>
+								<div class="button">Фильтр</div>
+								<div class="bx_filter">
+									<div class="bx_filter_section">
+										<form action="#">
+											<ul>
+												<li class="main--catalog__filter--item active">
+													<div class="main--catalog__filter--heading">
+														<span>Цена, руб.</span>
+														<i class="main--catalog__filter--heading__icon">
+														</i>
 													</div>
-													<div>
-														<input id="price--max" type="text" class="option--price">
-														<label for="price--max">до</label>
-													</div>
-												</div>
-												<div id="price--slider" class="main--catalog__filter--options__slider">
-													<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-													<div class="main--catalog__filter--options__range"></div>
-													<script>
-														$(".main--catalog__filter--options__range").slider({
-															min: 1050,
-															max: 15000,
-															values: [0, 15000],
-															range: true,
-															animate: "fast",
-															slide : function(event, ui) {
-																$("#price--min").val(ui.values[ 0 ]);
-																$("#price--max").val(ui.values[ 1 ]);
-															}
-														});
-													</script>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li class="main--catalog__filter--item">
-										<div class="main--catalog__filter--heading">
-											<span>Номинальный диаметр</span>
-											<i class="main--catalog__filter--heading__icon">
-											</i>
-										</div>
-										<div class="main--catalog__filter--options options--diameter">
-											<div class="main--catalog__filter--options__checkboxes">
-												<div class="checkboxes--wrapper">
-													<div class="checkboxes--item">
-														<input type="checkbox" id="diameter-1">
-														<label for="diameter-1">10"(25см)</label>
-														<div class="checkboxes--item__count">
-															<span>15</span>
+													<div class="main--catalog__filter--options options--prices">
+														<div class="main--catalog__filter--wrapper">
+															<div class="main--catalog__filter--options__price">
+																<div>
+																	<input id="price--min" type="text" class="option--price">
+																	<label for="price--min">от</label>
+																</div>
+																<div>
+																	<input id="price--max" type="text" class="option--price">
+																	<label for="price--max">до</label>
+																</div>
+															</div>
+															<div id="price--slider" class="main--catalog__filter--options__slider">
+																<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+																<div class="main--catalog__filter--options__range"></div>
+																<script>
+																	$(".main--catalog__filter--options__range").slider({
+																		min: 1050,
+																		max: 15000,
+																		values: [0, 15000],
+																		range: true,
+																		animate: "fast",
+																		slide : function(event, ui) {
+																			$("#price--min").val(ui.values[ 0 ]);
+																			$("#price--max").val(ui.values[ 1 ]);
+																		}
+																	});
+																</script>
+															</div>
 														</div>
 													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="diameter-2">
-														<label for="diameter-2">12"(30см)</label>
-														<div class="checkboxes--item__count">
-															<span>1</span>
+												</li>
+												<li class="main--catalog__filter--item">
+													<div class="main--catalog__filter--heading">
+														<span>Номинальный диаметр</span>
+														<i class="main--catalog__filter--heading__icon">
+														</i>
+													</div>
+													<div class="main--catalog__filter--options options--diameter">
+														<div class="main--catalog__filter--options__checkboxes">
+															<div class="checkboxes--wrapper">
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="diameter-1">
+																	<label for="diameter-1">10"(25см)</label>
+																	<div class="checkboxes--item__count">
+																		<span>15</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="diameter-2">
+																	<label for="diameter-2">12"(30см)</label>
+																	<div class="checkboxes--item__count">
+																		<span>1</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="diameter-3">
+																	<label for="diameter-3">2"(5см)</label>
+																	<div class="checkboxes--item__count">
+																		<span>3</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="diameter-4">
+																	<label for="diameter-4">2,5"(6,3см)</label>
+																	<div class="checkboxes--item__count">
+																		<span>1</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="diameter-5">
+																	<label for="diameter-5">2,83"(7,2см)</label>
+																	<div class="checkboxes--item__count">
+																		<span>1</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="diameter-6">
+																	<label for="diameter-6">2,36"(6см)</label>
+																	<div class="checkboxes--item__count">
+																		<span>1</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="diameter-7">
+																	<label for="diameter-7">2,75"(7см)</label>
+																	<div class="checkboxes--item__count">
+																		<span>2</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="diameter-8">
+																	<label for="diameter-8">3"(7,6см)</label>
+																	<div class="checkboxes--item__count">
+																		<span>10</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="diameter-9">
+																	<label for="diameter-9">3"(7,5см)</label>
+																	<div class="checkboxes--item__count">
+																		<span>1</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="diameter-10">
+																	<label for="diameter-10">3"(8см)</label>
+																	<div class="checkboxes--item__count">
+																		<span>5</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="diameter-11">
+																	<label for="diameter-11">3"(9см)</label>
+																	<div class="checkboxes--item__count">
+																		<span>1</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="diameter-12">
+																	<label for="diameter-12">3,14"(8см)</label>
+																	<div class="checkboxes--item__count">
+																		<span>4</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="diameter-13">
+																	<label for="diameter-13">3,5"(8,7см)</label>
+																	<div class="checkboxes--item__count">
+																		<span>3</span>
+																	</div>
+																</div>
+															</div>
 														</div>
 													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="diameter-3">
-														<label for="diameter-3">2"(5см)</label>
-														<div class="checkboxes--item__count">
-															<span>3</span>
+												</li>
+												<li class="main--catalog__filter--item">
+													<div class="main--catalog__filter--heading">
+														<span>Тип</span>
+														<i class="main--catalog__filter--heading__icon">
+														</i>
+													</div>
+													<div class="main--catalog__filter--options options--type">
+														<div class="main--catalog__filter--options__checkboxes">
+															<div class="checkboxes--wrapper">
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="type-1">
+																	<label for="type-1">2-компонентная акустика</label>
+																	<div class="checkboxes--item__count">
+																		<span>122</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="type-2">
+																	<label for="type-2">3-компонентная акустика</label>
+																	<div class="checkboxes--item__count">
+																		<span>12</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="type-3">
+																	<label for="type-3">Для AUDI</label>
+																	<div class="checkboxes--item__count">
+																		<span>4</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="type-4">
+																	<label for="type-4">Для BMW</label>
+																	<div class="checkboxes--item__count">
+																		<span>39</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="type-5">
+																	<label for="type-5">Для Mercedes</label>
+																	<div class="checkboxes--item__count">
+																		<span>25</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="type-6">
+																	<label for="type-6">Для Volkswagen</label>
+																	<div class="checkboxes--item__count">
+																		<span>2</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="type-7">
+																	<label for="type-7">Коаксиальная акустика</label>
+																	<div class="checkboxes--item__count">
+																		<span>141</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="type-8">
+																	<label for="type-8">Мидбасовый динамик</label>
+																	<div class="checkboxes--item__count">
+																		<span>56</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="type-9">
+																	<label for="type-9">Рупорные ВЧ</label>
+																	<div class="checkboxes--item__count">
+																		<span>72</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="type-10">
+																	<label for="type-10">Среднечастотный динамик</label>
+																	<div class="checkboxes--item__count">
+																		<span>248</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="type-11">
+																	<label for="type-11">Твитеры</label>
+																	<div class="checkboxes--item__count">
+																		<span>50</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="type-12">
+																	<label for="type-12">Широкополосная акустика</label>
+																	<div class="checkboxes--item__count">
+																		<span>25</span>
+																	</div>
+																</div>
+															</div>
 														</div>
 													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="diameter-4">
-														<label for="diameter-4">2,5"(6,3см)</label>
-														<div class="checkboxes--item__count">
-															<span>1</span>
+												</li>
+												<li class="main--catalog__filter--item">
+													<div class="main--catalog__filter--heading">
+														<span>Производители</span>
+														<i class="main--catalog__filter--heading__icon">
+														</i>
+													</div>
+													<div class="main--catalog__filter--options options--manufacturers">
+														<div class="main--catalog__filter--options__checkboxes">
+															<div class="checkboxes--wrapper">
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="manufacturers-1">
+																	<label for="manufacturers-1">18Sound</label>
+																	<div class="checkboxes--item__count">
+																		<span>1</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="manufacturers-2">
+																	<label for="manufacturers-2">Alphard Group</label>
+																	<div class="checkboxes--item__count">
+																		<span>69</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="manufacturers-3">
+																	<label for="manufacturers-3">Alpine</label>
+																	<div class="checkboxes--item__count">
+																		<span>2</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="manufacturers-4">
+																	<label for="manufacturers-4">AMP</label>
+																	<div class="checkboxes--item__count">
+																		<span>7</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="manufacturers-5">
+																	<label for="manufacturers-5">Art Sound</label>
+																	<div class="checkboxes--item__count">
+																		<span>3</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="manufacturers-6">
+																	<label for="manufacturers-6">Audio Nova</label>
+																	<div class="checkboxes--item__count">
+																		<span>4</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="manufacturers-7">
+																	<label for="manufacturers-7">Audio System</label>
+																	<div class="checkboxes--item__count">
+																		<span>4</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="manufacturers-8">
+																	<label for="manufacturers-8">Audison</label>
+																	<div class="checkboxes--item__count">
+																		<span>7</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="manufacturers-9">
+																	<label for="manufacturers-9">Aura Sound Equipment</label>
+																	<div class="checkboxes--item__count">
+																		<span>48</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="manufacturers-10">
+																	<label for="manufacturers-10">AZ-13</label>
+																	<div class="checkboxes--item__count">
+																		<span>1</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="manufacturers-11">
+																	<label for="manufacturers-11">Best Balance</label>
+																	<div class="checkboxes--item__count">
+																		<span>8</span>
+																	</div>
+																</div>
+																<div class="checkboxes--item">
+																	<input type="checkbox" id="manufacturers-12">
+																	<label for="manufacturers-12">Blam</label>
+																	<div class="checkboxes--item__count">
+																		<span>58</span>
+																	</div>
+																</div>
+															</div>
 														</div>
 													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="diameter-5">
-														<label for="diameter-5">2,83"(7,2см)</label>
-														<div class="checkboxes--item__count">
-															<span>1</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="diameter-6">
-														<label for="diameter-6">2,36"(6см)</label>
-														<div class="checkboxes--item__count">
-															<span>1</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="diameter-7">
-														<label for="diameter-7">2,75"(7см)</label>
-														<div class="checkboxes--item__count">
-															<span>2</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="diameter-8">
-														<label for="diameter-8">3"(7,6см)</label>
-														<div class="checkboxes--item__count">
-															<span>10</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="diameter-9">
-														<label for="diameter-9">3"(7,5см)</label>
-														<div class="checkboxes--item__count">
-															<span>1</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="diameter-10">
-														<label for="diameter-10">3"(8см)</label>
-														<div class="checkboxes--item__count">
-															<span>5</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="diameter-11">
-														<label for="diameter-11">3"(9см)</label>
-														<div class="checkboxes--item__count">
-															<span>1</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="diameter-12">
-														<label for="diameter-12">3,14"(8см)</label>
-														<div class="checkboxes--item__count">
-															<span>4</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="diameter-13">
-														<label for="diameter-13">3,5"(8,7см)</label>
-														<div class="checkboxes--item__count">
-															<span>3</span>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li class="main--catalog__filter--item">
-										<div class="main--catalog__filter--heading">
-											<span>Тип</span>
-											<i class="main--catalog__filter--heading__icon">
-											</i>
-										</div>
-										<div class="main--catalog__filter--options options--type">
-											<div class="main--catalog__filter--options__checkboxes">
-												<div class="checkboxes--wrapper">
-													<div class="checkboxes--item">
-														<input type="checkbox" id="type-1">
-														<label for="type-1">2-компонентная акустика</label>
-														<div class="checkboxes--item__count">
-															<span>122</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="type-2">
-														<label for="type-2">3-компонентная акустика</label>
-														<div class="checkboxes--item__count">
-															<span>12</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="type-3">
-														<label for="type-3">Для AUDI</label>
-														<div class="checkboxes--item__count">
-															<span>4</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="type-4">
-														<label for="type-4">Для BMW</label>
-														<div class="checkboxes--item__count">
-															<span>39</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="type-5">
-														<label for="type-5">Для Mercedes</label>
-														<div class="checkboxes--item__count">
-															<span>25</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="type-6">
-														<label for="type-6">Для Volkswagen</label>
-														<div class="checkboxes--item__count">
-															<span>2</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="type-7">
-														<label for="type-7">Коаксиальная акустика</label>
-														<div class="checkboxes--item__count">
-															<span>141</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="type-8">
-														<label for="type-8">Мидбасовый динамик</label>
-														<div class="checkboxes--item__count">
-															<span>56</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="type-9">
-														<label for="type-9">Рупорные ВЧ</label>
-														<div class="checkboxes--item__count">
-															<span>72</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="type-10">
-														<label for="type-10">Среднечастотный динамик</label>
-														<div class="checkboxes--item__count">
-															<span>248</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="type-11">
-														<label for="type-11">Твитеры</label>
-														<div class="checkboxes--item__count">
-															<span>50</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="type-12">
-														<label for="type-12">Широкополосная акустика</label>
-														<div class="checkboxes--item__count">
-															<span>25</span>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li class="main--catalog__filter--item">
-										<div class="main--catalog__filter--heading">
-											<span>Производители</span>
-											<i class="main--catalog__filter--heading__icon">
-											</i>
-										</div>
-										<div class="main--catalog__filter--options options--manufacturers">
-											<div class="main--catalog__filter--options__checkboxes">
-												<div class="checkboxes--wrapper">
-													<div class="checkboxes--item">
-														<input type="checkbox" id="manufacturers-1">
-														<label for="manufacturers-1">18Sound</label>
-														<div class="checkboxes--item__count">
-															<span>1</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="manufacturers-2">
-														<label for="manufacturers-2">Alphard Group</label>
-														<div class="checkboxes--item__count">
-															<span>69</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="manufacturers-3">
-														<label for="manufacturers-3">Alpine</label>
-														<div class="checkboxes--item__count">
-															<span>2</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="manufacturers-4">
-														<label for="manufacturers-4">AMP</label>
-														<div class="checkboxes--item__count">
-															<span>7</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="manufacturers-5">
-														<label for="manufacturers-5">Art Sound</label>
-														<div class="checkboxes--item__count">
-															<span>3</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="manufacturers-6">
-														<label for="manufacturers-6">Audio Nova</label>
-														<div class="checkboxes--item__count">
-															<span>4</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="manufacturers-7">
-														<label for="manufacturers-7">Audio System</label>
-														<div class="checkboxes--item__count">
-															<span>4</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="manufacturers-8">
-														<label for="manufacturers-8">Audison</label>
-														<div class="checkboxes--item__count">
-															<span>7</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="manufacturers-9">
-														<label for="manufacturers-9">Aura Sound Equipment</label>
-														<div class="checkboxes--item__count">
-															<span>48</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="manufacturers-10">
-														<label for="manufacturers-10">AZ-13</label>
-														<div class="checkboxes--item__count">
-															<span>1</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="manufacturers-11">
-														<label for="manufacturers-11">Best Balance</label>
-														<div class="checkboxes--item__count">
-															<span>8</span>
-														</div>
-													</div>
-													<div class="checkboxes--item">
-														<input type="checkbox" id="manufacturers-12">
-														<label for="manufacturers-12">Blam</label>
-														<div class="checkboxes--item__count">
-															<span>58</span>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</li>
-								</ul>
+												</li>
+											</ul>
+										</form>
+									</div>
+								</div>
 								<div class="main--catalog__banner">
 									<div class="main--catalog__banner--image">
 										<img src="img/main/banner.png" alt="#">
